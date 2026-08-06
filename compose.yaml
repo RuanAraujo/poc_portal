@@ -1,0 +1,108 @@
+name: documentation-portal
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-documentation_portal}
+      POSTGRES_USER: ${POSTGRES_USER:-documentation_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-documentation_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 5s
+    restart: unless-stopped
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-documentation_user}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-documentation_password}
+      RABBITMQ_DEFAULT_VHOST: ${RABBITMQ_DEFAULT_VHOST:-/}
+    ports:
+      - "${RABBITMQ_AMQP_PORT:-5672}:5672"
+      - "${RABBITMQ_MANAGEMENT_PORT:-15672}:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  documentation-api:
+    build:
+      context: .
+      dockerfile: src/Documentation.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__Postgres: >-
+        Host=postgres;Port=5432;Database=${POSTGRES_DB:-documentation_portal};Username=${POSTGRES_USER:-documentation_user};Password=${POSTGRES_PASSWORD:-documentation_password};Include Error Detail=true
+      ConnectionStrings__DocumentationDb: >-
+        Host=postgres;Port=5432;Database=${POSTGRES_DB:-documentation_portal};Username=${POSTGRES_USER:-documentation_user};Password=${POSTGRES_PASSWORD:-documentation_password};Include Error Detail=true
+      RabbitMq__Host: rabbitmq
+      RabbitMq__HostName: rabbitmq
+      RabbitMq__Port: 5672
+      RabbitMq__UserName: ${RABBITMQ_DEFAULT_USER:-documentation_user}
+      RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-documentation_password}
+      RabbitMq__VirtualHost: ${RABBITMQ_DEFAULT_VHOST:-/}
+    ports:
+      - "${API_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8080/health || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+
+  documentation-ingestion:
+    build:
+      context: .
+      dockerfile: src/Documentation.Ingestion.Worker/Dockerfile
+    environment:
+      DOTNET_ENVIRONMENT: Development
+      ConnectionStrings__Postgres: >-
+        Host=postgres;Port=5432;Database=${POSTGRES_DB:-documentation_portal};Username=${POSTGRES_USER:-documentation_user};Password=${POSTGRES_PASSWORD:-documentation_password};Include Error Detail=true
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: 5672
+      RabbitMq__UserName: ${RABBITMQ_DEFAULT_USER:-documentation_user}
+      RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-documentation_password}
+      RabbitMq__VirtualHost: ${RABBITMQ_DEFAULT_VHOST:-/}
+      DocumentationApi__BaseUrl: http://documentation-api:8080
+      Embeddings__Provider: ${EMBEDDINGS_PROVIDER:-Fake}
+      Embeddings__Dimensions: ${EMBEDDINGS_DIMENSIONS:-1024}
+      Embeddings__BedrockRegion: ${BEDROCK_REGION:-us-east-1}
+      Embeddings__BedrockModelId: ${BEDROCK_MODEL_ID:-amazon.titan-embed-text-v2:0}
+      AWS__Region: ${AWS_REGION:-us-east-1}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      documentation-api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  rabbitmq-data:
