@@ -51,20 +51,16 @@ public static class DependencyInjection
 
         var embeddingOptions = configuration.GetSection(EmbeddingsOptions.SectionName).Get<EmbeddingsOptions>()
             ?? new EmbeddingsOptions();
-        if (embeddingOptions.Dimensions != FakeEmbeddingGenerator.DefaultDimensions)
+        if (embeddingOptions.Dimensions != EmbeddingGemmaEmbeddingGenerator.RequiredDimensions)
         {
             throw new InvalidOperationException(
-                $"Embeddings:Dimensions must be {FakeEmbeddingGenerator.DefaultDimensions} for this POC.");
+                $"Embeddings:Dimensions must be {EmbeddingGemmaEmbeddingGenerator.RequiredDimensions} for this POC.");
         }
 
-        if (string.Equals(embeddingOptions.Provider, "Bedrock", StringComparison.OrdinalIgnoreCase))
+        services.AddHttpClient<IEmbeddingGenerator, EmbeddingGemmaEmbeddingGenerator>(httpClient =>
         {
-            services.AddSingleton<IEmbeddingGenerator, BedrockEmbeddingGenerator>();
-        }
-        else
-        {
-            services.AddSingleton<IEmbeddingGenerator, FakeEmbeddingGenerator>();
-        }
+            httpClient.BaseAddress = new Uri(EnsureTrailingSlash(embeddingOptions.BaseUrl));
+        });
 
         return services;
     }

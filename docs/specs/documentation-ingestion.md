@@ -42,8 +42,9 @@ DLQ e confirma a mensagem original.
 5. Fazer `PUT .../indexing-status` com `Indexing`.
 6. Criar um chunk geral e um chunk para cada operação HTTP encontrada nos paths
    do OpenAPI JSON ou YAML.
-7. Criar embeddings normalizados de 1024 dimensões e substituir os chunks da
-   versão numa transação, junto do registro de idempotência.
+7. Solicitar ao serviço local EmbeddingGemma embeddings normalizados de 768
+   dimensões e substituir os chunks da versão numa transação, junto do registro
+   de idempotência.
 8. Fazer callback `Available` e confirmar a mensagem.
 
 Caso o callback final falhe depois da transação, a nova entrega encontra o
@@ -78,7 +79,7 @@ Tabela `ingestion.document_chunks`:
 - `document_id` UUID e `version_id` UUID;
 - `chunk_index`, `chunk_type`, `content`, `content_hash`;
 - `metadata` como `jsonb`;
-- `embedding` como `vector(1024)`;
+- `embedding` como `vector(768)`;
 - `created_at_utc`.
 
 Há restrição única em `(version_id, chunk_index)` e índice HNSW usando
@@ -94,13 +95,10 @@ uma republicação de outra mensagem para a mesma versão não duplica vetores.
 
 ## Embeddings
 
-`IEmbeddingGenerator` define 1024 dimensões.
-
-- `Fake`: padrão local. Gera vetor determinístico a partir de SHA-256 e o
-  normaliza por norma L2, sem rede externa.
-- `Bedrock`: chama Amazon Bedrock Runtime com o modelo
-  `amazon.titan-embed-text-v2:0`, `dimensions: 1024` e `normalize: true`.
-  Credenciais seguem a cadeia padrão do SDK AWS.
+`IEmbeddingGenerator` define 768 dimensões. Sua implementação chama
+`POST /internal/embeddings` no `Documentation.Agent`, que executa
+`google/embeddinggemma-300m` localmente com `encode_document` e normalização.
+Não há provider externo ou cobrança por embedding.
 
 ## Configuração
 
@@ -113,16 +111,16 @@ uma republicação de outra mensagem para a mesma versão não duplica vetores.
 | `RabbitMq:Password` | `guest` | Senha RabbitMQ |
 | `RabbitMq:VirtualHost` | `/` | Virtual host RabbitMQ |
 | `DocumentationApi:BaseUrl` | `http://localhost:8080` | Base da API interna |
-| `Embeddings:Provider` | `Fake` | `Fake` ou `Bedrock` |
-| `Embeddings:Dimensions` | `1024` | Deve permanecer 1024 nesta POC |
-| `Embeddings:BedrockRegion` | `us-east-1` | Região AWS para Bedrock |
-| `Embeddings:BedrockModelId` | `amazon.titan-embed-text-v2:0` | Modelo Bedrock |
+| `Embeddings:BaseUrl` | `http://localhost:8090` | Serviço local EmbeddingGemma |
+| `Embeddings:Dimensions` | `768` | Deve permanecer 768 nesta POC |
 
 ## Inicialização local
 
 Na partida, o worker instala `vector`, cria o schema/tabelas/índice quando ainda
-não existem e declara a topologia RabbitMQ. O `Dockerfile` do worker recebe a
-solução inteira como contexto de build.
+não existem e declara a topologia RabbitMQ. Se encontrar uma coluna com dimensão
+diferente de 768, remove os chunks e eventos processados incompatíveis, migra a
+coluna e marca as versões afetadas para republicação. O `Dockerfile` do worker
+recebe a solução inteira como contexto de build.
 
 ## Limitações deliberadas da POC
 

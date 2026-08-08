@@ -9,3 +9,5 @@ obj/
 .env
 TestResults/
 coverage/
+__pycache__/
+*.py[cod]

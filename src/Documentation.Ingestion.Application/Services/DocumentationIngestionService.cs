@@ -7,7 +7,7 @@ namespace Documentation.Ingestion.Application.Services;
 
 public sealed class DocumentationIngestionService : IIngestionService
 {
-    private const int RequiredEmbeddingDimensions = 1024;
+    private const int RequiredEmbeddingDimensions = 768;
 
     private readonly IChunkRepository _chunkRepository;
     private readonly IDocumentationApiClient _documentationApiClient;
