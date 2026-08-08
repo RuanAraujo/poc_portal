@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Documentation.Domain/Documentation.Domain.csproj" />
+    <ProjectReference Include="../Documentation.Contracts/Documentation.Contracts.csproj" />
+  </ItemGroup>
+</Project>
