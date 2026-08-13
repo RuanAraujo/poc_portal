@@ -56,6 +56,10 @@ O JSON usa `camelCase`.
 
 O endpoint de status aceita apenas `indexing`, `available` e `indexingFailed`. As rotas internas não possuem autenticação nesta POC e não devem ser expostas fora da rede local de containers.
 
+### Correlação
+
+Todas as rotas aceitam o header opcional `X-Correlation-ID`. Valores válidos têm de 1 a 128 caracteres alfanuméricos ou `.`, `_`, `:` e `-`; quando o header está ausente ou inválido, a API gera um identificador. O valor efetivo sempre volta no mesmo header da resposta e acompanha a publicação RabbitMQ e as chamadas HTTP/gRPC da ingestão.
+
 ## Mensageria
 
 Ao publicar ou republicar uma versão, a API envia `DocumentationPublished` definido em `Documentation.Contracts`:
@@ -64,6 +68,7 @@ Ao publicar ou republicar uma versão, a API envia `DocumentationPublished` defi
 - Routing key: `documentation.published.v1`.
 - JSON persistente em `camelCase`.
 - Publisher confirms obrigatórios.
+- `BasicProperties.CorrelationId` preserva o `X-Correlation-ID` da requisição, usando `eventId` quando não há requisição HTTP.
 - A mensagem contém `eventId`, IDs e metadados da versão, nunca `content`.
 
 ## Configuração

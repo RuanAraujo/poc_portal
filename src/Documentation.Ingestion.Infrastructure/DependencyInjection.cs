@@ -1,5 +1,6 @@
 using Documentation.Ingestion.Application.Abstractions;
 using Documentation.Ingestion.Application.Services;
+using Documentation.Embeddings.Grpc;
 using Documentation.Ingestion.Infrastructure.Clients;
 using Documentation.Ingestion.Infrastructure.Embeddings;
 using Documentation.Ingestion.Infrastructure.OpenApi;
@@ -51,20 +52,17 @@ public static class DependencyInjection
 
         var embeddingOptions = configuration.GetSection(EmbeddingsOptions.SectionName).Get<EmbeddingsOptions>()
             ?? new EmbeddingsOptions();
-        if (embeddingOptions.Dimensions != FakeEmbeddingGenerator.DefaultDimensions)
+        if (embeddingOptions.Dimensions != EmbeddingGemmaEmbeddingGenerator.RequiredDimensions)
         {
             throw new InvalidOperationException(
-                $"Embeddings:Dimensions must be {FakeEmbeddingGenerator.DefaultDimensions} for this POC.");
+                $"Embeddings:Dimensions must be {EmbeddingGemmaEmbeddingGenerator.RequiredDimensions} for this POC.");
         }
 
-        if (string.Equals(embeddingOptions.Provider, "Bedrock", StringComparison.OrdinalIgnoreCase))
+        services.AddGrpcClient<EmbeddingService.EmbeddingServiceClient>(options =>
         {
-            services.AddSingleton<IEmbeddingGenerator, BedrockEmbeddingGenerator>();
-        }
-        else
-        {
-            services.AddSingleton<IEmbeddingGenerator, FakeEmbeddingGenerator>();
-        }
+            options.Address = new Uri(embeddingOptions.BaseUrl);
+        });
+        services.AddScoped<IEmbeddingGenerator, EmbeddingGemmaEmbeddingGenerator>();
 
         return services;
     }

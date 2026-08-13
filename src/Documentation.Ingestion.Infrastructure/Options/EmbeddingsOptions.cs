@@ -4,11 +4,7 @@ public sealed class EmbeddingsOptions
 {
     public const string SectionName = "Embeddings";
 
-    public string Provider { get; init; } = "Fake";
+    public string BaseUrl { get; init; } = "http://localhost:8080";
 
-    public int Dimensions { get; init; } = 1024;
-
-    public string BedrockRegion { get; init; } = "us-east-1";
-
-    public string BedrockModelId { get; init; } = "amazon.titan-embed-text-v2:0";
+    public int Dimensions { get; init; } = 768;
 }

@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http.Json;
 using System.Text.Json;
@@ -27,11 +28,13 @@ public sealed class DocumentationApiClient : IDocumentationApiClient
         Guid versionId,
         CancellationToken cancellationToken)
     {
-        using var response = await _httpClient.GetAsync(
-            $"internal/documentations/{documentId}/versions/{versionId}/content",
-            cancellationToken);
+        using var request = new HttpRequestMessage(
+            HttpMethod.Get,
+            $"internal/documentations/{documentId}/versions/{versionId}/content");
+        AddCorrelationId(request);
+        using var response = await _httpClient.SendAsync(request, cancellationToken);
 
-        await EnsureSuccessAsync(response, isContentRequest: true, cancellationToken);
+        EnsureSuccess(response, isContentRequest: true);
 
         var content = await response.Content.ReadFromJsonAsync<DocumentationContent>(JsonOptions, cancellationToken);
         if (content is null || string.IsNullOrWhiteSpace(content.Content))
@@ -48,27 +51,28 @@ public sealed class DocumentationApiClient : IDocumentationApiClient
         DocumentationIndexingStatus status,
         CancellationToken cancellationToken)
     {
-        using var response = await _httpClient.PutAsJsonAsync(
-            $"internal/documentations/{documentId}/versions/{versionId}/indexing-status",
-            new UpdateIndexingStatusRequest(status),
-            JsonOptions,
-            cancellationToken);
+        using var request = new HttpRequestMessage(
+            HttpMethod.Put,
+            $"internal/documentations/{documentId}/versions/{versionId}/indexing-status")
+        {
+            Content = JsonContent.Create(new UpdateIndexingStatusRequest(status), options: JsonOptions)
+        };
+        AddCorrelationId(request);
+        using var response = await _httpClient.SendAsync(request, cancellationToken);
 
-        await EnsureSuccessAsync(response, isContentRequest: false, cancellationToken);
+        EnsureSuccess(response, isContentRequest: false);
     }
 
-    private static async Task EnsureSuccessAsync(
+    private static void EnsureSuccess(
         HttpResponseMessage response,
-        bool isContentRequest,
-        CancellationToken cancellationToken)
+        bool isContentRequest)
     {
         if (response.IsSuccessStatusCode)
         {
             return;
         }
 
-        var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
-        var message = $"Documentation API returned {(int)response.StatusCode} ({response.ReasonPhrase}): {responseBody}";
+        var message = $"Documentation API returned HTTP {(int)response.StatusCode}.";
 
         if (response.StatusCode != HttpStatusCode.TooManyRequests &&
             (isContentRequest || (int)response.StatusCode is >= 400 and < 500))
@@ -77,6 +81,15 @@ public sealed class DocumentationApiClient : IDocumentationApiClient
         }
 
         throw new HttpRequestException(message, null, response.StatusCode);
+    }
+
+    private static void AddCorrelationId(HttpRequestMessage request)
+    {
+        var correlationId = Activity.Current?.GetBaggageItem("CorrelationId");
+        if (correlationId is not null)
+        {
+            request.Headers.TryAddWithoutValidation("X-Correlation-ID", correlationId);
+        }
     }
 
     private sealed record UpdateIndexingStatusRequest(DocumentationIndexingStatus Status);

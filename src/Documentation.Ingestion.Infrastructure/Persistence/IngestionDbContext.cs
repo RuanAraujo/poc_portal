@@ -41,7 +41,7 @@ public sealed class IngestionDbContext : DbContext
             .HasConversion(
                 embedding => new Vector(embedding),
                 vector => vector.ToArray())
-            .HasColumnType("vector(1024)")
+            .HasColumnType("vector(768)")
             .IsRequired();
         embeddingProperty.Metadata.SetValueComparer(new ValueComparer<float[]>(
             (left, right) => left != null && right != null && left.SequenceEqual(right),

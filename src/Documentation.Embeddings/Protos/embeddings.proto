@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package documentation.embeddings;
+option csharp_namespace = "Documentation.Embeddings.Grpc";
+
+service EmbeddingService {
+  rpc EmbedQuery(EmbedRequest) returns (EmbedResponse);
+  rpc EmbedDocument(EmbedRequest) returns (EmbedResponse);
+}
+
+message EmbedRequest { string text = 1; }
+message EmbedResponse { repeated float embedding = 1; }
