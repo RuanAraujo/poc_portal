@@ -1,0 +1,407 @@
+{
+  "DocumentationPortal.sln": {
+    "mtime": 1786409125.1254816,
+    "ast_hash": "4e28fd407e27254f20ab05cdbc5bc7c9",
+    "semantic_hash": ""
+  },
+  "scripts/smoke.sh": {
+    "mtime": 1786410151.883343,
+    "ast_hash": "87ec7d07a23d9663074f2b8b95da6476",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/app.py": {
+    "mtime": 1786409841.2388701,
+    "ast_hash": "ed526ad42cf8d3f4dd160a40561c0092",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/test_app.py": {
+    "mtime": 1786410313.6358361,
+    "ast_hash": "a0eaa2bef360c1cb523d6614db1ae120",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Api/Contracts/DocumentationRequests.cs": {
+    "mtime": 1785976971.6072152,
+    "ast_hash": "fb2ba1fb21dea6d6182b13ae11a6252e",
+    "semantic_hash": "fb2ba1fb21dea6d6182b13ae11a6252e"
+  },
+  "src/Documentation.Api/Contracts/DocumentationResponses.cs": {
+    "mtime": 1785976971.7555456,
+    "ast_hash": "71e891d010bae08f82ecdb66b8e45d7b",
+    "semantic_hash": "71e891d010bae08f82ecdb66b8e45d7b"
+  },
+  "src/Documentation.Api/Controllers/DocumentationsController.cs": {
+    "mtime": 1785976972.0022984,
+    "ast_hash": "2d7a3f7768f0269df47642dc4a4f8a87",
+    "semantic_hash": "2d7a3f7768f0269df47642dc4a4f8a87"
+  },
+  "src/Documentation.Api/Controllers/InternalDocumentationsController.cs": {
+    "mtime": 1785976972.149225,
+    "ast_hash": "b263fb9ad8cac6ef7e3c0512d3cd2661",
+    "semantic_hash": "b263fb9ad8cac6ef7e3c0512d3cd2661"
+  },
+  "src/Documentation.Api/Documentation.Api.csproj": {
+    "mtime": 1785976971.358658,
+    "ast_hash": "61322d7968494020afc38459b2c7eb38",
+    "semantic_hash": "61322d7968494020afc38459b2c7eb38"
+  },
+  "src/Documentation.Api/Program.cs": {
+    "mtime": 1785976981.35467,
+    "ast_hash": "626bdfd273b7e638b7338d6837efcaea",
+    "semantic_hash": "626bdfd273b7e638b7338d6837efcaea"
+  },
+  "src/Documentation.Api/Properties/launchSettings.json": {
+    "mtime": 1785976972.7460883,
+    "ast_hash": "0ab12e9dae3f11b30724e0cd8bd3645e",
+    "semantic_hash": "0ab12e9dae3f11b30724e0cd8bd3645e"
+  },
+  "src/Documentation.Application/Abstractions/Messaging/IDocumentationEventPublisher.cs": {
+    "mtime": 1785976830.2817874,
+    "ast_hash": "fb543bc87f27d6923dc8fad3d7b5d2ed",
+    "semantic_hash": "fb543bc87f27d6923dc8fad3d7b5d2ed"
+  },
+  "src/Documentation.Application/Abstractions/Persistence/IApiDocumentationRepository.cs": {
+    "mtime": 1785976830.5276444,
+    "ast_hash": "936a0ed4482a554009361d2a77a91cfa",
+    "semantic_hash": "936a0ed4482a554009361d2a77a91cfa"
+  },
+  "src/Documentation.Application/Abstractions/Persistence/IDocumentationVersionRepository.cs": {
+    "mtime": 1785976830.6760893,
+    "ast_hash": "4e66fcf4d697e50d9dc1bebf6837d55c",
+    "semantic_hash": "4e66fcf4d697e50d9dc1bebf6837d55c"
+  },
+  "src/Documentation.Application/Abstractions/Persistence/IUnitOfWork.cs": {
+    "mtime": 1785976830.822372,
+    "ast_hash": "d056611c5246f4d54eb77590432a56ab",
+    "semantic_hash": "d056611c5246f4d54eb77590432a56ab"
+  },
+  "src/Documentation.Application/Documentation.Application.csproj": {
+    "mtime": 1785976830.034265,
+    "ast_hash": "30b19ef7456a141892ba303f4851d156",
+    "semantic_hash": "30b19ef7456a141892ba303f4851d156"
+  },
+  "src/Documentation.Application/Models/DocumentationModels.cs": {
+    "mtime": 1785976831.072566,
+    "ast_hash": "1cc4f9d2d77e4cd57dbc00c26fd05287",
+    "semantic_hash": "1cc4f9d2d77e4cd57dbc00c26fd05287"
+  },
+  "src/Documentation.Application/Services/DocumentationApplicationService.cs": {
+    "mtime": 1785976831.3323617,
+    "ast_hash": "50ba66b88d8255fadd7fd8b0dc0c922c",
+    "semantic_hash": "50ba66b88d8255fadd7fd8b0dc0c922c"
+  },
+  "src/Documentation.Contracts/Documentation.Contracts.csproj": {
+    "mtime": 1785976281.1698284,
+    "ast_hash": "4258e11a2b535b27f62d0cc8ecdeccc5",
+    "semantic_hash": "4258e11a2b535b27f62d0cc8ecdeccc5"
+  },
+  "src/Documentation.Contracts/DocumentationPublished.cs": {
+    "mtime": 1785976314.5121799,
+    "ast_hash": "24b68822bb2c48dd7745adaca62b4b81",
+    "semantic_hash": "24b68822bb2c48dd7745adaca62b4b81"
+  },
+  "src/Documentation.Contracts/RabbitMqTopology.cs": {
+    "mtime": 1785976314.661652,
+    "ast_hash": "7deaf81a162fa3f8c28d5b2f3c91c70e",
+    "semantic_hash": "7deaf81a162fa3f8c28d5b2f3c91c70e"
+  },
+  "src/Documentation.Domain/Documentation.Domain.csproj": {
+    "mtime": 1785976780.1862311,
+    "ast_hash": "19edc64557ac16fc308a8aaedcce1a2c",
+    "semantic_hash": "19edc64557ac16fc308a8aaedcce1a2c"
+  },
+  "src/Documentation.Domain/Entities/ApiDocumentation.cs": {
+    "mtime": 1785976780.432262,
+    "ast_hash": "e28e079265b445d6e5644fab02b5115e",
+    "semantic_hash": "e28e079265b445d6e5644fab02b5115e"
+  },
+  "src/Documentation.Domain/Entities/DocumentationVersion.cs": {
+    "mtime": 1785977232.7926865,
+    "ast_hash": "70902b852039b24d82afa760958c2744",
+    "semantic_hash": "70902b852039b24d82afa760958c2744"
+  },
+  "src/Documentation.Domain/Enums/DocumentationVersionStatus.cs": {
+    "mtime": 1785976780.8318207,
+    "ast_hash": "62988cb3d0897359e3ba1b75b7e163b9",
+    "semantic_hash": "62988cb3d0897359e3ba1b75b7e163b9"
+  },
+  "src/Documentation.Infrastructure/DependencyInjection.cs": {
+    "mtime": 1785976895.2320676,
+    "ast_hash": "cdd863731428f2db65f4c365654f3e8d",
+    "semantic_hash": "cdd863731428f2db65f4c365654f3e8d"
+  },
+  "src/Documentation.Infrastructure/Documentation.Infrastructure.csproj": {
+    "mtime": 1785976894.0423954,
+    "ast_hash": "f8862bda9ac1c762e6b79f389cf96923",
+    "semantic_hash": "f8862bda9ac1c762e6b79f389cf96923"
+  },
+  "src/Documentation.Infrastructure/Messaging/RabbitMqDocumentationEventPublisher.cs": {
+    "mtime": 1785977270.1544015,
+    "ast_hash": "ee353ff5f6ad384dbe8634c34d025604",
+    "semantic_hash": "ee353ff5f6ad384dbe8634c34d025604"
+  },
+  "src/Documentation.Infrastructure/Messaging/RabbitMqOptions.cs": {
+    "mtime": 1785976894.93236,
+    "ast_hash": "50b1a655d89bc4c4a6cc79d5795073dd",
+    "semantic_hash": "50b1a655d89bc4c4a6cc79d5795073dd"
+  },
+  "src/Documentation.Infrastructure/Persistence/DocumentationDbContext.cs": {
+    "mtime": 1785976894.290236,
+    "ast_hash": "eb47973360521f9422937c4c734b5c4f",
+    "semantic_hash": "eb47973360521f9422937c4c734b5c4f"
+  },
+  "src/Documentation.Infrastructure/Persistence/Repositories/ApiDocumentationRepository.cs": {
+    "mtime": 1785976894.536044,
+    "ast_hash": "d7716c3e9950eec0d0a71232f634eb06",
+    "semantic_hash": "d7716c3e9950eec0d0a71232f634eb06"
+  },
+  "src/Documentation.Infrastructure/Persistence/Repositories/DocumentationVersionRepository.cs": {
+    "mtime": 1785976894.685624,
+    "ast_hash": "7330ed7c2e75e15c188dd445d43810d2",
+    "semantic_hash": "7330ed7c2e75e15c188dd445d43810d2"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IChunkRepository.cs": {
+    "mtime": 1785976733.8655653,
+    "ast_hash": "9a3ad73214ce75406034b216c6a7ddda",
+    "semantic_hash": "9a3ad73214ce75406034b216c6a7ddda"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IDocumentationApiClient.cs": {
+    "mtime": 1785976734.0329213,
+    "ast_hash": "d028ce8246e968c73e5f7d22d4330f9e",
+    "semantic_hash": "d028ce8246e968c73e5f7d22d4330f9e"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IEmbeddingGenerator.cs": {
+    "mtime": 1785976734.1814044,
+    "ast_hash": "83a7eabbdf707a06e018c33d5be14636",
+    "semantic_hash": "83a7eabbdf707a06e018c33d5be14636"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IIngestionUnitOfWork.cs": {
+    "mtime": 1785976734.3301973,
+    "ast_hash": "bbb996888ff9435ff8b23a478588efd0",
+    "semantic_hash": "bbb996888ff9435ff8b23a478588efd0"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IOpenApiChunker.cs": {
+    "mtime": 1785976734.4771762,
+    "ast_hash": "31b8395a71bcc13e0a3ac5eb4bb31023",
+    "semantic_hash": "31b8395a71bcc13e0a3ac5eb4bb31023"
+  },
+  "src/Documentation.Ingestion.Application/Abstractions/IProcessedIntegrationEventRepository.cs": {
+    "mtime": 1785976734.6274152,
+    "ast_hash": "2965ed439d39d38a518cb2595611ba0b",
+    "semantic_hash": "2965ed439d39d38a518cb2595611ba0b"
+  },
+  "src/Documentation.Ingestion.Application/Documentation.Ingestion.Application.csproj": {
+    "mtime": 1785976733.6141458,
+    "ast_hash": "d7e10b8fcca9a31d6d898c4ecfe330b5",
+    "semantic_hash": "d7e10b8fcca9a31d6d898c4ecfe330b5"
+  },
+  "src/Documentation.Ingestion.Application/Exceptions/PermanentIngestionException.cs": {
+    "mtime": 1785976734.874453,
+    "ast_hash": "ffa890b97bfe0b8ffc9726a13000c55e",
+    "semantic_hash": "ffa890b97bfe0b8ffc9726a13000c55e"
+  },
+  "src/Documentation.Ingestion.Application/Models/DocumentationContent.cs": {
+    "mtime": 1785976735.1336296,
+    "ast_hash": "d7eecee85bf8f6b9fe01962bf1a09988",
+    "semantic_hash": "d7eecee85bf8f6b9fe01962bf1a09988"
+  },
+  "src/Documentation.Ingestion.Application/Models/DocumentationIndexingStatus.cs": {
+    "mtime": 1785976735.2824752,
+    "ast_hash": "3e36b2ecfbfb3d574db33a4828b15b55",
+    "semantic_hash": "3e36b2ecfbfb3d574db33a4828b15b55"
+  },
+  "src/Documentation.Ingestion.Application/Models/IngestionOutcome.cs": {
+    "mtime": 1785976735.4324584,
+    "ast_hash": "5d99b759f84e4846606b5d3c279d12d0",
+    "semantic_hash": "5d99b759f84e4846606b5d3c279d12d0"
+  },
+  "src/Documentation.Ingestion.Application/Services/DocumentationIngestionService.cs": {
+    "mtime": 1786193841.0188963,
+    "ast_hash": "cb3ab429725d655225b0909aaf9b984a",
+    "semantic_hash": "cb3ab429725d655225b0909aaf9b984a"
+  },
+  "src/Documentation.Ingestion.Application/Services/IIngestionService.cs": {
+    "mtime": 1785976735.6829123,
+    "ast_hash": "d9581a9fa2951c53d6875351c3600b8b",
+    "semantic_hash": "d9581a9fa2951c53d6875351c3600b8b"
+  },
+  "src/Documentation.Ingestion.Domain/Documentation.Ingestion.Domain.csproj": {
+    "mtime": 1785976732.7243729,
+    "ast_hash": "19edc64557ac16fc308a8aaedcce1a2c",
+    "semantic_hash": "19edc64557ac16fc308a8aaedcce1a2c"
+  },
+  "src/Documentation.Ingestion.Domain/Entities/DocumentChunk.cs": {
+    "mtime": 1785976732.9721513,
+    "ast_hash": "0d2bfe5f9541a097c543e9a1b4c0c9b5",
+    "semantic_hash": "0d2bfe5f9541a097c543e9a1b4c0c9b5"
+  },
+  "src/Documentation.Ingestion.Domain/Entities/ProcessedIntegrationEvent.cs": {
+    "mtime": 1785976733.1216965,
+    "ast_hash": "f453a4a799154ec2c55105c1cbd8e77a",
+    "semantic_hash": "f453a4a799154ec2c55105c1cbd8e77a"
+  },
+  "src/Documentation.Ingestion.Domain/ValueObjects/DocumentChunkDraft.cs": {
+    "mtime": 1785976733.3662813,
+    "ast_hash": "95ad386230c95132583409ff14994241",
+    "semantic_hash": "95ad386230c95132583409ff14994241"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Clients/DocumentationApiClient.cs": {
+    "mtime": 1785976862.164631,
+    "ast_hash": "a739395bc0b7e973f41c4f3171ff95de",
+    "semantic_hash": "a739395bc0b7e973f41c4f3171ff95de"
+  },
+  "src/Documentation.Ingestion.Infrastructure/DependencyInjection.cs": {
+    "mtime": 1786409107.149918,
+    "ast_hash": "d520b0765490382fabb70923f80f0df2",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Ingestion.Infrastructure/Documentation.Ingestion.Infrastructure.csproj": {
+    "mtime": 1786410759.75169,
+    "ast_hash": "d3b9e494d86a42560e76fe6039d9bf33",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Ingestion.Infrastructure/Embeddings/EmbeddingGemmaEmbeddingGenerator.cs": {
+    "mtime": 1786409103.0372732,
+    "ast_hash": "2f0140a5e3447df95360f0f92eaeefe1",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Ingestion.Infrastructure/OpenApi/OpenApiChunker.cs": {
+    "mtime": 1785976862.8274806,
+    "ast_hash": "1a08dfd94d6fce8080b081206f97bd21",
+    "semantic_hash": "1a08dfd94d6fce8080b081206f97bd21"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Options/DocumentationApiOptions.cs": {
+    "mtime": 1785976860.6402419,
+    "ast_hash": "599e655e971c2c873d6946b6db752787",
+    "semantic_hash": "599e655e971c2c873d6946b6db752787"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Options/EmbeddingsOptions.cs": {
+    "mtime": 1786409103.2277265,
+    "ast_hash": "74497d11d3914bac664b863ffd7839bd",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Ingestion.Infrastructure/Options/RabbitMqOptions.cs": {
+    "mtime": 1785976860.9382086,
+    "ast_hash": "87bff73909040be513b5a10b3216bb28",
+    "semantic_hash": "87bff73909040be513b5a10b3216bb28"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Persistence/DatabaseInitializer.cs": {
+    "mtime": 1786195087.0591314,
+    "ast_hash": "b69ef52dfbd62a39a710126c8ee877a4",
+    "semantic_hash": "b69ef52dfbd62a39a710126c8ee877a4"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Persistence/IngestionDbContext.cs": {
+    "mtime": 1786193841.1781964,
+    "ast_hash": "baf585e1a4e9d7ad42aeb5502b7dde34",
+    "semantic_hash": "baf585e1a4e9d7ad42aeb5502b7dde34"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Persistence/IngestionUnitOfWork.cs": {
+    "mtime": 1785976861.768978,
+    "ast_hash": "9a9c88f50c5dd84ac0776adc86a59bd1",
+    "semantic_hash": "9a9c88f50c5dd84ac0776adc86a59bd1"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Persistence/Repositories/ChunkRepository.cs": {
+    "mtime": 1785976861.4320943,
+    "ast_hash": "da8c931003ad0b5fe6e55c65f5f64244",
+    "semantic_hash": "da8c931003ad0b5fe6e55c65f5f64244"
+  },
+  "src/Documentation.Ingestion.Infrastructure/Persistence/Repositories/ProcessedIntegrationEventRepository.cs": {
+    "mtime": 1785976861.5820975,
+    "ast_hash": "94787245d5a4e4b371f85d20467dfd0e",
+    "semantic_hash": "94787245d5a4e4b371f85d20467dfd0e"
+  },
+  "src/Documentation.Ingestion.Worker/DatabaseInitializationHostedService.cs": {
+    "mtime": 1785976938.3663273,
+    "ast_hash": "3ec9c2b42c5fa4209475f13f992371f7",
+    "semantic_hash": "3ec9c2b42c5fa4209475f13f992371f7"
+  },
+  "src/Documentation.Ingestion.Worker/Documentation.Ingestion.Worker.csproj": {
+    "mtime": 1785976938.0698922,
+    "ast_hash": "aa6e8a33ab487f1d03a4b8d8fe9a0360",
+    "semantic_hash": "aa6e8a33ab487f1d03a4b8d8fe9a0360"
+  },
+  "src/Documentation.Ingestion.Worker/Program.cs": {
+    "mtime": 1785976938.2176845,
+    "ast_hash": "00158214be466651d48960d339baaf02",
+    "semantic_hash": "00158214be466651d48960d339baaf02"
+  },
+  "src/Documentation.Ingestion.Worker/RabbitMqIngestionWorker.cs": {
+    "mtime": 1785976938.5165222,
+    "ast_hash": "e26d945c4df2368d49153bd4203389be",
+    "semantic_hash": "e26d945c4df2368d49153bd4203389be"
+  },
+  "compose.yaml": {
+    "mtime": 1786409878.5967264,
+    "ast_hash": "d20daaa47a5d8f91ab619ad50f5540de",
+    "semantic_hash": ""
+  },
+  "docs/specs/documentation-api.md": {
+    "mtime": 1785976468.5199974,
+    "ast_hash": "9f7702bb0634dc88e73df7c10e6970dd",
+    "semantic_hash": "9f7702bb0634dc88e73df7c10e6970dd"
+  },
+  "docs/specs/documentation-ingestion.md": {
+    "mtime": 1786409165.1878383,
+    "ast_hash": "54f0236676f2339b255fab08c871ad47",
+    "semantic_hash": ""
+  },
+  "docs/specs/local-infrastructure.md": {
+    "mtime": 1786409878.7207696,
+    "ast_hash": "2eef213f121994cbbb8df0a5588efeb3",
+    "semantic_hash": ""
+  },
+  "docs/specs/repository-contracts.md": {
+    "mtime": 1785976315.5511546,
+    "ast_hash": "1cff105a4607e59834c2fe923531d3e8",
+    "semantic_hash": "1cff105a4607e59834c2fe923531d3e8"
+  },
+  "src/Documentation.Agent/requirements.txt": {
+    "mtime": 1786409700.0114963,
+    "ast_hash": "a6edbe36f0bd9524016cfa468b44fc8c",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Embeddings/Documentation.Embeddings.csproj": {
+    "mtime": 1786410759.68438,
+    "ast_hash": "8c648a761318e7401905d5dace01a9a5",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Embeddings/Program.cs": {
+    "mtime": 1786410068.1760614,
+    "ast_hash": "b2222ff068818ae63d3642b990dc7bf1",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1786316113.6060457,
+    "ast_hash": "6a47d64fcc136324ca395065a707ef76",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1786410354.0876846,
+    "ast_hash": "eb6fb83b832cb2f3bf7376ea91cb803f",
+    "semantic_hash": ""
+  },
+  "docs/diagrams/diagrama_completo_docs.png": {
+    "mtime": 1786199039.5240345,
+    "ast_hash": "e4887add184b6264983b7a536c50d473",
+    "semantic_hash": ""
+  },
+  "docs/diagrams/fluxograma_ingestao.png": {
+    "mtime": 1785983556.6502092,
+    "ast_hash": "445aa60a8784aedb98cb0c535c4e459a",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/documentation/__init__.py": {
+    "mtime": 1786409313.7543912,
+    "ast_hash": "f7be392ae3ef71d3f239423e4f295fb0",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/documentation/embeddings_pb2.py": {
+    "mtime": 1786409377.4785373,
+    "ast_hash": "f86aaf83e165e46c4d49ddefb9085a0a",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/documentation/embeddings_pb2_grpc.py": {
+    "mtime": 1786409313.960203,
+    "ast_hash": "e761a3e8b92974634848198bde0c609b",
+    "semantic_hash": ""
+  }
+}
