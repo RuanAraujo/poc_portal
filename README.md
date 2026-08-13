@@ -6,8 +6,9 @@ Prova de conceito em .NET 10 e Python para cadastro de especificações OpenAPI,
 
 - `Documentation.Api`: cadastro e versionamento das documentações.
 - `Documentation.Ingestion.Worker`: chunking e geração de embeddings.
-- `Documentation.Agent`: EmbeddingGemma local, busca pgvector e agentes LangChain/FastAPI.
-- Ollama nativo: execução com Metal do `qwen3:4b` usado pelos agentes.
+- `Documentation.Embeddings`: EmbeddingGemma local via gRPC.
+- `Documentation.Agent`: busca pgvector e agentes LangChain/FastAPI.
+- NVIDIA NIM: modelos de chat OpenAI-compatible usados pelos agentes.
 - `Documentation.Contracts`: contrato compartilhado da mensageria.
 - PostgreSQL 17 com pgvector e RabbitMQ Management via Docker Compose.
 
@@ -15,14 +16,14 @@ As decisões de cada sistema estão em [`docs/specs`](docs/specs).
 
 ## Executar localmente
 
-Pré-requisitos: Docker Desktop, Docker Compose, Ollama para macOS e acesso ao modelo
-[`google/embeddinggemma-300m`](https://huggingface.co/google/embeddinggemma-300m).
-Aceite a licença do modelo no Hugging Face e informe um token de leitura em `HF_TOKEN`.
+Pré-requisitos: Docker Desktop, Docker Compose e uma chave NVIDIA NIM. O serviço
+baixa a versão ONNX fp32 do
+[`google/embeddinggemma-300m`](https://huggingface.co/onnx-community/embeddinggemma-300m-ONNX)
+no primeiro startup; observe os termos da licença Gemma.
 
 ```bash
 cp .env.example .env
-# preencha HF_TOKEN; o chat e os embeddings rodam localmente
-ollama pull qwen3:4b
+# preencha LLM_API_KEY com a chave NVIDIA
 docker compose up --build -d
 docker compose ps
 ```
@@ -38,7 +39,7 @@ Serviços:
 
 Credenciais locais padrão: `documentation_user` / `documentation_password`.
 
-Execute `./scripts/smoke.sh` para cadastrar uma OpenAPI pequena e consultar o status. O processamento normalmente muda de `pendingIndexing` para `available` em poucos segundos.
+Execute `./scripts/smoke.sh` para cadastrar uma OpenAPI pequena, aguardar `available`, validar os vetores de 768 dimensões e consultar o Agent.
 
 Para conferir os vetores:
 
@@ -51,10 +52,9 @@ docker compose exec -T postgres psql \
 
 ## Embeddings
 
-O `google/embeddinggemma-300m` roda localmente em CPU no container do agente e
-gera vetores normalizados de 768 dimensões. Não há API paga para embeddings. O
-token do Hugging Face é usado somente para baixar os pesos; o volume
-`huggingface-cache` os preserva entre reinicializações.
+O `google/embeddinggemma-300m` roda via ONNX Runtime, em CPU, no serviço de
+embeddings exposto internamente por gRPC. Ele gera vetores normalizados de 768
+dimensões sem API paga; o volume `huggingface-cache` preserva os pesos.
 
 Se uma instalação existente ainda tiver `vector(1024)`, o worker remove os
 vetores incompatíveis, altera a coluna para `vector(768)` e marca as versões
@@ -63,11 +63,9 @@ os vetores.
 
 ## Agente de integração
 
-O chat é stateless e usa o `qwen3:4b` no Ollama nativo para o supervisor e o
-especialista. O agente em Docker acessa o host por
-`http://host.docker.internal:11434/v1`. A inferência usa Metal no Apple Silicon;
-não há chave nem API paga. Mantenha o aplicativo Ollama aberto antes de iniciar
-o chat.
+O chat é stateless e usa os modelos NVIDIA NIM configurados em `AGENT_MODEL` e
+`AGENT_FALLBACK_MODEL` para o supervisor e o especialista. Informe
+`LLM_API_KEY` antes de iniciar o chat.
 
 ```bash
 curl --fail-with-body http://localhost:8090/api/agents/chat \
@@ -89,4 +87,4 @@ docker compose down
 ```
 
 `docker compose down -v` também apaga o cache do EmbeddingGemma e força um novo
-download na próxima inicialização. Os modelos do Ollama nativo não são afetados.
+download na próxima inicialização.

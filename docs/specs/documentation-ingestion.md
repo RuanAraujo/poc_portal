@@ -42,7 +42,7 @@ DLQ e confirma a mensagem original.
 5. Fazer `PUT .../indexing-status` com `Indexing`.
 6. Criar um chunk geral e um chunk para cada operação HTTP encontrada nos paths
    do OpenAPI JSON ou YAML.
-7. Solicitar ao serviço local EmbeddingGemma embeddings normalizados de 768
+7. Solicitar ao serviço local EmbeddingGemma, via gRPC `EmbedDocument`, embeddings normalizados de 768
    dimensões e substituir os chunks da versão numa transação, junto do registro
    de idempotência.
 8. Fazer callback `Available` e confirmar a mensagem.
@@ -95,9 +95,10 @@ uma republicação de outra mensagem para a mesma versão não duplica vetores.
 
 ## Embeddings
 
-`IEmbeddingGenerator` define 768 dimensões. Sua implementação chama
-`POST /internal/embeddings` no `Documentation.Agent`, que executa
-`google/embeddinggemma-300m` localmente com `encode_document` e normalização.
+`IEmbeddingGenerator` define 768 dimensões. Sua implementação chama o serviço
+gRPC `EmbeddingService/EmbedDocument` no `Documentation.Embeddings`, que executa
+`google/embeddinggemma-300m` localmente com normalização. `InvalidArgument` é
+permanente; os demais erros gRPC são transitórios e seguem o retry RabbitMQ.
 Não há provider externo ou cobrança por embedding.
 
 ## Configuração
@@ -111,7 +112,7 @@ Não há provider externo ou cobrança por embedding.
 | `RabbitMq:Password` | `guest` | Senha RabbitMQ |
 | `RabbitMq:VirtualHost` | `/` | Virtual host RabbitMQ |
 | `DocumentationApi:BaseUrl` | `http://localhost:8080` | Base da API interna |
-| `Embeddings:BaseUrl` | `http://localhost:8090` | Serviço local EmbeddingGemma |
+| `Embeddings:BaseUrl` | `http://localhost:8080` | Serviço gRPC local EmbeddingGemma |
 | `Embeddings:Dimensions` | `768` | Deve permanecer 768 nesta POC |
 
 ## Inicialização local

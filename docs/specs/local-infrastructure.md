@@ -3,8 +3,8 @@
 ## Objetivo
 
 Disponibilizar o ambiente local da POC por meio de Docker Compose, com PostgreSQL
-17 + pgvector, RabbitMQ Management, a API de documentação, o agente Python e o
-worker de ingestão. O ambiente deve funcionar em máquinas ARM64 e AMD64 que suportem as
+17 + pgvector, RabbitMQ Management, a API de documentação, o serviço de embeddings,
+o agente Python e o worker de ingestão. O ambiente deve funcionar em máquinas ARM64 e AMD64 que suportem as
 imagens oficiais utilizadas.
 
 ## Serviços
@@ -14,7 +14,8 @@ imagens oficiais utilizadas.
 | `postgres` | `pgvector/pgvector:pg17` | `5432` | Banco `documentation_portal`, extensão `vector` e schemas da POC. |
 | `rabbitmq` | `rabbitmq:4-management` | `5672`, `15672` | Broker AMQP e painel de gerenciamento local. |
 | `documentation-api` | `src/Documentation.Api/Dockerfile` | `8080` | API HTTP e Swagger local. |
-| `documentation-agent` | `src/Documentation.Agent/Dockerfile` | `8090` | EmbeddingGemma local, busca pgvector e agentes LangChain. |
+| `documentation-embeddings` | `src/Documentation.Embeddings/Dockerfile` | nenhuma | EmbeddingGemma gRPC interno (`8080`) e health (`8081`). |
+| `documentation-agent` | `src/Documentation.Agent/Dockerfile` | `8090` | Busca pgvector e agentes LangChain. |
 | `documentation-ingestion` | `src/Documentation.Ingestion.Worker/Dockerfile` | nenhuma | Consumo de eventos e persistência dos vetores. |
 
 ## Estado e inicialização
@@ -22,7 +23,7 @@ imagens oficiais utilizadas.
 - Os dados do PostgreSQL ficam no volume nomeado `postgres-data`.
 - Os dados do RabbitMQ ficam no volume nomeado `rabbitmq-data`.
 - Os pesos do EmbeddingGemma ficam no volume nomeado `huggingface-cache`.
-- O modelo de chat roda no Ollama nativo do host e não ocupa volumes Docker.
+- Os modelos de chat são acessados no NVIDIA NIM e não ocupam volumes Docker.
 - Na primeira criação do volume do PostgreSQL, `infra/postgres/init.sql` habilita
   a extensão `vector` e cria os schemas `documentation` e `ingestion`.
 - O script é idempotente e pode ser executado manualmente em um banco já criado.
@@ -42,10 +43,11 @@ Variáveis compartilhadas que os containers recebem:
 | `ConnectionStrings__Postgres`, `ConnectionStrings__DocumentationDb` | String de conexão Npgsql para `documentation_portal`; o segundo nome é o alias adotado pela API. |
 | `RabbitMq__Host`, `RabbitMq__HostName`, `RabbitMq__Port`, `RabbitMq__UserName`, `RabbitMq__Password`, `RabbitMq__VirtualHost` | Conexão com o RabbitMQ; `HostName` é o alias adotado pela API. |
 | `DocumentationApi__BaseUrl` | URL interna usada pelo worker: `http://documentation-api:8080`. |
-| `Embeddings__BaseUrl` | URL interna do agente: `http://documentation-agent:8080`. |
-| `EMBEDDING_MODEL`, `EMBEDDING_DIMENSIONS` | `google/embeddinggemma-300m` e 768 dimensões. |
-| `HF_TOKEN` | Token de leitura usado apenas para baixar os pesos após aceitar a licença Gemma. |
-| `LLM_API_KEY`, `LLM_BASE_URL`, `AGENT_MODEL`, `LLM_MAX_TOKENS` | Endpoint OpenAI-compatible do Ollama nativo via `host.docker.internal`, chave local ignorada, modelo e limite da resposta. |
+| `Embeddings__BaseUrl` | URL gRPC interna: `http://documentation-embeddings:8080`. |
+| `EMBEDDING_DIMENSIONS` | Dimensão fixa dos vetores persistidos: `768`. |
+| `MODEL_DIR` | Cache do modelo ONNX no serviço de embeddings: `/models/huggingface`. |
+| `LLM_API_KEY`, `LLM_BASE_URL`, `AGENT_MODEL`, `AGENT_FALLBACK_MODEL`, `LLM_MAX_TOKENS` | NVIDIA NIM OpenAI-compatible, chave, modelo principal, fallback e limite da resposta. |
+| `EMBEDDING_GRPC_ADDRESS` | Destino gRPC usado pelo agente: `documentation-embeddings:8080`. |
 
 ## Saúde e ordem de inicialização
 
@@ -53,8 +55,9 @@ Variáveis compartilhadas que os containers recebem:
 - RabbitMQ: `rabbitmq-diagnostics -q ping`.
 - API: healthcheck HTTP em `/health` executado dentro do container.
 - A API inicia após PostgreSQL e RabbitMQ ficarem saudáveis.
-- O agente inicia após PostgreSQL e fica saudável quando o EmbeddingGemma está carregado.
-- O worker inicia após PostgreSQL, RabbitMQ, API e agente ficarem saudáveis.
+- O serviço de embeddings fica saudável após carregar o EmbeddingGemma.
+- O agente inicia após PostgreSQL e o serviço de embeddings ficarem saudáveis.
+- O worker inicia após PostgreSQL, RabbitMQ, API e embeddings ficarem saudáveis.
 
 O endpoint `/health` deve ser provido pelo projeto da API. Enquanto ele não
 existir, o healthcheck da API naturalmente impedirá o worker de iniciar, o que
@@ -91,7 +94,7 @@ docker compose down -v
 - Não há TLS, autenticação externa, secrets manager, monitoramento ou backup.
 - Usuários e senhas locais são configuráveis por `.env`; não use estes valores
   fora do ambiente de desenvolvimento.
-- O primeiro startup do agente requer acesso ao Hugging Face e aceite prévio da
-  licença Gemma. A inferência posterior ocorre localmente, sem API paga.
-- O Ollama deve estar aberto no host antes do uso do chat. No Apple Silicon, a
-  execução nativa usa Metal; o healthcheck do agente não depende do chat.
+- O primeiro startup do serviço de embeddings baixa o artefato ONNX fixado no
+  código a partir do Hugging Face. A inferência posterior é local e sem API paga.
+- O uso do modelo deve respeitar a licença Gemma.
+- O chat requer `LLM_API_KEY`; ela não deve ser versionada.
