@@ -4,6 +4,7 @@ using Documentation.Application.Models;
 using Documentation.Contracts;
 using Documentation.Domain.Entities;
 using Documentation.Domain.Enums;
+using Microsoft.Extensions.Logging;
 
 namespace Documentation.Application.Services;
 
@@ -11,12 +12,21 @@ public sealed class DocumentationApplicationService(
     IApiDocumentationRepository documentationRepository,
     IDocumentationVersionRepository versionRepository,
     IUnitOfWork unitOfWork,
-    IDocumentationEventPublisher eventPublisher)
+    IDocumentationEventPublisher eventPublisher,
+    ILogger<DocumentationApplicationService> logger)
 {
     public async Task<PublishAttemptResult> CreateAndPublishAsync(
         CreateDocumentationCommand command,
         CancellationToken cancellationToken = default)
     {
+        logger.LogInformation(
+            "Creating documentation version {Version} for API {ApiId} in {Environment} as {Format} with {ContentLength} characters",
+            command.Version,
+            command.ApiId,
+            command.Environment,
+            command.Format,
+            command.Content.Length);
+
         var documentation = await documentationRepository
             .GetByApiIdAsync(command.ApiId, cancellationToken);
 
@@ -32,6 +42,11 @@ public sealed class DocumentationApplicationService(
 
         if (await versionRepository.ExistsAsync(documentation.Id, command.Version, command.Environment, cancellationToken))
         {
+            logger.LogWarning(
+                "Documentation version already exists for document {DocumentId}, version {Version}, environment {Environment}",
+                documentation.Id,
+                command.Version,
+                command.Environment);
             return new PublishAttemptResult(PublishAttemptResultKind.Conflict, documentation.Id);
         }
 
@@ -47,6 +62,13 @@ public sealed class DocumentationApplicationService(
         versionRepository.Add(documentationVersion);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
+        logger.LogInformation(
+            "Documentation version persisted for document {DocumentId}, version {VersionId}, step {Step}, outcome {Outcome}",
+            documentation.Id,
+            documentationVersion.Id,
+            "Persisted",
+            "Succeeded");
+
         return await PublishVersionAsync(documentation, documentationVersion, cancellationToken);
     }
 
@@ -55,16 +77,32 @@ public sealed class DocumentationApplicationService(
         Guid versionId,
         CancellationToken cancellationToken = default)
     {
+        logger.LogInformation(
+            "Republishing documentation version for document {DocumentId}, version {VersionId}",
+            documentId,
+            versionId);
+
         var documentation = await documentationRepository.GetByIdAsync(documentId, cancellationToken);
         var documentationVersion = await versionRepository.GetByIdAsync(documentId, versionId, cancellationToken);
 
         if (documentation is null || documentationVersion is null)
         {
+            logger.LogWarning(
+                "Documentation version was not found for republish: document {DocumentId}, version {VersionId}",
+                documentId,
+                versionId);
             return new PublishAttemptResult(PublishAttemptResultKind.NotFound);
         }
 
         documentationVersion.MarkPublishing();
         await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        logger.LogInformation(
+            "Documentation version status updated for document {DocumentId}, version {VersionId}, status {Status}, step {Step}",
+            documentId,
+            versionId,
+            documentationVersion.Status,
+            "RepublishRequested");
 
         return await PublishVersionAsync(documentation, documentationVersion, cancellationToken);
     }
@@ -91,8 +129,18 @@ public sealed class DocumentationApplicationService(
 
         if (documentation is null || documentationVersion is null)
         {
+            logger.LogWarning(
+                "Documentation content was not found for document {DocumentId}, version {VersionId}",
+                documentId,
+                versionId);
             return null;
         }
+
+        logger.LogInformation(
+            "Documentation content loaded for document {DocumentId}, version {VersionId}, content length {ContentLength}",
+            documentId,
+            versionId,
+            documentationVersion.Content.Length);
 
         return new DocumentationContent(
             documentId,
@@ -115,17 +163,34 @@ public sealed class DocumentationApplicationService(
             and not DocumentationVersionStatus.Available
             and not DocumentationVersionStatus.IndexingFailed)
         {
+            logger.LogWarning(
+                "Rejected indexing status {Status} for document {DocumentId}, version {VersionId}",
+                status,
+                documentId,
+                versionId);
             return false;
         }
 
         var documentationVersion = await versionRepository.GetByIdAsync(documentId, versionId, cancellationToken);
         if (documentationVersion is null)
         {
+            logger.LogWarning(
+                "Documentation version was not found for indexing status update: document {DocumentId}, version {VersionId}",
+                documentId,
+                versionId);
             return false;
         }
 
         documentationVersion.UpdateIndexingStatus(status, DateTimeOffset.UtcNow, error);
         await unitOfWork.SaveChangesAsync(cancellationToken);
+
+        logger.LogInformation(
+            "Indexing status updated for document {DocumentId}, version {VersionId}, status {Status}, step {Step}, outcome {Outcome}",
+            documentId,
+            versionId,
+            status,
+            "IndexingStatusUpdated",
+            "Succeeded");
         return true;
     }
 
@@ -144,11 +209,26 @@ public sealed class DocumentationApplicationService(
             documentationVersion.Environment,
             DateTimeOffset.UtcNow);
 
+        logger.LogInformation(
+            "Publishing documentation event {EventId} for document {DocumentId}, version {VersionId}, step {Step}",
+            integrationEvent.EventId,
+            documentation.Id,
+            documentationVersion.Id,
+            "Publish");
+
         try
         {
             await eventPublisher.PublishAsync(integrationEvent, cancellationToken);
             documentationVersion.MarkPendingIndexing(DateTimeOffset.UtcNow);
             await unitOfWork.SaveChangesAsync(cancellationToken);
+
+            logger.LogInformation(
+                "Documentation event {EventId} processed for document {DocumentId}, version {VersionId}, status {Status}, outcome {Outcome}",
+                integrationEvent.EventId,
+                documentation.Id,
+                documentationVersion.Id,
+                documentationVersion.Status,
+                "Succeeded");
 
             return new PublishAttemptResult(
                 PublishAttemptResultKind.Accepted,
@@ -158,6 +238,15 @@ public sealed class DocumentationApplicationService(
         }
         catch (Exception exception)
         {
+            logger.LogError(
+                exception,
+                "Documentation event {EventId} failed for document {DocumentId}, version {VersionId}, step {Step}, outcome {Outcome}",
+                integrationEvent.EventId,
+                documentation.Id,
+                documentationVersion.Id,
+                "Publish",
+                "Failed");
+
             documentationVersion.MarkPublishFailed(exception.Message);
             await unitOfWork.SaveChangesAsync(cancellationToken);
 

@@ -1,52 +1,48 @@
-using System.Net;
-using System.Net.Http.Json;
-using System.Text.Json;
+using System.Diagnostics;
+using Documentation.Embeddings.Grpc;
 using Documentation.Ingestion.Application.Abstractions;
 using Documentation.Ingestion.Application.Exceptions;
+using Grpc.Core;
 
 namespace Documentation.Ingestion.Infrastructure.Embeddings;
 
-public sealed class EmbeddingGemmaEmbeddingGenerator(HttpClient httpClient) : IEmbeddingGenerator
+public sealed class EmbeddingGemmaEmbeddingGenerator(
+    EmbeddingService.EmbeddingServiceClient client) : IEmbeddingGenerator
 {
     public const int RequiredDimensions = 768;
-
-    private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
 
     public int Dimensions => RequiredDimensions;
 
     public async Task<float[]> GenerateAsync(string content, CancellationToken cancellationToken)
     {
-        using var response = await httpClient.PostAsJsonAsync(
-            "internal/embeddings",
-            new EmbeddingRequest(content),
-            JsonOptions,
-            cancellationToken);
-
-        if (!response.IsSuccessStatusCode)
+        try
         {
-            var responseBody = await response.Content.ReadAsStringAsync(cancellationToken);
-            var message = $"EmbeddingGemma service returned {(int)response.StatusCode} ({response.ReasonPhrase}): {responseBody}";
+            var correlationId = Activity.Current?.GetBaggageItem("CorrelationId");
+            Metadata? headers = correlationId is null
+                ? null
+                : new Metadata { { "x-correlation-id", correlationId } };
+            var response = await client.EmbedDocumentAsync(
+                new EmbedRequest { Text = content },
+                headers: headers,
+                deadline: DateTime.UtcNow.AddSeconds(100),
+                cancellationToken: cancellationToken);
 
-            if (response.StatusCode != HttpStatusCode.TooManyRequests &&
-                (int)response.StatusCode is >= 400 and < 500)
+            if (response.Embedding.Count != RequiredDimensions)
             {
-                throw new PermanentIngestionException(message);
+                throw new PermanentIngestionException(
+                    $"EmbeddingGemma must return exactly {RequiredDimensions} dimensions.");
             }
 
-            throw new HttpRequestException(message, null, response.StatusCode);
+            return response.Embedding.ToArray();
         }
-
-        var result = await response.Content.ReadFromJsonAsync<EmbeddingResponse>(JsonOptions, cancellationToken);
-        if (result is null || result.Dimensions != RequiredDimensions || result.Embedding.Length != RequiredDimensions)
+        catch (RpcException exception) when (exception.StatusCode == StatusCode.InvalidArgument)
         {
-            throw new PermanentIngestionException(
-                $"EmbeddingGemma must return exactly {RequiredDimensions} dimensions.");
+            throw new PermanentIngestionException("EmbeddingGemma rejected the document.");
         }
-
-        return result.Embedding;
+        catch (RpcException exception)
+        {
+            throw new InvalidOperationException(
+                $"EmbeddingGemma failed with gRPC status {exception.StatusCode}.");
+        }
     }
-
-    private sealed record EmbeddingRequest(string Text);
-
-    private sealed record EmbeddingResponse(float[] Embedding, int Dimensions);
 }

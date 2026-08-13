@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Text.Json;
 using Documentation.Contracts;
 using Documentation.Ingestion.Application.Exceptions;
@@ -12,6 +13,7 @@ namespace Documentation.Ingestion.Worker;
 public sealed class RabbitMqIngestionWorker : BackgroundService
 {
     private const string RetryCountHeader = "x-retry-count";
+    private const string CorrelationIdBaggageKey = "CorrelationId";
 
     private static readonly JsonSerializerOptions JsonOptions = new(JsonSerializerDefaults.Web);
 
@@ -101,7 +103,20 @@ public sealed class RabbitMqIngestionWorker : BackgroundService
         BasicDeliverEventArgs delivery,
         CancellationToken stoppingToken)
     {
+        var correlationId = GetCorrelationId(delivery.BasicProperties.CorrelationId);
+        var startedAt = Stopwatch.GetTimestamp();
+        using var activity = new Activity("documentation.ingestion.process")
+            .SetIdFormat(ActivityIdFormat.W3C)
+            .Start();
+        activity.AddBaggage(CorrelationIdBaggageKey, correlationId);
+        using var correlationScope = _logger.BeginScope("CorrelationId:{CorrelationId}", correlationId);
+
         DocumentationPublished? integrationEvent = null;
+        IDisposable? eventScope = null;
+
+        _logger.LogInformation(
+            "Documentation message received. Retry: {RetryCount}.",
+            GetRetryCount(delivery.BasicProperties.Headers));
 
         try
         {
@@ -116,47 +131,67 @@ public sealed class RabbitMqIngestionWorker : BackgroundService
                 throw new PermanentIngestionException($"Unsupported event type '{integrationEvent.EventType}'.");
             }
 
+            eventScope = _logger.BeginScope(
+                "EventId:{EventId} DocumentId:{DocumentId} VersionId:{VersionId}",
+                integrationEvent.EventId,
+                integrationEvent.DocumentId,
+                integrationEvent.VersionId);
+            _logger.LogInformation("Documentation event validated. Step: {Step}.", "Validated");
+
             await using var scope = _scopeFactory.CreateAsyncScope();
             var ingestionService = scope.ServiceProvider.GetRequiredService<IIngestionService>();
             var outcome = await ingestionService.ProcessAsync(integrationEvent, stoppingToken);
 
             channel.BasicAck(delivery.DeliveryTag, multiple: false);
             _logger.LogInformation(
-                "Documentation event {EventId} acknowledged. Already processed: {AlreadyProcessed}; chunks: {ChunkCount}.",
-                integrationEvent.EventId,
-                outcome.WasAlreadyProcessed,
-                outcome.ChunkCount);
+                "Documentation event acknowledged. Outcome: {Outcome}; chunks: {ChunkCount}; elapsed: {ElapsedMs} ms.",
+                outcome.WasAlreadyProcessed ? "AlreadyProcessed" : "Processed",
+                outcome.ChunkCount,
+                ElapsedMilliseconds(startedAt));
         }
         catch (PermanentIngestionException exception)
         {
             await MarkFailedBestEffortAsync(integrationEvent, stoppingToken);
-            PublishToDeadLetter(channel, delivery, exception.Message);
+            PublishToDeadLetter(channel, delivery, correlationId);
+            _logger.LogWarning(
+                "Documentation message published to the DLQ after a permanent failure. Outcome: {Outcome}; failure type: {FailureType}; elapsed: {ElapsedMs} ms.",
+                "DeadLettered",
+                exception.GetType().Name,
+                ElapsedMilliseconds(startedAt));
             channel.BasicAck(delivery.DeliveryTag, multiple: false);
-            _logger.LogWarning(exception, "Documentation message moved to the DLQ due to a permanent failure.");
+            _logger.LogInformation("Documentation message acknowledged after DLQ confirmation.");
         }
         catch (Exception exception) when (!stoppingToken.IsCancellationRequested)
         {
             var currentRetryCount = GetRetryCount(delivery.BasicProperties.Headers);
             if (currentRetryCount < _options.MaxRetryCount)
             {
-                PublishToRetry(channel, delivery, currentRetryCount + 1, exception.Message);
-                channel.BasicAck(delivery.DeliveryTag, multiple: false);
+                PublishToRetry(channel, delivery, currentRetryCount + 1, correlationId);
                 _logger.LogWarning(
                     exception,
-                    "Documentation message will retry in {DelaySeconds}s. Retry {RetryCount}/{MaxRetryCount}.",
-                    _options.RetryDelaySeconds,
+                    "Documentation message published to retry. Retry: {RetryCount}/{MaxRetryCount}; delay: {DelaySeconds}s; elapsed: {ElapsedMs} ms.",
                     currentRetryCount + 1,
-                    _options.MaxRetryCount);
+                    _options.MaxRetryCount,
+                    _options.RetryDelaySeconds,
+                    ElapsedMilliseconds(startedAt));
+                channel.BasicAck(delivery.DeliveryTag, multiple: false);
+                _logger.LogInformation("Documentation message acknowledged after retry confirmation.");
                 return;
             }
 
             await MarkFailedBestEffortAsync(integrationEvent, stoppingToken);
-            PublishToDeadLetter(channel, delivery, exception.Message);
-            channel.BasicAck(delivery.DeliveryTag, multiple: false);
+            PublishToDeadLetter(channel, delivery, correlationId);
             _logger.LogError(
                 exception,
-                "Documentation message exhausted retries and was moved to the DLQ. Retry count: {RetryCount}.",
-                currentRetryCount);
+                "Documentation message exhausted retries and was published to the DLQ. Retry count: {RetryCount}; elapsed: {ElapsedMs} ms.",
+                currentRetryCount,
+                ElapsedMilliseconds(startedAt));
+            channel.BasicAck(delivery.DeliveryTag, multiple: false);
+            _logger.LogInformation("Documentation message acknowledged after DLQ confirmation.");
+        }
+        finally
+        {
+            eventScope?.Dispose();
         }
     }
 
@@ -226,26 +261,26 @@ public sealed class RabbitMqIngestionWorker : BackgroundService
         IModel channel,
         BasicDeliverEventArgs delivery,
         int retryCount,
-        string errorMessage) =>
+        string correlationId) =>
         PublishCopy(
             channel,
             exchange: string.Empty,
             routingKey: RabbitMqTopology.RetryQueue,
             delivery,
             retryCount,
-            errorMessage);
+            correlationId);
 
     private void PublishToDeadLetter(
         IModel channel,
         BasicDeliverEventArgs delivery,
-        string errorMessage) =>
+        string correlationId) =>
         PublishCopy(
             channel,
             exchange: string.Empty,
             routingKey: RabbitMqTopology.DeadLetterQueue,
             delivery,
             GetRetryCount(delivery.BasicProperties.Headers),
-            errorMessage);
+            correlationId);
 
     private static void PublishCopy(
         IModel channel,
@@ -253,18 +288,17 @@ public sealed class RabbitMqIngestionWorker : BackgroundService
         string routingKey,
         BasicDeliverEventArgs delivery,
         int retryCount,
-        string errorMessage)
+        string correlationId)
     {
         var properties = channel.CreateBasicProperties();
         properties.Persistent = true;
         properties.ContentType = "application/json";
         properties.MessageId = delivery.BasicProperties.MessageId;
-        properties.CorrelationId = delivery.BasicProperties.CorrelationId;
+        properties.CorrelationId = correlationId;
         properties.Headers = delivery.BasicProperties.Headers is null
             ? new Dictionary<string, object>()
             : new Dictionary<string, object>(delivery.BasicProperties.Headers);
         properties.Headers[RetryCountHeader] = retryCount;
-        properties.Headers["x-ingestion-last-error"] = errorMessage;
 
         channel.BasicPublish(exchange, routingKey, mandatory: true, basicProperties: properties, body: delivery.Body);
         if (!channel.WaitForConfirms(TimeSpan.FromSeconds(5)))
@@ -290,4 +324,17 @@ public sealed class RabbitMqIngestionWorker : BackgroundService
             _ => 0
         };
     }
+
+    private static string GetCorrelationId(string? value) =>
+        value is { Length: > 0 and <= 128 }
+        && char.IsAsciiLetterOrDigit(value[0])
+        && value.All(character =>
+            character is >= 'a' and <= 'z' or
+                >= 'A' and <= 'Z' or
+                >= '0' and <= '9' or '-' or '_' or '.' or ':')
+            ? value
+            : Guid.NewGuid().ToString("N");
+
+    private static long ElapsedMilliseconds(long startedAt) =>
+        (long)Stopwatch.GetElapsedTime(startedAt).TotalMilliseconds;
 }

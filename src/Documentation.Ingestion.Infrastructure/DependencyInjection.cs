@@ -1,5 +1,6 @@
 using Documentation.Ingestion.Application.Abstractions;
 using Documentation.Ingestion.Application.Services;
+using Documentation.Embeddings.Grpc;
 using Documentation.Ingestion.Infrastructure.Clients;
 using Documentation.Ingestion.Infrastructure.Embeddings;
 using Documentation.Ingestion.Infrastructure.OpenApi;
@@ -57,10 +58,11 @@ public static class DependencyInjection
                 $"Embeddings:Dimensions must be {EmbeddingGemmaEmbeddingGenerator.RequiredDimensions} for this POC.");
         }
 
-        services.AddHttpClient<IEmbeddingGenerator, EmbeddingGemmaEmbeddingGenerator>(httpClient =>
+        services.AddGrpcClient<EmbeddingService.EmbeddingServiceClient>(options =>
         {
-            httpClient.BaseAddress = new Uri(EnsureTrailingSlash(embeddingOptions.BaseUrl));
+            options.Address = new Uri(embeddingOptions.BaseUrl);
         });
+        services.AddScoped<IEmbeddingGenerator, EmbeddingGemmaEmbeddingGenerator>();
 
         return services;
     }

@@ -76,24 +76,20 @@ services:
       context: .
       dockerfile: src/Documentation.Agent/Dockerfile
     environment:
-      HF_TOKEN: ${HF_TOKEN:-}
-      HF_HOME: /models/huggingface
-      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-google/embeddinggemma-300m}
-      EMBEDDING_DIMENSIONS: ${EMBEDDING_DIMENSIONS:-768}
-      LLM_API_KEY: ${LLM_API_KEY:-ollama}
-      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
-      AGENT_MODEL: ${AGENT_MODEL:-qwen3:4b}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://integrate.api.nvidia.com/v1}
+      AGENT_MODEL: ${AGENT_MODEL:-nvidia/nemotron-3-ultra-550b-a55b}
+      AGENT_FALLBACK_MODEL: ${AGENT_FALLBACK_MODEL:-nvidia/nemotron-3-super-120b-a12b}
       LLM_MAX_TOKENS: ${LLM_MAX_TOKENS:-512}
+      EMBEDDING_GRPC_ADDRESS: documentation-embeddings:8080
       DATABASE_DSN: >-
         host=postgres port=5432 dbname=${POSTGRES_DB:-documentation_portal} user=${POSTGRES_USER:-documentation_user} password=${POSTGRES_PASSWORD:-documentation_password}
     ports:
       - "${AGENT_PORT:-8090}:8080"
-    volumes:
-      - huggingface-cache:/models/huggingface
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
     depends_on:
       postgres:
+        condition: service_healthy
+      documentation-embeddings:
         condition: service_healthy
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=5)"]
@@ -101,6 +97,25 @@ services:
       timeout: 10s
       retries: 18
       start_period: 5m
+    restart: unless-stopped
+
+  documentation-embeddings:
+    build:
+      context: .
+      dockerfile: src/Documentation.Embeddings/Dockerfile
+    environment:
+      MODEL_DIR: /models/huggingface
+    expose:
+      - "8080"
+      - "8081"
+    volumes:
+      - huggingface-cache:/models/huggingface
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8081/health || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 18
+      start_period: 10m
     restart: unless-stopped
 
   documentation-ingestion:
@@ -117,7 +132,7 @@ services:
       RabbitMq__Password: ${RABBITMQ_DEFAULT_PASS:-documentation_password}
       RabbitMq__VirtualHost: ${RABBITMQ_DEFAULT_VHOST:-/}
       DocumentationApi__BaseUrl: http://documentation-api:8080
-      Embeddings__BaseUrl: http://documentation-agent:8080
+      Embeddings__BaseUrl: http://documentation-embeddings:8080
       Embeddings__Dimensions: ${EMBEDDING_DIMENSIONS:-768}
     depends_on:
       postgres:
@@ -126,7 +141,7 @@ services:
         condition: service_healthy
       documentation-api:
         condition: service_healthy
-      documentation-agent:
+      documentation-embeddings:
         condition: service_healthy
     restart: unless-stopped
 
