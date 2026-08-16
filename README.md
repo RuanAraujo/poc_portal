@@ -71,7 +71,8 @@ os vetores.
 
 O chat é stateless e usa os modelos NVIDIA NIM configurados em `AGENT_MODEL` e
 `AGENT_FALLBACK_MODEL` para o supervisor e o especialista. Informe
-`LLM_API_KEY` antes de iniciar o chat.
+`LLM_API_KEY` antes de iniciar o chat. A resposta de `POST /api/agents/chat` é
+transmitida progressivamente como `text/plain`.
 
 O serviço Python segue Clean Architecture: `domain` contém o modelo de
 conhecimento, `application` os casos de uso e ports, `interface_adapters` o
@@ -81,6 +82,7 @@ somente compõe as implementações.
 
 ```bash
 curl --fail-with-body http://localhost:8090/api/agents/chat \
+  --no-buffer \
   -H 'Content-Type: application/json' \
   --data '{"message":"Como integrar uma nova operacao nesta API?"}'
 ```

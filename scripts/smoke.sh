@@ -59,12 +59,19 @@ fi
 
 echo "Ingestion available with 768-dimensional vectors"
 chat_response=$(curl --fail-with-body --silent --show-error \
+  --no-buffer \
   -X POST "$agent_base_url/api/agents/chat" \
   -H 'Content-Type: application/json' \
   -H "X-Correlation-ID: $agent_correlation_id" \
   --dump-header "$headers_file" \
   --data-binary '{"message":"Qual endpoint da Smoke API verifica a saúde?"}')
 printf '%s\n' "$chat_response"
+
+content_type=$(awk 'tolower($1) == "content-type:" { gsub("\r", "", $2); value=$2 } END { print value }' "$headers_file")
+if [[ "$content_type" != text/plain* ]] || [ -z "$chat_response" ]; then
+  echo "Expected a non-empty text/plain agent stream, got '$content_type'" >&2
+  exit 1
+fi
 
 returned_correlation_id=$(awk 'tolower($1) == "x-correlation-id:" { gsub("\r", "", $2); value=$2 } END { print value }' "$headers_file")
 if [ "$returned_correlation_id" != "$agent_correlation_id" ]; then

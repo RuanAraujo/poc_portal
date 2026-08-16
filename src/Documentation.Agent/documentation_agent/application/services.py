@@ -1,4 +1,5 @@
 import asyncio
+from collections.abc import AsyncIterator
 from dataclasses import dataclass
 
 from documentation_agent.domain import KnowledgeChunk
@@ -29,5 +30,5 @@ class HealthUseCase:
 class ChatUseCase:
     agent: AgentGateway
 
-    async def execute(self, message: str) -> str:
-        return await self.agent.respond(message)
+    def execute(self, message: str) -> AsyncIterator[str]:
+        return self.agent.respond(message)
