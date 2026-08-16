@@ -73,6 +73,12 @@ O chat é stateless e usa os modelos NVIDIA NIM configurados em `AGENT_MODEL` e
 `AGENT_FALLBACK_MODEL` para o supervisor e o especialista. Informe
 `LLM_API_KEY` antes de iniciar o chat.
 
+O serviço Python segue Clean Architecture: `domain` contém o modelo de
+conhecimento, `application` os casos de uso e ports, `interface_adapters` o
+HTTP e observabilidade, e `infrastructure` gRPC, pgvector e os pacotes
+`agents`/`tools` do LangChain. As dependências apontam para dentro; `app.py`
+somente compõe as implementações.
+
 ```bash
 curl --fail-with-body http://localhost:8090/api/agents/chat \
   -H 'Content-Type: application/json' \
