@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786907385.4438407,
-    "ast_hash": "212ae45082517bfb875338db7f2a7d7d",
+    "mtime": 1786907322.4246964,
+    "ast_hash": "a897df6abf04b9d0f75cbc84d5e02bbe",
     "semantic_hash": ""
   },
   "docs/diagrams/diagrama_completo_docs.png": {
@@ -500,13 +500,18 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/agents/__init__.py": {
-    "mtime": 1786907385.274328,
-    "ast_hash": "80d60c5932de9a8b7e0c7281440d798a",
+    "mtime": 1786907285.0520928,
+    "ast_hash": "96a3d70b7ddeec5a991707702f1dddc2",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py": {
-    "mtime": 1786907385.331559,
-    "ast_hash": "bb51cecf20c30c4e74ab953642d421cd",
+    "mtime": 1786907303.2006285,
+    "ast_hash": "1ded2db256a89a82cb3546793809791b",
+    "semantic_hash": ""
+  },
+  "src/Documentation.Agent/documentation_agent/infrastructure/agents/text.py": {
+    "mtime": 1786907285.1073544,
+    "ast_hash": "699ac4814f054e89ce23fab1e68fe2a9",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/__init__.py": {
@@ -515,18 +520,13 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py": {
-    "mtime": 1786907385.387878,
-    "ast_hash": "5c74184fd08fd1db7e7079146fdfd7d0",
+    "mtime": 1786907285.313992,
+    "ast_hash": "404f1b8ab78b07590e72a7842a32d6ed",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/search_system_knowledge.py": {
     "mtime": 1786907285.2572954,
     "ast_hash": "708af99f09cc67e253f876d8879d2e8b",
-    "semantic_hash": ""
-  },
-  "src/Documentation.Agent/documentation_agent/infrastructure/text.py": {
-    "mtime": 1786907385.2192695,
-    "ast_hash": "699ac4814f054e89ce23fab1e68fe2a9",
     "semantic_hash": ""
   }
 }

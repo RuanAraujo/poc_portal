@@ -207,7 +207,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_init",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": "documentation/__init__.py"
     },
     {
@@ -218,7 +218,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_init_rationale_1",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": "generated protobuf client package."
     },
     {
@@ -229,7 +229,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": "embeddings_pb2.py"
     },
     {
@@ -240,7 +240,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": "embeddings_pb2_grpc.py"
     },
     {
@@ -253,7 +253,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc_embeddingservicestub",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": "embeddingservicestub"
     },
     {
@@ -265,7 +265,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc_embeddingservicestub_init",
       "community": 58,
-      "community_name": "embeddings_pb2_grpc.py",
+      "community_name": "embeddings.py",
       "norm_label": ".__init__()"
     },
     {
@@ -768,6 +768,40 @@
       "norm_label": ".respond()"
     },
     {
+      "label": "text.py",
+      "file_type": "code",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/text.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_documentation_agent_documentation_agent_infrastructure_agents_text",
+      "community": 5,
+      "community_name": "test_app.py",
+      "norm_label": "text.py"
+    },
+    {
+      "label": "message_text()",
+      "file_type": "code",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/text.py",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "community": 5,
+      "community_name": "test_app.py",
+      "norm_label": "message_text()"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_documentation_agent_documentation_agent_infrastructure_agents_text_py_any",
+      "community": 5,
+      "community_name": "test_app.py",
+      "norm_label": "any"
+    },
+    {
       "label": "config.py",
       "file_type": "code",
       "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/config.py",
@@ -810,8 +844,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_agent_infrastructure_embeddings",
-      "community": 5,
-      "community_name": "test_app.py",
+      "community": 58,
+      "community_name": "embeddings.py",
       "norm_label": "embeddings.py"
     },
     {
@@ -958,40 +992,6 @@
       "community": 5,
       "community_name": "test_app.py",
       "norm_label": ".search()"
-    },
-    {
-      "label": "text.py",
-      "file_type": "code",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/text.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_documentation_agent_documentation_agent_infrastructure_text",
-      "community": 5,
-      "community_name": "test_app.py",
-      "norm_label": "text.py"
-    },
-    {
-      "label": "message_text()",
-      "file_type": "code",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/text.py",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "community": 5,
-      "community_name": "test_app.py",
-      "norm_label": "message_text()"
-    },
-    {
-      "label": "Any",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "src_documentation_agent_documentation_agent_infrastructure_text_py_any",
-      "community": 5,
-      "community_name": "test_app.py",
-      "norm_label": "any"
     },
     {
       "label": "tools/__init__.py",
@@ -1584,8 +1584,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:84d1cc40eabce447",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.api.contracts"
     },
     {
@@ -1633,8 +1633,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationresponses",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationresponses.cs"
     },
     {
@@ -1652,8 +1652,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationresponses_documentation_api_contracts_publishdocumentationresponse",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "publishdocumentationresponse"
     },
     {
@@ -1663,8 +1663,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationscontroller.cs"
     },
     {
@@ -1679,8 +1679,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:59dc7424a289f308",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.api.controllers"
     },
     {
@@ -1909,8 +1909,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "internaldocumentationscontroller.cs"
     },
     {
@@ -2097,7 +2097,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_program",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.api/program.cs"
     },
     {
@@ -2113,7 +2113,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_program_program",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "program"
     },
     {
@@ -2244,8 +2244,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "idocumentationeventpublisher.cs"
     },
     {
@@ -2261,7 +2261,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:17ea9daed367f6e0",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.application.abstractions.messaging"
     },
     {
@@ -2279,8 +2279,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_documentation_application_abstractions_messaging_idocumentationeventpublisher",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "idocumentationeventpublisher"
     },
     {
@@ -2297,8 +2297,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_documentation_application_abstractions_messaging_idocumentationeventpublisher_publishasync",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": ".publishasync()"
     },
     {
@@ -2308,8 +2308,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_cs_cancellationtoken",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2319,8 +2319,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_cs_task",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "task"
     },
     {
@@ -2346,7 +2346,7 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:1b865510c69f01cf",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.application.abstractions.persistence"
     },
@@ -2492,8 +2492,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 14,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "idocumentationversionrepository.cs"
     },
     {
@@ -2511,8 +2511,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_documentation_application_abstractions_persistence_idocumentationversionrepository",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": "idocumentationversionrepository"
     },
     {
@@ -2529,8 +2529,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_documentation_application_abstractions_persistence_idocumentationversionrepository_getbyidasync",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": ".getbyidasync()"
     },
     {
@@ -2540,8 +2540,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_cs_guid",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": "guid"
     },
     {
@@ -2551,8 +2551,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_cs_cancellationtoken",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2562,8 +2562,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_cs_task",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": "task"
     },
     {
@@ -2580,8 +2580,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_documentation_application_abstractions_persistence_idocumentationversionrepository_existsasync",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": ".existsasync()"
     },
     {
@@ -2598,8 +2598,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_idocumentationversionrepository_documentation_application_abstractions_persistence_idocumentationversionrepository_add",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 4,
+      "community_name": "IDocumentationVersionRepository",
       "norm_label": ".add()"
     },
     {
@@ -2609,7 +2609,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "iunitofwork.cs"
     },
@@ -2628,7 +2628,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_documentation_application_abstractions_persistence_iunitofwork",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "iunitofwork"
     },
@@ -2646,7 +2646,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_documentation_application_abstractions_persistence_iunitofwork_savechangesasync",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": ".savechangesasync()"
     },
@@ -2657,7 +2657,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_cs_cancellationtoken",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "cancellationtoken"
     },
@@ -2668,7 +2668,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_cs_task",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "task"
     },
@@ -2713,7 +2713,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "documentationmodels.cs"
     },
     {
@@ -2728,8 +2728,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:511da7cdcdfe6e3d",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.application.models"
     },
     {
@@ -2748,7 +2748,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_createdocumentationcommand",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "createdocumentationcommand"
     },
     {
@@ -2767,7 +2767,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationversionsummary",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "documentationversionsummary"
     },
     {
@@ -2786,7 +2786,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationsummary",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "documentationsummary"
     },
     {
@@ -2805,7 +2805,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationcontent",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "documentationcontent"
     },
     {
@@ -2824,7 +2824,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_publishattemptresultkind",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "publishattemptresultkind"
     },
     {
@@ -2843,7 +2843,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_publishattemptresult",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "publishattemptresult"
     },
     {
@@ -2853,8 +2853,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationapplicationservice.cs"
     },
     {
@@ -2869,8 +2869,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:b1f86901a7364c9c",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.application.services"
     },
     {
@@ -2889,7 +2889,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "documentationapplicationservice"
     },
     {
@@ -2907,7 +2907,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_createandpublishasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".createandpublishasync()"
     },
     {
@@ -2918,7 +2918,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_cancellationtoken",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2929,7 +2929,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_task",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "task"
     },
     {
@@ -2947,7 +2947,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_republishasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".republishasync()"
     },
     {
@@ -2958,7 +2958,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_guid",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "guid"
     },
     {
@@ -2976,7 +2976,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_listasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".listasync()"
     },
     {
@@ -2987,7 +2987,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_ireadonlylist",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": "ireadonlylist"
     },
     {
@@ -3005,7 +3005,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_getasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".getasync()"
     },
     {
@@ -3023,7 +3023,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_getcontentasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".getcontentasync()"
     },
     {
@@ -3041,7 +3041,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_updateindexingstatusasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".updateindexingstatusasync()"
     },
     {
@@ -3059,7 +3059,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_publishversionasync",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".publishversionasync()"
     },
     {
@@ -3077,7 +3077,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_tosummary",
       "community": 0,
-      "community_name": "DocumentationVersion",
+      "community_name": ".PublishVersionAsync",
       "norm_label": ".tosummary()"
     },
     {
@@ -3109,8 +3109,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "documentationpublished.cs"
     },
     {
@@ -3125,8 +3125,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:8c00ae021c55d25d",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "documentation.contracts"
     },
     {
@@ -3144,8 +3144,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished_documentation_contracts_documentationpublished",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "documentationpublished"
     },
     {
@@ -3155,8 +3155,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished_cs_string",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "string"
     },
     {
@@ -3166,8 +3166,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "rabbitmqtopology.cs"
     },
     {
@@ -3185,8 +3185,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology_documentation_contracts_rabbitmqtopology",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "rabbitmqtopology"
     },
     {
@@ -3196,8 +3196,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology_cs_string",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "string"
     },
     {
@@ -3229,7 +3229,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_apidocumentation",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "apidocumentation.cs"
     },
@@ -3245,7 +3245,7 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:6cb67d840213368e",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.domain.entities"
     },
@@ -3326,8 +3326,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 1,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationversion.cs"
     },
     {
@@ -3345,7 +3345,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_documentation_domain_entities_documentationversion",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": "documentationversion"
     },
@@ -3356,7 +3356,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_cs_guid",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": "guid"
     },
@@ -3367,7 +3367,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_cs_datetimeoffset",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": "datetimeoffset"
     },
@@ -3385,7 +3385,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_documentation_domain_entities_documentationversion_markpublishing",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": ".markpublishing()"
     },
@@ -3403,7 +3403,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_documentation_domain_entities_documentationversion_markpendingindexing",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": ".markpendingindexing()"
     },
@@ -3421,7 +3421,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_documentation_domain_entities_documentationversion_markpublishfailed",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": ".markpublishfailed()"
     },
@@ -3439,7 +3439,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion_documentation_domain_entities_documentationversion_updateindexingstatus",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": ".updateindexingstatus()"
     },
@@ -3450,7 +3450,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_domain_enums_documentationversionstatus",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": "documentationversionstatus.cs"
     },
@@ -3466,8 +3466,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:8aab5598a86c186e",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 7,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.domain.enums"
     },
     {
@@ -3485,7 +3485,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_domain_enums_documentationversionstatus_documentation_domain_enums_documentationversionstatus",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": "documentationversionstatus"
     },
@@ -4187,7 +4187,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.infrastructure/dependencyinjection.cs"
     },
     {
@@ -4203,7 +4203,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:11fee406829891ad",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.infrastructure"
     },
     {
@@ -4222,7 +4222,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_documentation_infrastructure_dependencyinjection",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "dependencyinjection"
     },
     {
@@ -4240,7 +4240,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_documentation_infrastructure_dependencyinjection_adddocumentationinfrastructure",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": ".adddocumentationinfrastructure()"
     },
     {
@@ -4251,7 +4251,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_cs_iservicecollection",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "iservicecollection"
     },
     {
@@ -4262,7 +4262,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_cs_iconfiguration",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "iconfiguration"
     },
     {
@@ -4350,7 +4350,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "rabbitmqdocumentationeventpublisher.cs"
     },
     {
@@ -4366,7 +4366,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:0f11fc2726971d78",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.infrastructure.messaging"
     },
     {
@@ -4384,8 +4384,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "rabbitmqdocumentationeventpublisher"
     },
     {
@@ -4395,8 +4395,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_jsonserializeroptions",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "jsonserializeroptions"
     },
     {
@@ -4406,8 +4406,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "connectionfactory",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "connectionfactory"
     },
     {
@@ -4424,8 +4424,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_publishasync",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": ".publishasync()"
     },
     {
@@ -4435,8 +4435,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_cancellationtoken",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "cancellationtoken"
     },
     {
@@ -4446,8 +4446,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_task",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "task"
     },
     {
@@ -4458,7 +4458,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "messaging/rabbitmqoptions.cs"
     },
     {
@@ -4477,7 +4477,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_documentation_infrastructure_messaging_rabbitmqoptions",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "rabbitmqoptions"
     },
     {
@@ -4495,7 +4495,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_documentation_infrastructure_messaging_rabbitmqoptions_fromconfiguration",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": ".fromconfiguration()"
     },
     {
@@ -4506,7 +4506,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_cs_iconfiguration",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "iconfiguration"
     },
     {
@@ -4516,7 +4516,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentationdbcontext.cs"
     },
@@ -4533,7 +4533,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:614c39e7bc688c8f",
       "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community_name": "Documentation.Infrastructure/DependencyInjection.cs",
       "norm_label": "documentation.infrastructure.persistence"
     },
     {
@@ -4551,8 +4551,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_documentation_infrastructure_persistence_documentationdbcontext",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 57,
+      "community_name": "DocumentationDbContext",
       "norm_label": "documentationdbcontext"
     },
     {
@@ -4562,8 +4562,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "dbcontext",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 57,
+      "community_name": "DocumentationDbContext",
       "norm_label": "dbcontext"
     },
     {
@@ -4573,8 +4573,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_cs_dbset",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 57,
+      "community_name": "DocumentationDbContext",
       "norm_label": "dbset"
     },
     {
@@ -4591,8 +4591,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_documentation_infrastructure_persistence_documentationdbcontext_onmodelcreating",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 57,
+      "community_name": "DocumentationDbContext",
       "norm_label": ".onmodelcreating()"
     },
     {
@@ -4602,8 +4602,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_cs_modelbuilder",
-      "community": 56,
-      "community_name": "Documentation.Application.Abstractions.Persistence",
+      "community": 57,
+      "community_name": "DocumentationDbContext",
       "norm_label": "modelbuilder"
     },
     {
@@ -4613,7 +4613,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_apidocumentationrepository",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "apidocumentationrepository.cs"
     },
@@ -4629,7 +4629,7 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:c69dd418709f8078",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.infrastructure.persistence.repositories"
     },
@@ -4775,7 +4775,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository",
-      "community": 56,
+      "community": 14,
       "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentationversionrepository.cs"
     },
@@ -4794,8 +4794,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_documentation_infrastructure_persistence_repositories_documentationversionrepository",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": "documentationversionrepository"
     },
     {
@@ -4812,8 +4812,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_documentation_infrastructure_persistence_repositories_documentationversionrepository_getbyidasync",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": ".getbyidasync()"
     },
     {
@@ -4823,8 +4823,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_cs_guid",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": "guid"
     },
     {
@@ -4834,8 +4834,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_cs_cancellationtoken",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": "cancellationtoken"
     },
     {
@@ -4845,8 +4845,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_cs_task",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": "task"
     },
     {
@@ -4863,8 +4863,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_documentation_infrastructure_persistence_repositories_documentationversionrepository_existsasync",
-      "community": 0,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationVersionRepository",
       "norm_label": ".existsasync()"
     },
     {
@@ -4881,7 +4881,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository_documentation_infrastructure_persistence_repositories_documentationversionrepository_add",
-      "community": 0,
+      "community": 1,
       "community_name": "DocumentationVersion",
       "norm_label": ".add()"
     },
@@ -4946,7 +4946,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_documentation_ingestion_application_abstractions_ichunkrepository_replaceforversionasync",
       "community": 59,
-      "community_name": "DocumentChunk",
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": ".replaceforversionasync()"
     },
     {
@@ -4957,7 +4957,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_cs_guid",
       "community": 59,
-      "community_name": "DocumentChunk",
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "guid"
     },
     {
@@ -4968,7 +4968,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_cs_ireadonlycollection",
       "community": 59,
-      "community_name": "DocumentChunk",
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "ireadonlycollection"
     },
     {
@@ -4979,7 +4979,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_cs_cancellationtoken",
       "community": 59,
-      "community_name": "DocumentChunk",
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "cancellationtoken"
     },
     {
@@ -4990,7 +4990,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_cs_task",
       "community": 59,
-      "community_name": "DocumentChunk",
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "task"
     },
     {
@@ -5169,8 +5169,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iingestionunitofwork.cs"
     },
     {
@@ -5188,8 +5188,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_documentation_ingestion_application_abstractions_iingestionunitofwork",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iingestionunitofwork"
     },
     {
@@ -5206,8 +5206,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_documentation_ingestion_application_abstractions_iingestionunitofwork_executeintransactionasync",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".executeintransactionasync()"
     },
     {
@@ -5217,8 +5217,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_func",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "func"
     },
     {
@@ -5228,8 +5228,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_cancellationtoken",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "cancellationtoken"
     },
     {
@@ -5239,8 +5239,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_task",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "task"
     },
     {
@@ -5766,8 +5766,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "iingestionservice.cs"
     },
     {
@@ -5785,8 +5785,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "iingestionservice"
     },
     {
@@ -5803,8 +5803,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice_processasync",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": ".processasync()"
     },
     {
@@ -5814,8 +5814,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_cs_cancellationtoken",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "cancellationtoken"
     },
     {
@@ -5825,8 +5825,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_cs_task",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": "task"
     },
     {
@@ -5843,8 +5843,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice_markindexingfailedasync",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 19,
+      "community_name": "DocumentationPublished",
       "norm_label": ".markindexingfailedasync()"
     },
     {
@@ -5911,8 +5911,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_documentchunk_documentation_ingestion_domain_entities_documentchunk",
-      "community": 59,
-      "community_name": "DocumentChunk",
+      "community": 2,
+      "community_name": "IngestionDbContext",
       "norm_label": "documentchunk"
     },
     {
@@ -5922,8 +5922,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_documentchunk_cs_guid",
-      "community": 59,
-      "community_name": "DocumentChunk",
+      "community": 2,
+      "community_name": "IngestionDbContext",
       "norm_label": "guid"
     },
     {
@@ -5933,8 +5933,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_documentchunk_cs_datetimeoffset",
-      "community": 59,
-      "community_name": "DocumentChunk",
+      "community": 2,
+      "community_name": "IngestionDbContext",
       "norm_label": "datetimeoffset"
     },
     {
@@ -5951,8 +5951,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_documentchunk_documentation_ingestion_domain_entities_documentchunk_create",
-      "community": 59,
-      "community_name": "DocumentChunk",
+      "community": 2,
+      "community_name": "IngestionDbContext",
       "norm_label": ".create()"
     },
     {
@@ -5962,8 +5962,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_processedintegrationevent",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 60,
+      "community_name": "ProcessedIntegrationEvent",
       "norm_label": "processedintegrationevent.cs"
     },
     {
@@ -5981,8 +5981,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_processedintegrationevent_documentation_ingestion_domain_entities_processedintegrationevent",
-      "community": 2,
-      "community_name": "IngestionDbContext",
+      "community": 60,
+      "community_name": "ProcessedIntegrationEvent",
       "norm_label": "processedintegrationevent"
     },
     {
@@ -5992,8 +5992,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_processedintegrationevent_cs_guid",
-      "community": 2,
-      "community_name": "IngestionDbContext",
+      "community": 60,
+      "community_name": "ProcessedIntegrationEvent",
       "norm_label": "guid"
     },
     {
@@ -6003,8 +6003,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_processedintegrationevent_cs_datetimeoffset",
-      "community": 2,
-      "community_name": "IngestionDbContext",
+      "community": 60,
+      "community_name": "ProcessedIntegrationEvent",
       "norm_label": "datetimeoffset"
     },
     {
@@ -6021,8 +6021,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_processedintegrationevent_documentation_ingestion_domain_entities_processedintegrationevent_create",
-      "community": 2,
-      "community_name": "IngestionDbContext",
+      "community": 60,
+      "community_name": "ProcessedIntegrationEvent",
       "norm_label": ".create()"
     },
     {
@@ -7232,8 +7232,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "ingestionunitofwork.cs"
     },
     {
@@ -7251,8 +7251,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_documentation_ingestion_infrastructure_persistence_ingestionunitofwork",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "ingestionunitofwork"
     },
     {
@@ -7269,8 +7269,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_executeintransactionasync",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": ".executeintransactionasync()"
     },
     {
@@ -7280,8 +7280,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_cs_func",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "func"
     },
     {
@@ -7291,8 +7291,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_cs_cancellationtoken",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "cancellationtoken"
     },
     {
@@ -7302,8 +7302,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_cs_task",
-      "community": 1,
-      "community_name": ".ExecuteInTransactionAsync",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "task"
     },
     {
@@ -7377,8 +7377,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_replaceforversionasync",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 61,
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": ".replaceforversionasync()"
     },
     {
@@ -7388,8 +7388,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_cs_guid",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 61,
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "guid"
     },
     {
@@ -7399,8 +7399,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_cs_ireadonlycollection",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 61,
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "ireadonlycollection"
     },
     {
@@ -7410,8 +7410,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_cs_cancellationtoken",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 61,
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "cancellationtoken"
     },
     {
@@ -7421,8 +7421,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_cs_task",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Domain.Entities",
+      "community": 61,
+      "community_name": ".ReplaceForVersionAsync",
       "norm_label": "task"
     },
     {
@@ -7432,8 +7432,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_processedintegrationeventrepository",
-      "community": 20,
-      "community_name": "ProcessedIntegrationEventRepository",
+      "community": 48,
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "processedintegrationeventrepository.cs"
     },
     {
@@ -11554,7 +11554,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_documentation_agent_documentation_agent_infrastructure_agents_init",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text",
       "confidence_score": 1.0
     },
     {
@@ -11566,7 +11566,7 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_documentation_agent_documentation_agent_infrastructure_agents_init",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
       "confidence_score": 1.0
     },
     {
@@ -11597,6 +11597,30 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py",
       "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
@@ -11614,30 +11638,6 @@
       "_origin": "ast",
       "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway",
       "target": "src_documentation_agent_documentation_agent_infrastructure_config_settings",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
       "confidence_score": 1.0
     },
     {
@@ -11849,7 +11849,90 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_documentation_agent_documentation_agent_infrastructure_agents_gateway_langchainagentgateway_respond",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text"
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/text.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_text",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/agents/text.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_py_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist_create_consult_feature_integration_specialist",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/Documentation.Agent/test_app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_test_app",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/Documentation.Agent/test_app.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_documentation_agent_test_app_agenttests_test_message_text_hides_model_thinking",
+      "target": "src_documentation_agent_documentation_agent_infrastructure_agents_text_message_text"
     },
     {
       "relation": "contains",
@@ -12271,89 +12354,6 @@
       "source": "src_documentation_agent_documentation_agent_infrastructure_repositories_postgresknowledgerepository",
       "target": "src_documentation_agent_documentation_agent_infrastructure_repositories_postgresknowledgerepository_search",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/text.py",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_text",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/text.py",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_py_any",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_documentation_agent_infrastructure_tools_consult_feature_integration_specialist_create_consult_feature_integration_specialist",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/Documentation.Agent/test_app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_test_app",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/Documentation.Agent/test_app.py",
-      "source_location": "L96",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_documentation_agent_test_app_agenttests_test_message_text_hides_model_thinking",
-      "target": "src_documentation_agent_documentation_agent_infrastructure_text_message_text"
     },
     {
       "relation": "re_exports",
