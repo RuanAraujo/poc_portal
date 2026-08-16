@@ -5,7 +5,7 @@
     "semantic_hash": ""
   },
   "scripts/smoke.sh": {
-    "mtime": 1786909557.2355826,
+    "mtime": 1786914288.7401228,
     "ast_hash": "dd497b7e1479c1b7dd65a872ab2d8efb",
     "semantic_hash": ""
   },
@@ -15,7 +15,7 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/test_app.py": {
-    "mtime": 1786913118.2559676,
+    "mtime": 1786914288.7425036,
     "ast_hash": "19afb63d3995d7838bf263715bbb25a9",
     "semantic_hash": ""
   },
@@ -340,8 +340,8 @@
     "semantic_hash": ""
   },
   "docs/specs/documentation-ingestion.md": {
-    "mtime": 1786656645.1665976,
-    "ast_hash": "54f0236676f2339b255fab08c871ad47",
+    "mtime": 1786914736.9544466,
+    "ast_hash": "d90a5326d29b123a88af00110f5a74ea",
     "semantic_hash": ""
   },
   "docs/specs/local-infrastructure.md": {
@@ -375,7 +375,7 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786909557.1759493,
+    "mtime": 1786914288.73131,
     "ast_hash": "da36b165db74d60a75e666af6da6755c",
     "semantic_hash": ""
   },
@@ -405,7 +405,7 @@
     "semantic_hash": ""
   },
   "src/Documentation.Frontend/app.js": {
-    "mtime": 1786913082.0499024,
+    "mtime": 1786914288.7429838,
     "ast_hash": "1aeffe1db207010f1baeb459c158037f",
     "semantic_hash": ""
   },
@@ -420,7 +420,7 @@
     "semantic_hash": ""
   },
   "src/Documentation.Frontend/index.html": {
-    "mtime": 1786913124.84424,
+    "mtime": 1786914288.743415,
     "ast_hash": "c7f718899a6c2dee531ea2883dfd6da8",
     "semantic_hash": ""
   },
@@ -440,12 +440,12 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/ports.py": {
-    "mtime": 1786909626.2902954,
+    "mtime": 1786914288.74073,
     "ast_hash": "7c9777e05583fc639b8042ea63a9b7b6",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/services.py": {
-    "mtime": 1786909626.3506227,
+    "mtime": 1786914288.7411807,
     "ast_hash": "ee534406e08af7f4a914c0b6539cba44",
     "semantic_hash": ""
   },
@@ -485,7 +485,7 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/interface_adapters/http.py": {
-    "mtime": 1786913118.2010868,
+    "mtime": 1786914288.74203,
     "ast_hash": "43b807401a6471fc20f43bd1be0c0a4d",
     "semantic_hash": ""
   },
@@ -505,7 +505,7 @@
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py": {
-    "mtime": 1786913081.9270048,
+    "mtime": 1786914288.741611,
     "ast_hash": "3177ccecb3bd026236896b2ae006e468",
     "semantic_hash": ""
   },
