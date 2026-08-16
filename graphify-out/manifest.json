@@ -5,18 +5,18 @@
     "semantic_hash": ""
   },
   "scripts/smoke.sh": {
-    "mtime": 1786656645.1762362,
-    "ast_hash": "aa015d90ed649d91f776633a391fc162",
+    "mtime": 1786909557.2355826,
+    "ast_hash": "dd497b7e1479c1b7dd65a872ab2d8efb",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/app.py": {
-    "mtime": 1786905632.5522144,
+    "mtime": 1786908709.091451,
     "ast_hash": "3738fa9369dc29c5580225d816ff5714",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/test_app.py": {
-    "mtime": 1786907317.0054827,
-    "ast_hash": "615ecc0ebb67589c0c6122935398d5cc",
+    "mtime": 1786913118.2559676,
+    "ast_hash": "19afb63d3995d7838bf263715bbb25a9",
     "semantic_hash": ""
   },
   "src/Documentation.Api/Contracts/DocumentationRequests.cs": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786907385.4438407,
-    "ast_hash": "212ae45082517bfb875338db7f2a7d7d",
+    "mtime": 1786909557.1759493,
+    "ast_hash": "da36b165db74d60a75e666af6da6755c",
     "semantic_hash": ""
   },
   "docs/diagrams/diagrama_completo_docs.png": {
@@ -405,8 +405,8 @@
     "semantic_hash": ""
   },
   "src/Documentation.Frontend/app.js": {
-    "mtime": 1786904371.510953,
-    "ast_hash": "7ca35a27a865fc9b46077866e0c232ad",
+    "mtime": 1786913082.0499024,
+    "ast_hash": "1aeffe1db207010f1baeb459c158037f",
     "semantic_hash": ""
   },
   "src/Documentation.Frontend/helpers.js": {
@@ -420,112 +420,112 @@
     "semantic_hash": ""
   },
   "src/Documentation.Frontend/index.html": {
-    "mtime": 1786904371.5115206,
-    "ast_hash": "8f293c092b07bc3fe22712484ccfc306",
+    "mtime": 1786913124.84424,
+    "ast_hash": "c7f718899a6c2dee531ea2883dfd6da8",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/__init__.py": {
-    "mtime": 1786905253.9099717,
+    "mtime": 1786908709.0923214,
     "ast_hash": "fdd7820ce7bd9f9a0f7fbb0d9d7a7645",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/__init__.py": {
-    "mtime": 1786905254.1638584,
+    "mtime": 1786908709.0924766,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/errors.py": {
-    "mtime": 1786905899.5132473,
+    "mtime": 1786908709.0930235,
     "ast_hash": "a90dad78127833e9332413e29da4f768",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/ports.py": {
-    "mtime": 1786905899.5729747,
-    "ast_hash": "104ec87f9108eb99003a6fa536997e76",
+    "mtime": 1786909626.2902954,
+    "ast_hash": "7c9777e05583fc639b8042ea63a9b7b6",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/application/services.py": {
-    "mtime": 1786905899.6314538,
-    "ast_hash": "fde92f16f036a1950c641c743a07b115",
+    "mtime": 1786909626.3506227,
+    "ast_hash": "ee534406e08af7f4a914c0b6539cba44",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/domain/__init__.py": {
-    "mtime": 1786905254.0079877,
+    "mtime": 1786908709.0944076,
     "ast_hash": "d8825c1981e44bbbdc788fde8cdaa095",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/domain/knowledge.py": {
-    "mtime": 1786905254.06645,
+    "mtime": 1786908709.094672,
     "ast_hash": "5ce288c1b3c88c2b72884ec495c0712c",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/__init__.py": {
-    "mtime": 1786905254.436319,
+    "mtime": 1786908709.0947917,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/config.py": {
-    "mtime": 1786905899.6903327,
+    "mtime": 1786908709.096209,
     "ast_hash": "fa119edfe70d6472a24275c19722d180",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/embeddings.py": {
-    "mtime": 1786905624.641899,
+    "mtime": 1786908709.0966747,
     "ast_hash": "95275355771533cbd571f7c7f2e873a6",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/repositories.py": {
-    "mtime": 1786905923.5032144,
+    "mtime": 1786908709.0973759,
     "ast_hash": "cda357d1ceed86c57900fa22fe801744",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/interface_adapters/__init__.py": {
-    "mtime": 1786905279.8741,
+    "mtime": 1786908709.0989974,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/interface_adapters/http.py": {
-    "mtime": 1786905923.562373,
-    "ast_hash": "d8a35471dea0f88c74db2b9cd4f54cbd",
+    "mtime": 1786913118.2010868,
+    "ast_hash": "43b807401a6471fc20f43bd1be0c0a4d",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/interface_adapters/observability.py": {
-    "mtime": 1786905650.911257,
+    "mtime": 1786908709.0996368,
     "ast_hash": "84b355c69da586f56fab60193f9bf57a",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/interface_adapters/web.py": {
-    "mtime": 1786905665.1612415,
+    "mtime": 1786908709.0999286,
     "ast_hash": "a40e37ca4aa0e59d18b6f6bd2b4748d1",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/agents/__init__.py": {
-    "mtime": 1786907385.274328,
+    "mtime": 1786908709.0953329,
     "ast_hash": "80d60c5932de9a8b7e0c7281440d798a",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/agents/gateway.py": {
-    "mtime": 1786907385.331559,
-    "ast_hash": "bb51cecf20c30c4e74ab953642d421cd",
+    "mtime": 1786913081.9270048,
+    "ast_hash": "3177ccecb3bd026236896b2ae006e468",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/__init__.py": {
-    "mtime": 1786907285.2011125,
+    "mtime": 1786908709.0983262,
     "ast_hash": "6ea87f31c8b18879189246e115df48c7",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/consult_feature_integration_specialist.py": {
-    "mtime": 1786907385.387878,
+    "mtime": 1786908709.0985615,
     "ast_hash": "5c74184fd08fd1db7e7079146fdfd7d0",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/tools/search_system_knowledge.py": {
-    "mtime": 1786907285.2572954,
+    "mtime": 1786908709.098813,
     "ast_hash": "708af99f09cc67e253f876d8879d2e8b",
     "semantic_hash": ""
   },
   "src/Documentation.Agent/documentation_agent/infrastructure/text.py": {
-    "mtime": 1786907385.2192695,
+    "mtime": 1786908709.0978656,
     "ast_hash": "699ac4814f054e89ce23fab1e68fe2a9",
     "semantic_hash": ""
   }

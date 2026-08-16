@@ -14,6 +14,7 @@ from langchain.agents.middleware.types import ModelRequest
 from documentation_agent.application.errors import AgentInvocationFailed, EmbeddingUnavailable, KnowledgeBaseUnavailable
 from documentation_agent.application.services import ChatUseCase, HealthUseCase, KnowledgeSearchUseCase
 from documentation_agent.infrastructure.agents import LangChainAgentGateway, message_text
+from documentation_agent.infrastructure.agents.gateway import ThoughtFilter
 from documentation_agent.infrastructure.config import Settings
 from documentation_agent.infrastructure.embeddings import EMBEDDING_GRPC_DEADLINE_SECONDS, GrpcEmbeddingGateway
 from documentation_agent.infrastructure.repositories import vector_literal
@@ -26,11 +27,12 @@ from documentation_agent.interface_adapters.web import add_web_concerns
 class FailingAgent:
     async def respond(self, _):
         raise AgentInvocationFailed() from RuntimeError("SECRET-PROMPT-MARKER")
+        yield ""
 
 
 class SuccessfulAgent:
     async def respond(self, _):
-        return "answer"
+        yield "answer"
 
 
 class HealthyEmbeddings:
@@ -120,11 +122,41 @@ class AgentTests(unittest.TestCase):
 
         gateway._supervisor()
 
-        options = dict(api_key="key", base_url="url", max_tokens=123, reasoning_effort="none")
+        options = dict(api_key="key", base_url="url", max_tokens=123, reasoning_effort="none", streaming=True)
         self.assertEqual(chat_openai.call_args_list, [call(model=settings.agent_model, **options), call(model=settings.agent_fallback_model, **options)])
         self.assertEqual(fallback_middleware.call_args_list, [call(fallback), call(fallback)])
         self.assertEqual(create_agent.call_args_list[0].kwargs["middleware"], [fallback_middleware.return_value])
         self.assertEqual(create_agent.call_args_list[1].kwargs["middleware"], [fallback_middleware.return_value])
+
+    def test_streams_only_final_supervisor_tokens_and_filters_fragmented_thinking(self):
+        async def events():
+            yield "messages", (SimpleNamespace(content="specialist"), {"langgraph_node": "feature_integration_agent"})
+            yield "messages", (SimpleNamespace(content="delegating"), {"langgraph_node": "model"})
+            yield "updates", {"tools": {"messages": [SimpleNamespace(name="consult_feature_integration_specialist")]}}
+            yield "messages", (SimpleNamespace(content="before<th"), {"langgraph_node": "model"})
+            yield "messages", (SimpleNamespace(content="ink>secret</think>after"), {"langgraph_node": "model"})
+            yield "messages", (SimpleNamespace(content=[{"type": "reasoning", "text": "private"}, {"type": "text", "text": " answer"}]), {"langgraph_node": "model"})
+
+        gateway = LangChainAgentGateway(Settings(), Mock(), Mock())
+        gateway.supervisor = SimpleNamespace(astream=lambda *_args, **_kwargs: events())
+
+        self.assertEqual(asyncio.run(self._collect(gateway.respond("question"))), "beforeafter answer")
+
+    def test_streams_direct_supervisor_answer_without_specialist(self):
+        async def events():
+            yield "messages", (SimpleNamespace(content="<think>private</thi"), {"langgraph_node": "model"})
+            yield "messages", (SimpleNamespace(content="nk>Olá!"), {"langgraph_node": "model"})
+            yield "updates", {"model": {"messages": [SimpleNamespace()]}}
+
+        gateway = LangChainAgentGateway(Settings(), Mock(), Mock())
+        gateway.supervisor = SimpleNamespace(astream=lambda *_args, **_kwargs: events())
+
+        self.assertEqual(asyncio.run(self._collect(gateway.respond("olá"))), "Olá!")
+
+    def test_thought_filter_drops_unclosed_thinking(self):
+        filter = ThoughtFilter()
+        self.assertEqual(filter.filter("answer<think>secret"), "answer")
+        self.assertEqual(filter.finish(), "")
 
     def test_extracted_search_tool_returns_dependency_errors(self):
         log = Mock()
@@ -146,6 +178,23 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(response.status_code, 502)
         self.assertEqual(response.json()["detail"], "Agent invocation failed.")
         self.assertNotIn("SECRET-PROMPT-MARKER", "\n".join(captured.output))
+
+    def test_chat_streams_plain_text_and_rejects_empty_response(self):
+        response = TestClient(make_test_app()).post("/api/agents/chat", json={"message": "hello"})
+
+        class EmptyAgent:
+            async def respond(self, _):
+                if False:
+                    yield ""
+
+        empty = TestClient(make_test_app(agent=EmptyAgent())).post("/api/agents/chat", json={"message": "hello"})
+        self.assertEqual((response.status_code, response.text), (200, "answer"))
+        self.assertEqual(response.headers["content-type"], "text/plain; charset=utf-8")
+        self.assertEqual((empty.status_code, empty.json()["detail"]), (502, "Agent invocation failed."))
+
+    @staticmethod
+    async def _collect(stream):
+        return "".join([chunk async for chunk in stream])
 
     def test_chat_cors_correlation_and_validation(self):
         client = TestClient(make_test_app())

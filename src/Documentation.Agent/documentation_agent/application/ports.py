@@ -1,3 +1,4 @@
+from collections.abc import AsyncIterator
 from typing import Protocol
 
 from documentation_agent.domain import KnowledgeChunk
@@ -20,4 +21,4 @@ class KnowledgeRepository(Protocol):
 
 
 class AgentGateway(Protocol):
-    async def respond(self, message: str) -> str: ...
+    def respond(self, message: str) -> AsyncIterator[str]: ...
