@@ -92,6 +92,28 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(response.status_code, 502)
         self.assertEqual(response.json()["detail"], "Agent invocation failed.")
 
+    def test_chat_cors_allows_only_the_portal_origin(self):
+        client = TestClient(app.app)
+        allowed = client.options(
+            "/api/agents/chat",
+            headers={
+                "Origin": "http://localhost:3000",
+                "Access-Control-Request-Method": "POST",
+            },
+        )
+        denied = client.options(
+            "/api/agents/chat",
+            headers={
+                "Origin": "http://localhost:3001",
+                "Access-Control-Request-Method": "POST",
+            },
+        )
+
+        self.assertEqual(allowed.status_code, 200)
+        self.assertEqual(allowed.headers["access-control-allow-origin"], "http://localhost:3000")
+        self.assertNotIn("access-control-allow-credentials", allowed.headers)
+        self.assertEqual(denied.status_code, 400)
+
     def test_chat_propagates_valid_correlation_id(self):
         app.supervisor_agent = SuccessfulSupervisor()
 

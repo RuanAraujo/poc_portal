@@ -1,27 +1,27 @@
-# Graph Report - poc_portal  (2026-08-10)
+# Graph Report - poc_portal  (2026-08-14)
 
 ## Corpus Check
-- 82 files · ~79,928 words
+- 85 files · ~81,401 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 591 nodes · 918 edges · 45 communities (30 shown, 15 thin omitted)
+- 607 nodes · 939 edges · 44 communities (29 shown, 15 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 28 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a463f1a2`
+- Built from commit: `a811b0d3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - Documentation.Application.Abstractions.Persistence
+- DocumentationPublished
 - .ProcessAsync
-- IngestionDbContext
 - Documentation.Ingestion.Infrastructure.csproj
 - .PublishVersionAsync
 - app.py
-- OpenApiChunker
+- Documentation.Ingestion.Application.Models
 - DocumentationVersion
 - ApiDocumentation
 - RabbitMqIngestionWorker
@@ -31,19 +31,16 @@
 - Documentation.Ingestion.Application.Abstractions
 - DocumentationApiClient
 - EmbeddingEngine
-- DocumentationPortal.sln
+- Documentation.Ingestion.Infrastructure.Options
 - Documentation.Api
 - Especificação — serviço de ingestão de documentações
-- Documentation.Infrastructure.csproj
+- .AddDocumentationIngestionInfrastructure
 - .GetContent
-- Documentation.Contracts.csproj
 - Documentation API
-- Documentation.Ingestion.Application.csproj
 - smoke.sh
 - Documentation.Embeddings.csproj
 - requirements file
 - Documentation Portal POC
-- Documentation.Ingestion.Worker.csproj
 - Application layer
 - Ingestion worker
 - AGENTS.md
@@ -60,13 +57,14 @@
 - API Service
 - Ingestion Worker
 - PostgreSQL
+- helpers.test.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `RabbitMqIngestionWorker` - 18 edges
 2. `ApiDocumentation` - 17 edges
 3. `DocumentationVersion` - 16 edges
-4. `EmbeddingEngine` - 15 edges
-5. `AgentTests` - 14 edges
+4. `AgentTests` - 15 edges
+5. `EmbeddingEngine` - 15 edges
 6. `Documentation.Ingestion.Application.Abstractions` - 14 edges
 7. `DocumentationIngestionService` - 12 edges
 8. `Especificação — serviço de ingestão de documentações` - 11 edges
@@ -80,31 +78,31 @@
   src/Documentation.Infrastructure/Persistence/DocumentationDbContext.cs → src/Documentation.Domain/Entities/ApiDocumentation.cs
 - `DocumentationDbContext` --references--> `DocumentationVersion`  [EXTRACTED]
   src/Documentation.Infrastructure/Persistence/DocumentationDbContext.cs → src/Documentation.Domain/Entities/DocumentationVersion.cs
-- `DocumentationIngestionService` --references--> `IChunkRepository`  [EXTRACTED]
-  src/Documentation.Ingestion.Application/Services/DocumentationIngestionService.cs → src/Documentation.Ingestion.Application/Abstractions/IChunkRepository.cs
+- `DocumentationIngestionService` --references--> `IDocumentationApiClient`  [EXTRACTED]
+  src/Documentation.Ingestion.Application/Services/DocumentationIngestionService.cs → src/Documentation.Ingestion.Application/Abstractions/IDocumentationApiClient.cs
 - `DocumentationApiClient` --implements--> `IDocumentationApiClient`  [EXTRACTED]
   src/Documentation.Ingestion.Infrastructure/Clients/DocumentationApiClient.cs → src/Documentation.Ingestion.Application/Abstractions/IDocumentationApiClient.cs
 
 ## Import Cycles
 - None detected.
 
-## Communities (45 total, 15 thin omitted)
+## Communities (44 total, 15 thin omitted)
 
 ### Community 0 - "Documentation.Application.Abstractions.Persistence"
 Cohesion: 0.06
 Nodes (28): Documentation.Infrastructure.Messaging, Documentation.Infrastructure, Documentation.Application.Abstractions.Messaging, Documentation.Application.Abstractions.Persistence, Documentation.Application.Models, Documentation.Api.Controllers, Documentation.Infrastructure.Persistence, Documentation.Domain.Entities (+20 more)
 
-### Community 1 - ".ProcessAsync"
-Cohesion: 0.05
-Nodes (34): ConnectionFactory, CancellationToken, Task, IDocumentationEventPublisher, string, DocumentationPublished, CancellationToken, JsonSerializerOptions (+26 more)
+### Community 1 - "DocumentationPublished"
+Cohesion: 0.11
+Nodes (16): ConnectionFactory, Documentation.Contracts, CancellationToken, Task, IDocumentationEventPublisher, string, DocumentationPublished, string (+8 more)
 
-### Community 2 - "IngestionDbContext"
+### Community 2 - ".ProcessAsync"
 Cohesion: 0.06
-Nodes (32): Documentation.Ingestion.Infrastructure.Persistence.Repositories, Documentation.Ingestion.Domain.Entities, EntityTypeBuilder, CancellationToken, Guid, IReadOnlyCollection, Task, IChunkRepository (+24 more)
+Nodes (33): EntityTypeBuilder, CancellationToken, Guid, IReadOnlyCollection, Task, CancellationToken, Guid, Task (+25 more)
 
 ### Community 3 - "Documentation.Ingestion.Infrastructure.csproj"
-Cohesion: 0.13
-Nodes (14): Grpc.Net.ClientFactory (2.80.0), Microsoft.EntityFrameworkCore (10.0.0), Microsoft.Extensions.Configuration.Binder (10.0.0), Microsoft.Extensions.Http (10.0.0), Microsoft.Extensions.Options.ConfigurationExtensions (10.0.0), Pgvector.EntityFrameworkCore (0.2.2), YamlDotNet (16.3.0), net10.0 (+6 more)
+Cohesion: 0.05
+Nodes (40): Grpc.Net.ClientFactory (2.80.0), Microsoft.EntityFrameworkCore (10.0.0), Microsoft.Extensions.Configuration.Abstractions (10.0.0), Microsoft.Extensions.Configuration.Binder (10.0.0), Microsoft.Extensions.Hosting (10.0.0), Microsoft.Extensions.Http (10.0.0), Microsoft.Extensions.Options.ConfigurationExtensions (10.0.0), Pgvector.EntityFrameworkCore (0.2.2) (+32 more)
 
 ### Community 4 - ".PublishVersionAsync"
 Cohesion: 0.23
@@ -114,16 +112,16 @@ Nodes (11): CreateDocumentationCommand, DocumentationContent, DocumentationSumma
 Cohesion: 0.11
 Nodes (28): Any, BaseModel, ChatOpenAI, FastAPI, get, middleware, post, Request (+20 more)
 
-### Community 6 - "OpenApiChunker"
-Cohesion: 0.20
-Nodes (10): IDeserializer, JsonDocument, JsonElement, IReadOnlyList, IOpenApiChunker, DocumentationContent, DocumentChunkDraft, IReadOnlyList (+2 more)
+### Community 6 - "Documentation.Ingestion.Application.Models"
+Cohesion: 0.14
+Nodes (12): Documentation.Ingestion.Domain.ValueObjects, Documentation.Ingestion.Application.Models, IDeserializer, JsonDocument, JsonElement, IReadOnlyList, IOpenApiChunker, DocumentationContent (+4 more)
 
 ### Community 7 - "DocumentationVersion"
 Cohesion: 0.13
 Nodes (12): CancellationToken, Guid, Task, IDocumentationVersionRepository, DateTimeOffset, Guid, DocumentationVersion, DocumentationVersionStatus (+4 more)
 
 ### Community 8 - "ApiDocumentation"
-Cohesion: 0.15
+Cohesion: 0.14
 Nodes (14): ICollection, CancellationToken, Guid, IReadOnlyList, Task, IApiDocumentationRepository, DateTimeOffset, Guid (+6 more)
 
 ### Community 9 - "RabbitMqIngestionWorker"
@@ -131,11 +129,11 @@ Cohesion: 0.20
 Nodes (11): BackgroundService, BasicDeliverEventArgs, IDictionary, IModel, CancellationToken, ILogger, IServiceScopeFactory, JsonSerializerOptions (+3 more)
 
 ### Community 10 - "AgentTests"
-Cohesion: 0.12
+Cohesion: 0.11
 Nodes (4): object, AgentTests, FailingSupervisor, SuccessfulSupervisor
 
 ### Community 11 - "DatabaseInitializer"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (12): IHostedService, CancellationToken, ILogger, IServiceScopeFactory, string, Task, DatabaseInitializer, CancellationToken (+4 more)
 
 ### Community 12 - ".Create"
@@ -144,7 +142,7 @@ Nodes (10): HttpPost, ActionResult, CancellationToken, Guid, HttpGet, IActionRes
 
 ### Community 13 - "Documentation.Ingestion.Application.Abstractions"
 Cohesion: 0.05
-Nodes (30): Documentation.Ingestion.Infrastructure.OpenApi, Documentation.Ingestion.Infrastructure.Options, Documentation.Ingestion.Domain.ValueObjects, Documentation.Ingestion.Infrastructure.Clients, Documentation.Ingestion.Infrastructure.Persistence, Documentation.Ingestion.Application.Models, Documentation.Ingestion.Application.Abstractions, Documentation.Ingestion.Infrastructure.Embeddings (+22 more)
+Nodes (35): Documentation.Ingestion.Infrastructure.OpenApi, Documentation.Ingestion.Infrastructure.Clients, Documentation.Ingestion.Infrastructure.Persistence, Documentation.Ingestion.Infrastructure.Persistence.Repositories, Documentation.Ingestion.Application.Abstractions, Documentation.Ingestion.Infrastructure.Embeddings, Documentation.Ingestion.Application.Services, Documentation.Ingestion.Infrastructure (+27 more)
 
 ### Community 14 - "DocumentationApiClient"
 Cohesion: 0.20
@@ -154,9 +152,9 @@ Nodes (10): HttpRequestMessage, HttpResponseMessage, DocumentationIndexingStatus
 Cohesion: 0.09
 Nodes (23): DenseTensor, EmbeddingServiceBase, EmbedRequest, EmbedResponse, HealthCheckContext, HealthCheckResult, IDisposable, IHealthCheck (+15 more)
 
-### Community 16 - "DocumentationPortal.sln"
-Cohesion: 0.25
-Nodes (5): net10.0, Microsoft.Extensions.Logging.Abstractions (10.0.0), Microsoft.NET.Sdk, net10.0, Microsoft.NET.Sdk
+### Community 16 - "Documentation.Ingestion.Infrastructure.Options"
+Cohesion: 0.20
+Nodes (7): Documentation.Ingestion.Infrastructure.Options, string, DocumentationApiOptions, string, EmbeddingsOptions, string, RabbitMqOptions
 
 ### Community 17 - "Documentation.Api"
 Cohesion: 0.18
@@ -166,25 +164,17 @@ Nodes (10): applicationUrl, commandName, dotnetRunMessages, environmentVariables
 Cohesion: 0.17
 Nodes (11): Configuração, Contrato de mensageria, Contrato HTTP esperado da API, Embeddings, Especificação — serviço de ingestão de documentações, Fluxo de processamento, Inicialização local, Limitações deliberadas da POC (+3 more)
 
-### Community 19 - "Documentation.Infrastructure.csproj"
-Cohesion: 0.25
-Nodes (7): Microsoft.Extensions.Configuration.Abstractions (10.0.0), net10.0, Microsoft.Extensions.DependencyInjection.Abstractions (10.0.0), Microsoft.Extensions.Logging.Abstractions (10.0.0), Npgsql.EntityFrameworkCore.PostgreSQL (10.0.0), RabbitMQ.Client (6.8.1), Microsoft.NET.Sdk
+### Community 19 - ".AddDocumentationIngestionInfrastructure"
+Cohesion: 0.50
+Nodes (3): IConfiguration, IServiceCollection, DependencyInjection
 
 ### Community 20 - ".GetContent"
 Cohesion: 0.23
 Nodes (10): ControllerBase, HttpPut, ActionResult, CancellationToken, Guid, HttpGet, IActionResult, ProducesResponseType (+2 more)
 
-### Community 21 - "Documentation.Contracts.csproj"
-Cohesion: 0.29
-Nodes (5): Swashbuckle.AspNetCore (9.0.6), net10.0, Microsoft.NET.Sdk.Web, net10.0, Microsoft.NET.Sdk
-
 ### Community 22 - "Documentation API"
 Cohesion: 0.22
 Nodes (8): Arquitetura, Configuração, Contrato HTTP, Documentation API, Limites da POC, Mensageria, Modelo de persistência, Responsabilidade
-
-### Community 23 - "Documentation.Ingestion.Application.csproj"
-Cohesion: 0.29
-Nodes (5): net10.0, Microsoft.Extensions.Logging.Abstractions (10.0.0), Microsoft.NET.Sdk, net10.0, Microsoft.NET.Sdk
 
 ### Community 25 - "Documentation.Embeddings.csproj"
 Cohesion: 0.25
@@ -195,12 +185,8 @@ Cohesion: 0.25
 Nodes (8): fastapi, langchain, langchain-openai, psycopg[binary], requirements file, sentence-transformers, torch, uvicorn
 
 ### Community 27 - "Documentation Portal POC"
-Cohesion: 0.29
-Nodes (6): Agente de integração, Componentes, Desenvolvimento, Documentation Portal POC, Embeddings, Executar localmente
-
-### Community 28 - "Documentation.Ingestion.Worker.csproj"
-Cohesion: 0.40
-Nodes (4): Microsoft.Extensions.Hosting (10.0.0), Microsoft.NET.Sdk.Worker, net10.0, RabbitMQ.Client (6.8.1)
+Cohesion: 0.25
+Nodes (7): Agente de integração, Componentes, Desenvolvimento, Documentation Portal POC, Embeddings, Executar localmente, Limites da POC
 
 ### Community 29 - "Application layer"
 Cohesion: 0.67
@@ -210,25 +196,29 @@ Nodes (4): Application layer, Documentation.Api service, Domain layer, Infrastru
 Cohesion: 0.67
 Nodes (3): Embedding service, Ingestion worker, RabbitMQ
 
+### Community 45 - "helpers.test.js"
+Cohesion: 0.29
+Nodes (10): escapeHtml(), formatDuration(), formatFromContent(), formatFromFile(), inlineMarkdown(), isRetryableStatus(), renderMarkdown(), assert (+2 more)
+
 ## Knowledge Gaps
-- **99 isolated node(s):** `smoke.sh script`, `PublishDocumentationResponse`, `net10.0`, `Swashbuckle.AspNetCore (9.0.6)`, `Microsoft.NET.Sdk.Web` (+94 more)
+- **103 isolated node(s):** `smoke.sh script`, `PublishDocumentationResponse`, `net10.0`, `Swashbuckle.AspNetCore (9.0.6)`, `Microsoft.NET.Sdk.Web` (+98 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **15 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Documentation.Contracts` connect `Documentation.Ingestion.Application.Abstractions` to `Documentation.Application.Abstractions.Persistence`, `.ProcessAsync`?**
-  _High betweenness centrality (0.156) - this node is a cross-community bridge._
-- **Why does `IngestionDbContext` connect `IngestionDbContext` to `Documentation.Application.Abstractions.Persistence`, `DatabaseInitializer`, `Documentation.Ingestion.Application.Abstractions`?**
-  _High betweenness centrality (0.094) - this node is a cross-community bridge._
+- **Why does `Documentation.Contracts` connect `DocumentationPublished` to `Documentation.Application.Abstractions.Persistence`, `Documentation.Ingestion.Application.Abstractions`?**
+  _High betweenness centrality (0.148) - this node is a cross-community bridge._
+- **Why does `IngestionDbContext` connect `.ProcessAsync` to `Documentation.Application.Abstractions.Persistence`, `DatabaseInitializer`, `Documentation.Ingestion.Application.Abstractions`?**
+  _High betweenness centrality (0.089) - this node is a cross-community bridge._
 - **Why does `DatabaseInitializationHostedService` connect `DatabaseInitializer` to `Documentation.Ingestion.Application.Abstractions`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+  _High betweenness centrality (0.088) - this node is a cross-community bridge._
 - **What connects `smoke.sh script`, `PublishDocumentationResponse`, `net10.0` to the rest of the system?**
-  _99 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _103 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation.Application.Abstractions.Persistence` be split into smaller, more focused modules?**
-  _Cohesion score 0.06205673758865248 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.061979648473635525 - nodes in this community are weakly interconnected._
+- **Should `DocumentationPublished` be split into smaller, more focused modules?**
+  _Cohesion score 0.10507246376811594 - nodes in this community are weakly interconnected._
 - **Should `.ProcessAsync` be split into smaller, more focused modules?**
-  _Cohesion score 0.05279034690799397 - nodes in this community are weakly interconnected._
-- **Should `IngestionDbContext` be split into smaller, more focused modules?**
-  _Cohesion score 0.05697278911564626 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0563265306122449 - nodes in this community are weakly interconnected._

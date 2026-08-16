@@ -14,6 +14,7 @@ import grpc
 import psycopg
 from documentation import embeddings_pb2, embeddings_pb2_grpc
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
 from langchain.agents import create_agent
 from langchain.agents.middleware import ModelFallbackMiddleware
 from langchain.tools import tool
@@ -29,6 +30,7 @@ AGENT_FALLBACK_MODEL = os.getenv("AGENT_FALLBACK_MODEL", "nvidia/nemotron-3-supe
 LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "512"))
 LLM_BASE_URL = os.getenv("LLM_BASE_URL", "https://integrate.api.nvidia.com/v1")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
+PORTAL_ORIGIN = os.getenv("PORTAL_ORIGIN", "http://localhost:3000")
 DATABASE_DSN = os.getenv(
     "DATABASE_DSN",
     "host=localhost port=5432 dbname=documentation_portal user=postgres password=postgres",
@@ -255,6 +257,12 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(title="Documentation Agent", version="1.0.0", lifespan=lifespan)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[PORTAL_ORIGIN],
+    allow_methods=["POST"],
+    allow_headers=["*"],
+)
 
 
 @app.middleware("http")

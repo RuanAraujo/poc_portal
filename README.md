@@ -8,6 +8,7 @@ Prova de conceito em .NET 10 e Python para cadastro de especificações OpenAPI,
 - `Documentation.Ingestion.Worker`: chunking e geração de embeddings.
 - `Documentation.Embeddings`: EmbeddingGemma local via gRPC.
 - `Documentation.Agent`: busca pgvector e agentes LangChain/FastAPI.
+- `Documentation.Frontend`: portal web para consultar e cadastrar documentações.
 - NVIDIA NIM: modelos de chat OpenAI-compatible usados pelos agentes.
 - `Documentation.Contracts`: contrato compartilhado da mensageria.
 - PostgreSQL 17 com pgvector e RabbitMQ Management via Docker Compose.
@@ -30,6 +31,7 @@ docker compose ps
 
 Serviços:
 
+- Portal: <http://localhost:3000>
 - Swagger: <http://localhost:8080/swagger>
 - Health da API: <http://localhost:8080/health>
 - Swagger do agente: <http://localhost:8090/docs>
@@ -38,6 +40,10 @@ Serviços:
 - PostgreSQL: `localhost:5432`
 
 Credenciais locais padrão: `documentation_user` / `documentation_password`.
+
+O portal usa `DOCUMENTATION_API_URL` e `DOCUMENTATION_AGENT_URL`, URLs vistas pelo
+navegador. Os valores padrão apontam para as portas locais publicadas; altere-os
+junto com `PORTAL_ORIGIN` e as portas expostas se o portal for aberto por outro host.
 
 Execute `./scripts/smoke.sh` para cadastrar uma OpenAPI pequena, aguardar `available`, validar os vetores de 768 dimensões e consultar o Agent.
 
@@ -88,3 +94,8 @@ docker compose down
 
 `docker compose down -v` também apaga o cache do EmbeddingGemma e força um novo
 download na próxima inicialização.
+
+## Limites da POC
+
+O portal é local e não tem autenticação, autorização, TLS ou gestão de segredos.
+Não o exponha fora do ambiente de desenvolvimento.
