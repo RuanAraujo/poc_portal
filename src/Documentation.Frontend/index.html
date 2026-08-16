@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Documentation Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div><strong>Documentation Portal</strong><span>OpenAPI e orientação de integração</span></div>
+    <nav aria-label="Navegação principal"><a href="#chat">Chat</a><a href="#administracao">Administração</a></nav>
+  </header>
+  <main>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <section id="chat" aria-labelledby="chat-title">
+      <h1 id="chat-title">Consulte a documentação</h1>
+      <p>Pergunte como integrar uma API indexada.</p>
+      <div id="chat-history" class="chat-history" aria-live="polite" aria-label="Histórico desta sessão"></div>
+      <form id="chat-form" class="inline-form">
+        <label for="chat-message">Pergunta</label>
+        <textarea id="chat-message" name="message" required maxlength="10000" rows="3" placeholder="Como integrar uma nova operação nesta API?"></textarea>
+        <button>Enviar</button>
+      </form>
+    </section>
+
+    <section id="administracao" aria-labelledby="admin-title">
+      <div class="section-heading"><div><h2 id="admin-title">Administração</h2><p>Publique especificações e acompanhe a indexação.</p></div><button id="refresh" type="button">Atualizar lista</button></div>
+      <form id="documentation-form" class="admin-form">
+        <label>Identificador da API<input name="apiId" required maxlength="200" placeholder="payments-api"></label>
+        <label>Nome<input name="name" required maxlength="300" placeholder="Payments API"></label>
+        <label>Versão<input name="version" required maxlength="100" placeholder="1.0.0"></label>
+        <label>Ambiente<input name="environment" required maxlength="100" placeholder="sandbox"></label>
+        <label>Arquivo OpenAPI <input id="openapi-file" type="file" accept=".json,.yaml,.yml,application/json,application/yaml,text/yaml"></label>
+        <label>ou cole o conteúdo<textarea id="openapi-content" name="content" required rows="8" placeholder="openapi: 3.0.0"></textarea></label>
+        <p id="file-status" class="hint">JSON e YAML são aceitos.</p>
+        <button>Publicar documentação</button>
+      </form>
+      <div id="documentation-list" class="documentation-list" aria-live="polite"></div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="helpers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

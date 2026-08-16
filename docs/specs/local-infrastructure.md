@@ -4,7 +4,7 @@
 
 Disponibilizar o ambiente local da POC por meio de Docker Compose, com PostgreSQL
 17 + pgvector, RabbitMQ Management, a API de documentação, o serviço de embeddings,
-o agente Python e o worker de ingestão. O ambiente deve funcionar em máquinas ARM64 e AMD64 que suportem as
+o agente Python, o portal web e o worker de ingestão. O ambiente deve funcionar em máquinas ARM64 e AMD64 que suportem as
 imagens oficiais utilizadas.
 
 ## Serviços
@@ -14,6 +14,7 @@ imagens oficiais utilizadas.
 | `postgres` | `pgvector/pgvector:pg17` | `5432` | Banco `documentation_portal`, extensão `vector` e schemas da POC. |
 | `rabbitmq` | `rabbitmq:4-management` | `5672`, `15672` | Broker AMQP e painel de gerenciamento local. |
 | `documentation-api` | `src/Documentation.Api/Dockerfile` | `8080` | API HTTP e Swagger local. |
+| `documentation-frontend` | `src/Documentation.Frontend/Dockerfile` | `3000` | Portal web local. |
 | `documentation-embeddings` | `src/Documentation.Embeddings/Dockerfile` | nenhuma | EmbeddingGemma gRPC interno (`8080`) e health (`8081`). |
 | `documentation-agent` | `src/Documentation.Agent/Dockerfile` | `8090` | Busca pgvector e agentes LangChain. |
 | `documentation-ingestion` | `src/Documentation.Ingestion.Worker/Dockerfile` | nenhuma | Consumo de eventos e persistência dos vetores. |
@@ -48,6 +49,9 @@ Variáveis compartilhadas que os containers recebem:
 | `MODEL_DIR` | Cache do modelo ONNX no serviço de embeddings: `/models/huggingface`. |
 | `LLM_API_KEY`, `LLM_BASE_URL`, `AGENT_MODEL`, `AGENT_FALLBACK_MODEL`, `LLM_MAX_TOKENS` | NVIDIA NIM OpenAI-compatible, chave, modelo principal, fallback e limite da resposta. |
 | `EMBEDDING_GRPC_ADDRESS` | Destino gRPC usado pelo agente: `documentation-embeddings:8080`. |
+| `FRONTEND_PORT` | Porta publicada pelo portal web (padrão `3000`). |
+| `PORTAL_ORIGIN` | Origem exata do portal, repassada à API e ao agente para CORS (padrão `http://localhost:3000`). |
+| `DOCUMENTATION_API_URL`, `DOCUMENTATION_AGENT_URL` | URLs públicas que o navegador usa para acessar API e agente; não use nomes de serviço do Compose. |
 
 ## Saúde e ordem de inicialização
 
@@ -57,6 +61,7 @@ Variáveis compartilhadas que os containers recebem:
 - A API inicia após PostgreSQL e RabbitMQ ficarem saudáveis.
 - O serviço de embeddings fica saudável após carregar o EmbeddingGemma.
 - O agente inicia após PostgreSQL e o serviço de embeddings ficarem saudáveis.
+- O portal verifica HTTP em sua raiz; ele inicia independentemente dos serviços de backend.
 - O worker inicia após PostgreSQL, RabbitMQ, API e embeddings ficarem saudáveis.
 
 O endpoint `/health` deve ser provido pelo projeto da API. Enquanto ele não
@@ -72,6 +77,7 @@ docker compose up --build
 
 URLs locais:
 
+- Portal: `http://localhost:3000`
 - Swagger: `http://localhost:8080/swagger`
 - Swagger do agente: `http://localhost:8090/docs`
 - RabbitMQ Management: `http://localhost:15672`
@@ -92,6 +98,7 @@ docker compose down -v
 ## Limites da POC
 
 - Não há TLS, autenticação externa, secrets manager, monitoramento ou backup.
+- O portal é somente para uso local da POC; não há autenticação ou autorização.
 - Usuários e senhas locais são configuráveis por `.env`; não use estes valores
   fora do ambiente de desenvolvimento.
 - O primeiro startup do serviço de embeddings baixa o artefato ONNX fixado no

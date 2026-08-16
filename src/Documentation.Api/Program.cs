@@ -26,6 +26,10 @@ builder.Services
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHealthChecks();
+builder.Services.AddCors(options => options.AddDefaultPolicy(policy => policy
+    .WithOrigins(builder.Configuration["PORTAL_ORIGIN"] ?? "http://localhost:3000")
+    .AllowAnyHeader()
+    .AllowAnyMethod()));
 builder.Services.AddDocumentationInfrastructure(builder.Configuration);
 builder.Services.AddScoped<DocumentationApplicationService>();
 
@@ -113,6 +117,7 @@ app.Use(async (context, next) =>
 
 app.UseSwagger();
 app.UseSwaggerUI();
+app.UseCors();
 
 app.MapControllers();
 app.MapHealthChecks("/health");

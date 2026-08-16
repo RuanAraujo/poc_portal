@@ -1,0 +1,22 @@
+const assert = require("node:assert/strict");
+const { isRetryableStatus, formatFromFile, formatFromContent, renderMarkdown, formatDuration } = require("../helpers.js");
+
+assert.equal(isRetryableStatus("publishFailed"), true);
+assert.equal(isRetryableStatus("indexingFailed"), true);
+assert.equal(isRetryableStatus("available"), false);
+assert.equal(formatFromFile("openapi.JSON"), "json");
+assert.equal(formatFromFile("openapi.yml"), "yaml");
+assert.equal(formatFromFile("openapi.txt"), "");
+assert.equal(formatFromContent('{"openapi":"3.0.0"}'), "json");
+assert.equal(formatFromContent("openapi: 3.0.0"), "yaml");
+const markdown = renderMarkdown("# Título\n\n**Forte** e *ênfase* com `código`.\n\n- item\n\n```json\n{\"ok\":true}\n```\n\n> nota\n\n[Docs](https://example.com)");
+assert.match(markdown, /<h1>Título<\/h1>/);
+assert.match(markdown, /<strong>Forte<\/strong> e <em>ênfase<\/em> com <code>código<\/code>/);
+assert.match(markdown, /<ul><li>item<\/li><\/ul>/);
+assert.match(markdown, /<pre><code class="language-json">{&quot;ok&quot;:true}<\/code><\/pre>/);
+assert.match(markdown, /<blockquote>nota<\/blockquote>/);
+assert.match(markdown, /<a href="https:\/\/example.com" target="_blank" rel="noopener noreferrer">Docs<\/a>/);
+assert.match(renderMarkdown("<script>alert(1)</script>"), /&lt;script&gt;alert\(1\)&lt;\/script&gt;/);
+assert.doesNotMatch(renderMarkdown("[ruim](javascript:alert(1))"), /<a /);
+assert.equal(formatDuration(850.4), "850 ms");
+assert.equal(formatDuration(2430), "2,4 s");
