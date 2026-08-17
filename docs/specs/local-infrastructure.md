@@ -64,9 +64,8 @@ Variáveis compartilhadas que os containers recebem:
 - O portal verifica HTTP em sua raiz; ele inicia independentemente dos serviços de backend.
 - O worker inicia após PostgreSQL, RabbitMQ, API e embeddings ficarem saudáveis.
 
-O endpoint `/health` deve ser provido pelo projeto da API. Enquanto ele não
-existir, o healthcheck da API naturalmente impedirá o worker de iniciar, o que
-torna explícito o contrato de integração.
+O endpoint `/health` da API é parte do contrato de inicialização: se ele não
+responder com sucesso, o Compose não inicia o worker.
 
 ## Operação local
 
@@ -105,3 +104,38 @@ docker compose down -v
   código a partir do Hugging Face. A inferência posterior é local e sem API paga.
 - O uso do modelo deve respeitar a licença Gemma.
 - O chat requer `LLM_API_KEY`; ela não deve ser versionada.
+
+## Redes e exposição
+
+O Compose usa a rede padrão do projeto. PostgreSQL, RabbitMQ, API, Agent e
+Frontend publicam portas no host para facilitar diagnóstico local. Embeddings
+expõe gRPC `8080` e health HTTP `8081` somente para a rede interna; o worker não
+publica porta.
+
+`DOCUMENTATION_API_URL` e `DOCUMENTATION_AGENT_URL` são injetadas pelo template
+do Nginx em `config.js` e precisam ser URLs alcançáveis pelo navegador.
+`DocumentationApi__BaseUrl` e `EMBEDDING_GRPC_ADDRESS`, por outro lado, usam os
+nomes DNS internos do Compose.
+
+## Requisitos para ambientes definitivos
+
+- construir e identificar imagens imutáveis por versão/commit, sem depender de
+  `latest` implícito;
+- separar redes e permitir somente os fluxos descritos na especificação geral;
+- armazenar credenciais e a chave do LLM em um gerenciador de segredos;
+- remover credenciais padrão e `Include Error Detail=true` fora do
+  desenvolvimento;
+- publicar apenas os endpoints necessários atrás de TLS e controle de acesso;
+- separar liveness de readiness e incluir health do worker/consumidor;
+- executar migrations como etapa controlada de deploy;
+- definir requests/limits de CPU e memória, especialmente para embeddings;
+- monitorar espaço dos volumes, fila/DLQ, latência, erros e disponibilidade;
+- definir backup e teste periódico de restauração do PostgreSQL e a política de
+  retenção do RabbitMQ;
+- preservar o cache do modelo ou empacotar artefatos validados para evitar
+  download externo durante o startup;
+- fixar e verificar checksum/licença dos artefatos de modelo.
+
+O Compose continua útil como ambiente de desenvolvimento e teste de integração;
+ele não constitui por si só uma especificação de produção ou alta
+disponibilidade.

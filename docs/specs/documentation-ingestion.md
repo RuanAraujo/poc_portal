@@ -449,6 +449,10 @@ a esse comportamento.
 
 ## 9. Geração de embeddings
 
+O comportamento interno, a operação e os requisitos de evolução do servidor
+estão detalhados em [documentation-embeddings.md](documentation-embeddings.md).
+Esta seção registra somente o contrato observado pela ingestão.
+
 Para cada draft, `EmbeddingGemmaEmbeddingGenerator` chama:
 
 ```text
@@ -872,7 +876,81 @@ Uma implementação compatível com esta especificação deve satisfazer:
   validação automatizada atual é principalmente o smoke test ponta a ponta e o
   self-check do serviço de embeddings.
 
-## 21. Rastreabilidade no código
+## 21. Requisitos para o sistema definitivo
+
+Os itens abaixo não descrevem funcionalidades presentes na POC. Eles registram
+o mínimo que deve ser decidido ou implementado antes de usar este fluxo como
+base de um produto.
+
+### 21.1 Entrega, idempotência e estado
+
+- publicar `DocumentationPublished` por outbox transacional na API;
+- tratar JSON malformado e violações do contrato como falhas permanentes;
+- manter inbox/idempotência durável no consumidor, com política explícita de
+  retenção e auditoria;
+- definir ordenação e exclusão mútua por versão para suportar múltiplas réplicas;
+- impedir regressão de estado com versão, compare-and-set ou máquina de estados
+  aplicada no serviço dono da versão;
+- oferecer replay auditável da DLQ sem edição manual da mensagem;
+- definir semântica para republicação concorrente e eventos antigos;
+- manter ACK somente após garantir o próximo estado durável da mensagem.
+
+### 21.2 Conteúdo, chunking e compatibilidade vetorial
+
+- validar o contrato OpenAPI aceito e devolver diagnóstico acionável;
+- definir limites de documento, operações, caracteres e tokens antes de alocar
+  ou transmitir o conteúdo;
+- substituir o chunk integral sem limite por chunking orientado ao orçamento do
+  tokenizer, com overlap somente se a qualidade medida justificar;
+- decidir como expandir `$ref`, parâmetros de path e contexto global sem
+  duplicação excessiva;
+- tornar estáveis a identidade e a versão do algoritmo de chunking;
+- persistir junto ao vetor o modelo, revisão, dimensão, normalização, prefixo e
+  versão do chunker que o produziram;
+- planejar reindexação e convivência entre versões antes de trocar qualquer
+  item desse contrato;
+- avaliar reaproveitamento por hash apenas após medir se ele reduz custo sem
+  comprometer metadados e rastreabilidade.
+
+### 21.3 Persistência e evolução
+
+- substituir o bootstrap SQL em runtime por migrations versionadas e revisáveis;
+- proibir migração automática que trunque globalmente chunks e idempotência;
+- definir backup, restore, retenção, limpeza e reconciliação entre versões e
+  chunks órfãos;
+- decidir se schemas no mesmo banco atendem isolamento, escala e ownership ou
+  se a ingestão precisa de banco próprio;
+- testar rollback e reindexação antes de uma mudança de dimensão ou modelo.
+
+### 21.4 Resiliência e capacidade
+
+- classificar de forma consistente timeout, 429, 5xx e erros permanentes de
+  todos os clientes;
+- configurar deadlines, retry com backoff/jitter e circuit breaker por
+  dependência, evitando multiplicação entre retries HTTP, gRPC e RabbitMQ;
+- usar concorrência limitada e backpressure mensurável; batch de embeddings
+  deve ser introduzido somente se suportado pelo contrato e pelos testes;
+- definir SLOs, tamanho máximo, throughput, latência, orçamento de retry e
+  capacidade de DLQ;
+- suportar desligamento gracioso sem perder entrega em processamento.
+
+### 21.5 Segurança, observabilidade e qualidade
+
+- autenticar e autorizar chamadas internas; usar TLS/mTLS conforme o ambiente;
+- retirar credenciais da configuração comum e usar gestão de segredos;
+- classificar, mascarar, criptografar e reter conteúdo conforme a política de
+  dados, sem registrar conteúdo ou embeddings em logs;
+- expor liveness e readiness do worker e verificar broker, banco, API e
+  embeddings com critérios distintos;
+- exportar métricas e traces OpenTelemetry, preservando correlação e evitando
+  cardinalidade não limitada;
+- alertar para backlog, idade da fila, retries, DLQ, falha de callback, duração
+  de chunking/embedding e divergência de estados;
+- manter testes unitários do chunker e classificação de erros, testes de
+  contrato HTTP/gRPC/evento, integração com infraestrutura real e cenários de
+  recuperação após commit, timeout e queda do consumidor.
+
+## 22. Rastreabilidade no código
 
 | Assunto | Fonte principal |
 | --- | --- |

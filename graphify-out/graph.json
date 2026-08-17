@@ -207,7 +207,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_init",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": "documentation/__init__.py"
     },
     {
@@ -218,7 +218,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_init_rationale_1",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": "generated protobuf client package."
     },
     {
@@ -229,7 +229,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": "embeddings_pb2.py"
     },
     {
@@ -240,7 +240,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": "embeddings_pb2_grpc.py"
     },
     {
@@ -253,7 +253,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc_embeddingservicestub",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": "embeddingservicestub"
     },
     {
@@ -265,7 +265,7 @@
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_embeddings_pb2_grpc_embeddingservicestub_init",
       "community": 58,
-      "community_name": "embeddings.py",
+      "community_name": "embeddings_pb2_grpc.py",
       "norm_label": ".__init__()"
     },
     {
@@ -883,8 +883,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_agent_documentation_agent_infrastructure_embeddings",
-      "community": 58,
-      "community_name": "embeddings.py",
+      "community": 5,
+      "community_name": "test_app.py",
       "norm_label": "embeddings.py"
     },
     {
@@ -1688,8 +1688,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationrequests",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationrequests.cs"
     },
     {
@@ -1704,8 +1704,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:84d1cc40eabce447",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.api.contracts"
     },
     {
@@ -1723,8 +1723,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationrequests_documentation_api_contracts_createdocumentationrequest",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "createdocumentationrequest"
     },
     {
@@ -1742,8 +1742,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationrequests_documentation_api_contracts_updateindexingstatusrequest",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "updateindexingstatusrequest"
     },
     {
@@ -1753,8 +1753,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationresponses",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationresponses.cs"
     },
     {
@@ -1772,8 +1772,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_contracts_documentationresponses_documentation_api_contracts_publishdocumentationresponse",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "publishdocumentationresponse"
     },
     {
@@ -1783,8 +1783,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationscontroller.cs"
     },
     {
@@ -1799,8 +1799,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:59dc7424a289f308",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.api.controllers"
     },
     {
@@ -1819,7 +1819,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "documentationscontroller"
     },
     {
@@ -1829,8 +1829,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "controllerbase",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "controllerbase"
     },
     {
@@ -1848,7 +1848,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller_create",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": ".create()"
     },
     {
@@ -1859,7 +1859,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_cancellationtoken",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "cancellationtoken"
     },
     {
@@ -1870,7 +1870,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_task",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "task"
     },
     {
@@ -1881,7 +1881,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_iactionresult",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "iactionresult"
     },
     {
@@ -1892,7 +1892,7 @@
       "_origin": "ast",
       "id": "httppost",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "httppost"
     },
     {
@@ -1903,7 +1903,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_producesresponsetype",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "producesresponsetype"
     },
     {
@@ -1921,7 +1921,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller_list",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": ".list()"
     },
     {
@@ -1932,7 +1932,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_actionresult",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "actionresult"
     },
     {
@@ -1943,7 +1943,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_ireadonlylist",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "ireadonlylist"
     },
     {
@@ -1954,7 +1954,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_httpget",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "httpget"
     },
     {
@@ -1972,7 +1972,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller_get",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": ".get()"
     },
     {
@@ -1983,7 +1983,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_cs_guid",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": "guid"
     },
     {
@@ -2001,7 +2001,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller_republish",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": ".republish()"
     },
     {
@@ -2019,7 +2019,7 @@
       "_origin": "ast",
       "id": "src_documentation_api_controllers_documentationscontroller_documentation_api_controllers_documentationscontroller_topublishactionresult",
       "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community_name": ".Create",
       "norm_label": ".topublishactionresult()"
     },
     {
@@ -2029,8 +2029,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "internaldocumentationscontroller.cs"
     },
     {
@@ -2048,8 +2048,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_documentation_api_controllers_internaldocumentationscontroller",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "internaldocumentationscontroller"
     },
     {
@@ -2066,8 +2066,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_documentation_api_controllers_internaldocumentationscontroller_getcontent",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": ".getcontent()"
     },
     {
@@ -2077,8 +2077,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_guid",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "guid"
     },
     {
@@ -2088,8 +2088,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_cancellationtoken",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2099,8 +2099,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_task",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "task"
     },
     {
@@ -2110,8 +2110,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_actionresult",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "actionresult"
     },
     {
@@ -2121,8 +2121,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_httpget",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "httpget"
     },
     {
@@ -2132,8 +2132,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_producesresponsetype",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "producesresponsetype"
     },
     {
@@ -2150,8 +2150,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_documentation_api_controllers_internaldocumentationscontroller_updateindexingstatus",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": ".updateindexingstatus()"
     },
     {
@@ -2161,8 +2161,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_api_controllers_internaldocumentationscontroller_cs_iactionresult",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "iactionresult"
     },
     {
@@ -2172,8 +2172,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "httpput",
-      "community": 12,
-      "community_name": ".GetContent",
+      "community": 0,
+      "community_name": ".Create",
       "norm_label": "httpput"
     },
     {
@@ -2216,8 +2216,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_api_program",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.api/program.cs"
     },
     {
@@ -2232,8 +2232,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_api_program_program",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "program"
     },
     {
@@ -2364,8 +2364,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "idocumentationeventpublisher.cs"
     },
     {
@@ -2380,8 +2380,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:17ea9daed367f6e0",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "documentation.application.abstractions.messaging"
     },
     {
@@ -2400,7 +2400,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_documentation_application_abstractions_messaging_idocumentationeventpublisher",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "idocumentationeventpublisher"
     },
     {
@@ -2418,7 +2418,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_documentation_application_abstractions_messaging_idocumentationeventpublisher_publishasync",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": ".publishasync()"
     },
     {
@@ -2429,7 +2429,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_cs_cancellationtoken",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2440,7 +2440,7 @@
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_messaging_idocumentationeventpublisher_cs_task",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "task"
     },
     {
@@ -2466,8 +2466,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:1b865510c69f01cf",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.application.abstractions.persistence"
     },
     {
@@ -2729,8 +2729,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "iunitofwork.cs"
     },
     {
@@ -2748,8 +2748,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_documentation_application_abstractions_persistence_iunitofwork",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "iunitofwork"
     },
     {
@@ -2766,8 +2766,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_documentation_application_abstractions_persistence_iunitofwork_savechangesasync",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": ".savechangesasync()"
     },
     {
@@ -2777,8 +2777,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_cs_cancellationtoken",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "cancellationtoken"
     },
     {
@@ -2788,8 +2788,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_abstractions_persistence_iunitofwork_cs_task",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "task"
     },
     {
@@ -2832,8 +2832,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationmodels.cs"
     },
     {
@@ -2848,8 +2848,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:511da7cdcdfe6e3d",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.application.models"
     },
     {
@@ -2867,8 +2867,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_createdocumentationcommand",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "createdocumentationcommand"
     },
     {
@@ -2886,8 +2886,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationversionsummary",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationversionsummary"
     },
     {
@@ -2905,8 +2905,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationsummary",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationsummary"
     },
     {
@@ -2924,8 +2924,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_documentationcontent",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationcontent"
     },
     {
@@ -2943,8 +2943,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_publishattemptresultkind",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "publishattemptresultkind"
     },
     {
@@ -2962,8 +2962,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_models_documentationmodels_documentation_application_models_publishattemptresult",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "publishattemptresult"
     },
     {
@@ -2973,8 +2973,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentationapplicationservice.cs"
     },
     {
@@ -2989,8 +2989,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:b1f86901a7364c9c",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.application.services"
     },
     {
@@ -3008,8 +3008,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "documentationapplicationservice"
     },
     {
@@ -3026,8 +3026,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_createandpublishasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".createandpublishasync()"
     },
     {
@@ -3037,8 +3037,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_cancellationtoken",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "cancellationtoken"
     },
     {
@@ -3048,8 +3048,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_task",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "task"
     },
     {
@@ -3066,8 +3066,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_republishasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".republishasync()"
     },
     {
@@ -3077,8 +3077,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_guid",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "guid"
     },
     {
@@ -3095,8 +3095,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_listasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".listasync()"
     },
     {
@@ -3106,8 +3106,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_cs_ireadonlylist",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": "ireadonlylist"
     },
     {
@@ -3124,8 +3124,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_getasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".getasync()"
     },
     {
@@ -3142,8 +3142,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_getcontentasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".getcontentasync()"
     },
     {
@@ -3160,8 +3160,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_updateindexingstatusasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".updateindexingstatusasync()"
     },
     {
@@ -3178,8 +3178,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_publishversionasync",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".publishversionasync()"
     },
     {
@@ -3196,8 +3196,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_application_services_documentationapplicationservice_documentation_application_services_documentationapplicationservice_tosummary",
-      "community": 0,
-      "community_name": ".PublishVersionAsync",
+      "community": 56,
+      "community_name": "DocumentationVersion",
       "norm_label": ".tosummary()"
     },
     {
@@ -3229,8 +3229,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "documentationpublished.cs"
     },
     {
@@ -3245,8 +3245,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:8c00ae021c55d25d",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "documentation.contracts"
     },
     {
@@ -3264,7 +3264,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished_documentation_contracts_documentationpublished",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "documentationpublished"
     },
@@ -3275,7 +3275,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_contracts_documentationpublished_cs_string",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "string"
     },
@@ -3286,8 +3286,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "rabbitmqtopology.cs"
     },
     {
@@ -3305,8 +3305,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology_documentation_contracts_rabbitmqtopology",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "rabbitmqtopology"
     },
     {
@@ -3316,8 +3316,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_contracts_rabbitmqtopology_cs_string",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "string"
     },
     {
@@ -3349,8 +3349,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_apidocumentation",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "apidocumentation.cs"
     },
     {
@@ -3365,8 +3365,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:6cb67d840213368e",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.domain.entities"
     },
     {
@@ -3435,8 +3435,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_domain_entities_apidocumentation_documentation_domain_entities_apidocumentation_addversion",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 8,
+      "community_name": "ApiDocumentation",
       "norm_label": ".addversion()"
     },
     {
@@ -3446,8 +3446,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_domain_entities_documentationversion",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentationversion.cs"
     },
     {
@@ -3586,8 +3586,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:8aab5598a86c186e",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 22,
+      "community_name": "Documentation.Domain.Enums",
       "norm_label": "documentation.domain.enums"
     },
     {
@@ -4306,8 +4306,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.infrastructure/dependencyinjection.cs"
     },
     {
@@ -4322,8 +4322,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:11fee406829891ad",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.infrastructure"
     },
     {
@@ -4341,8 +4341,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_documentation_infrastructure_dependencyinjection",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "dependencyinjection"
     },
     {
@@ -4359,8 +4359,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_documentation_infrastructure_dependencyinjection_adddocumentationinfrastructure",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": ".adddocumentationinfrastructure()"
     },
     {
@@ -4370,8 +4370,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_cs_iservicecollection",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "iservicecollection"
     },
     {
@@ -4381,8 +4381,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_dependencyinjection_cs_iconfiguration",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "iconfiguration"
     },
     {
@@ -4469,8 +4469,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "rabbitmqdocumentationeventpublisher.cs"
     },
     {
@@ -4485,8 +4485,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:0f11fc2726971d78",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 57,
+      "community_name": "Documentation.Contracts",
       "norm_label": "documentation.infrastructure.messaging"
     },
     {
@@ -4505,7 +4505,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "rabbitmqdocumentationeventpublisher"
     },
     {
@@ -4516,7 +4516,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_jsonserializeroptions",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "jsonserializeroptions"
     },
     {
@@ -4527,7 +4527,7 @@
       "_origin": "ast",
       "id": "connectionfactory",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "connectionfactory"
     },
     {
@@ -4545,7 +4545,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_publishasync",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": ".publishasync()"
     },
     {
@@ -4556,7 +4556,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_cancellationtoken",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "cancellationtoken"
     },
     {
@@ -4567,7 +4567,7 @@
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqdocumentationeventpublisher_cs_task",
       "community": 4,
-      "community_name": "DocumentationPublished",
+      "community_name": "RabbitMqDocumentationEventPublisher",
       "norm_label": "task"
     },
     {
@@ -4577,8 +4577,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "messaging/rabbitmqoptions.cs"
     },
     {
@@ -4596,8 +4596,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_documentation_infrastructure_messaging_rabbitmqoptions",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "rabbitmqoptions"
     },
     {
@@ -4614,8 +4614,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_documentation_infrastructure_messaging_rabbitmqoptions_fromconfiguration",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": ".fromconfiguration()"
     },
     {
@@ -4625,8 +4625,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_messaging_rabbitmqoptions_cs_iconfiguration",
-      "community": 4,
-      "community_name": "DocumentationPublished",
+      "community": 61,
+      "community_name": ".AddDocumentationInfrastructure",
       "norm_label": "iconfiguration"
     },
     {
@@ -4636,8 +4636,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentationdbcontext.cs"
     },
     {
@@ -4652,8 +4652,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:614c39e7bc688c8f",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.infrastructure.persistence"
     },
     {
@@ -4671,8 +4671,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_documentation_infrastructure_persistence_documentationdbcontext",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "documentationdbcontext"
     },
     {
@@ -4682,8 +4682,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "dbcontext",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "dbcontext"
     },
     {
@@ -4693,8 +4693,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_cs_dbset",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "dbset"
     },
     {
@@ -4711,8 +4711,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_documentation_infrastructure_persistence_documentationdbcontext_onmodelcreating",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": ".onmodelcreating()"
     },
     {
@@ -4722,8 +4722,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_documentationdbcontext_cs_modelbuilder",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 28,
+      "community_name": "DocumentationDbContext",
       "norm_label": "modelbuilder"
     },
     {
@@ -4733,8 +4733,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_apidocumentationrepository",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "apidocumentationrepository.cs"
     },
     {
@@ -4749,8 +4749,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:c69dd418709f8078",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentation.infrastructure.persistence.repositories"
     },
     {
@@ -4895,8 +4895,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_infrastructure_persistence_repositories_documentationversionrepository",
-      "community": 56,
-      "community_name": "DocumentationVersion",
+      "community": 27,
+      "community_name": "Documentation.Application.Abstractions.Persistence",
       "norm_label": "documentationversionrepository.cs"
     },
     {
@@ -5013,7 +5013,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "ichunkrepository.cs"
     },
     {
@@ -5028,7 +5028,7 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:5c3e2907623e9b56",
-      "community": 48,
+      "community": 13,
       "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.application.abstractions"
     },
@@ -5048,7 +5048,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_ichunkrepository_documentation_ingestion_application_abstractions_ichunkrepository",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "ichunkrepository"
     },
     {
@@ -5121,7 +5121,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_idocumentationapiclient",
       "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "idocumentationapiclient.cs"
     },
     {
@@ -5289,8 +5289,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "iingestionunitofwork.cs"
     },
     {
@@ -5308,8 +5308,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_documentation_ingestion_application_abstractions_iingestionunitofwork",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "iingestionunitofwork"
     },
     {
@@ -5326,8 +5326,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_documentation_ingestion_application_abstractions_iingestionunitofwork_executeintransactionasync",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": ".executeintransactionasync()"
     },
     {
@@ -5337,8 +5337,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_func",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "func"
     },
     {
@@ -5348,8 +5348,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_cancellationtoken",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "cancellationtoken"
     },
     {
@@ -5359,8 +5359,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iingestionunitofwork_cs_task",
-      "community": 21,
-      "community_name": ".ProcessAsync",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "task"
     },
     {
@@ -5370,8 +5370,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iopenapichunker",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iopenapichunker.cs"
     },
     {
@@ -5389,8 +5389,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iopenapichunker_documentation_ingestion_application_abstractions_iopenapichunker",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iopenapichunker"
     },
     {
@@ -5407,8 +5407,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iopenapichunker_documentation_ingestion_application_abstractions_iopenapichunker_createchunks",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".createchunks()"
     },
     {
@@ -5418,8 +5418,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iopenapichunker_cs_ireadonlylist",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "ireadonlylist"
     },
     {
@@ -5429,8 +5429,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iprocessedintegrationeventrepository",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iprocessedintegrationeventrepository.cs"
     },
     {
@@ -5448,8 +5448,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_abstractions_iprocessedintegrationeventrepository_documentation_ingestion_application_abstractions_iprocessedintegrationeventrepository",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "iprocessedintegrationeventrepository"
     },
     {
@@ -5619,7 +5619,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_models_documentationcontent",
       "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentationcontent.cs"
     },
     {
@@ -5635,7 +5635,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:52a90e9a18e5f331",
       "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.application.models"
     },
     {
@@ -5653,8 +5653,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_models_documentationcontent_documentation_ingestion_application_models_documentationcontent",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "documentationcontent"
     },
     {
@@ -5695,7 +5695,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_models_ingestionoutcome",
       "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "ingestionoutcome.cs"
     },
     {
@@ -5760,8 +5760,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_documentationingestionservice",
-      "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentationingestionservice.cs"
     },
     {
@@ -5776,8 +5776,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:9328b570b90f7743",
-      "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.application.services"
     },
     {
@@ -5795,8 +5795,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_documentationingestionservice_documentation_ingestion_application_services_documentationingestionservice",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "documentationingestionservice"
     },
     {
@@ -5806,8 +5806,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_documentationingestionservice_cs_int",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "int"
     },
     {
@@ -5817,8 +5817,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_documentationingestionservice_cs_ilogger",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "ilogger"
     },
     {
@@ -5886,7 +5886,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "iingestionservice.cs"
     },
@@ -5905,7 +5905,7 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "iingestionservice"
     },
@@ -5923,7 +5923,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice_processasync",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": ".processasync()"
     },
@@ -5934,7 +5934,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_cs_cancellationtoken",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "cancellationtoken"
     },
@@ -5945,7 +5945,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_cs_task",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": "task"
     },
@@ -5963,7 +5963,7 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_application_services_iingestionservice_documentation_ingestion_application_services_iingestionservice_markindexingfailedasync",
-      "community": 4,
+      "community": 60,
       "community_name": "DocumentationPublished",
       "norm_label": ".markindexingfailedasync()"
     },
@@ -5997,7 +5997,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_entities_documentchunk",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "documentchunk.cs"
     },
     {
@@ -6013,7 +6013,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:de5026d5f91cb357",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "documentation.ingestion.domain.entities"
     },
     {
@@ -6152,8 +6152,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_valueobjects_documentchunkdraft",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "documentchunkdraft.cs"
     },
     {
@@ -6168,8 +6168,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:209726470c501397",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "documentation.ingestion.domain.valueobjects"
     },
     {
@@ -6187,8 +6187,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_domain_valueobjects_documentchunkdraft_documentation_ingestion_domain_valueobjects_documentchunkdraft",
-      "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "documentchunkdraft"
     },
     {
@@ -6198,8 +6198,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_clients_documentationapiclient",
-      "community": 14,
-      "community_name": "Documentation.Ingestion.Application.Exceptions",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentationapiclient.cs"
     },
     {
@@ -6214,8 +6214,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:23da67f395d95069",
-      "community": 14,
-      "community_name": "Documentation.Ingestion.Application.Exceptions",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.infrastructure.clients"
     },
     {
@@ -6413,8 +6413,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_dependencyinjection",
-      "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.infrastructure/dependencyinjection.cs"
     },
     {
@@ -6430,7 +6430,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:a03d5c53239bc781",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "documentation.ingestion.infrastructure"
     },
     {
@@ -6671,8 +6671,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_embeddings_embeddinggemmaembeddinggenerator",
-      "community": 7,
-      "community_name": "IEmbeddingGenerator",
+      "community": 14,
+      "community_name": "Documentation.Ingestion.Application.Exceptions",
       "norm_label": "embeddinggemmaembeddinggenerator.cs"
     },
     {
@@ -6687,8 +6687,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:80bc22aab1995e8d",
-      "community": 7,
-      "community_name": "IEmbeddingGenerator",
+      "community": 14,
+      "community_name": "Documentation.Ingestion.Application.Exceptions",
       "norm_label": "documentation.ingestion.infrastructure.embeddings"
     },
     {
@@ -6769,7 +6769,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker",
       "community": 13,
-      "community_name": "Documentation.Ingestion.Application.Models",
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "openapichunker.cs"
     },
     {
@@ -6784,8 +6784,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:0da4fb925227bb45",
-      "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community": 13,
+      "community_name": "Documentation.Ingestion.Application.Abstractions",
       "norm_label": "documentation.ingestion.infrastructure.openapi"
     },
     {
@@ -6803,8 +6803,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "openapichunker"
     },
     {
@@ -6814,8 +6814,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_cs_string",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "string"
     },
     {
@@ -6825,8 +6825,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "ideserializer",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "ideserializer"
     },
     {
@@ -6843,8 +6843,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker_createchunks",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".createchunks()"
     },
     {
@@ -6854,8 +6854,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_cs_ireadonlylist",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "ireadonlylist"
     },
     {
@@ -6872,8 +6872,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker_parse",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".parse()"
     },
     {
@@ -6883,8 +6883,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "jsondocument",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "jsondocument"
     },
     {
@@ -6901,8 +6901,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker_createdocumentchunkcontent",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".createdocumentchunkcontent()"
     },
     {
@@ -6912,8 +6912,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "jsonelement",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": "jsonelement"
     },
     {
@@ -6930,8 +6930,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker_createoperationchunkcontent",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".createoperationchunkcontent()"
     },
     {
@@ -6948,8 +6948,8 @@
       "_callable": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_openapi_openapichunker_documentation_ingestion_infrastructure_openapi_openapichunker_getstring",
-      "community": 6,
-      "community_name": "OpenApiChunker",
+      "community": 21,
+      "community_name": ".ProcessAsync",
       "norm_label": ".getstring()"
     },
     {
@@ -6959,8 +6959,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_documentationapioptions",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "documentationapioptions.cs"
     },
     {
@@ -6975,8 +6975,8 @@
       },
       "_origin": "ast",
       "id": "csharp_namespace:1ff582b8886fc320",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "documentation.ingestion.infrastructure.options"
     },
     {
@@ -6994,8 +6994,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_documentationapioptions_documentation_ingestion_infrastructure_options_documentationapioptions",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "documentationapioptions"
     },
     {
@@ -7005,8 +7005,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_documentationapioptions_cs_string",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "string"
     },
     {
@@ -7016,8 +7016,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_embeddingsoptions",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "embeddingsoptions.cs"
     },
     {
@@ -7035,8 +7035,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_embeddingsoptions_documentation_ingestion_infrastructure_options_embeddingsoptions",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "embeddingsoptions"
     },
     {
@@ -7046,8 +7046,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_options_embeddingsoptions_cs_string",
-      "community": 9,
-      "community_name": "RabbitMqIngestionWorker",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "string"
     },
     {
@@ -7098,8 +7098,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_databaseinitializer",
-      "community": 11,
-      "community_name": "DatabaseInitializer",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "databaseinitializer.cs"
     },
     {
@@ -7115,7 +7115,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:323d20d64f8e8269",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "documentation.ingestion.infrastructure.persistence"
     },
     {
@@ -7236,7 +7236,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestiondbcontext",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "ingestiondbcontext.cs"
     },
     {
@@ -7352,8 +7352,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 49,
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "ingestionunitofwork.cs"
     },
     {
@@ -7371,8 +7371,8 @@
       "_callable_class": true,
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_ingestionunitofwork_documentation_ingestion_infrastructure_persistence_ingestionunitofwork",
-      "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community": 1,
+      "community_name": ".ExecuteInTransactionAsync",
       "norm_label": "ingestionunitofwork"
     },
     {
@@ -7434,7 +7434,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "chunkrepository.cs"
     },
     {
@@ -7450,7 +7450,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:438fb250cef87a15",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "documentation.ingestion.infrastructure.persistence.repositories"
     },
     {
@@ -7469,7 +7469,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "chunkrepository"
     },
     {
@@ -7480,7 +7480,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_chunkrepository_cs_ingestiondbcontext",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "ingestiondbcontext"
     },
     {
@@ -7553,7 +7553,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_infrastructure_persistence_repositories_processedintegrationeventrepository",
       "community": 48,
-      "community_name": "Documentation.Ingestion.Application.Abstractions",
+      "community_name": "Documentation.Ingestion.Domain.Entities",
       "norm_label": "processedintegrationeventrepository.cs"
     },
     {
@@ -7663,7 +7663,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_worker_databaseinitializationhostedservice",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "databaseinitializationhostedservice.cs"
     },
     {
@@ -7679,7 +7679,7 @@
       "_origin": "ast",
       "id": "csharp_namespace:bf13112284d5921e",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "documentation.ingestion.worker"
     },
     {
@@ -7833,7 +7833,7 @@
       "_origin": "ast",
       "id": "src_documentation_ingestion_worker_program",
       "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community_name": "Documentation.Ingestion.Infrastructure.Persistence",
       "norm_label": "documentation.ingestion.worker/program.cs"
     },
     {
@@ -7843,8 +7843,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_documentation_ingestion_worker_rabbitmqingestionworker",
-      "community": 49,
-      "community_name": "Documentation.Ingestion.Infrastructure/DependencyInjection.cs",
+      "community": 59,
+      "community_name": "RabbitMqIngestionWorker.cs",
       "norm_label": "rabbitmqingestionworker.cs"
     },
     {
@@ -8203,8 +8203,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "readme.md"
     },
     {
@@ -8214,8 +8214,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "readme_documentation_portal_poc",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "documentation portal poc"
     },
     {
@@ -8225,64 +8225,1230 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "readme_componentes",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "componentes"
     },
     {
       "label": "Executar localmente",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "readme_executar_localmente",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "executar localmente"
     },
     {
       "label": "Embeddings",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L59",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "readme_embeddings",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "embeddings"
     },
     {
       "label": "Agente de integra\u00e7\u00e3o",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "readme_agente_de_integra\u00e7\u00e3o",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "agente de integracao"
     },
     {
       "label": "Desenvolvimento",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L90",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "readme_desenvolvimento",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "desenvolvimento"
     },
     {
       "label": "Limites da POC",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L106",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "readme_limites_da_poc",
-      "community": 27,
-      "community_name": "Documentation Portal POC",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "limites da poc"
+    },
+    {
+      "label": "specs/README.md",
+      "file_type": "document",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_readme",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "specs/readme.md"
+    },
+    {
+      "label": "Especifica\u00e7\u00f5es da POC",
+      "file_type": "document",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_readme_especifica\u00e7\u00f5es_da_poc",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "especificacoes da poc"
+    },
+    {
+      "label": "documentation-agent.md",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "documentation-agent.md"
+    },
+    {
+      "label": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "especificacao \u2014 documentation agent"
+    },
+    {
+      "label": "1. Objetivo e responsabilidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_1_objetivo_e_responsabilidade",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "1. objetivo e responsabilidade"
+    },
+    {
+      "label": "2. Arquitetura real",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_2_arquitetura_real",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "2. arquitetura real"
+    },
+    {
+      "label": "3. Contrato HTTP",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_3_contrato_http",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "3. contrato http"
+    },
+    {
+      "label": "`GET /health`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_get_health",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "`get /health`"
+    },
+    {
+      "label": "`POST /api/agents/chat`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_post_api_agents_chat",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "`post /api/agents/chat`"
+    },
+    {
+      "label": "4. Fluxo da conversa",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L82",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_4_fluxo_da_conversa",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "4. fluxo da conversa"
+    },
+    {
+      "label": "5. Busca de conhecimento e contratos integrados",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_5_busca_de_conhecimento_e_contratos_integrados",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "5. busca de conhecimento e contratos integrados"
+    },
+    {
+      "label": "Embeddings",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_embeddings",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "embeddings"
+    },
+    {
+      "label": "PostgreSQL / pgvector",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_postgresql_pgvector",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "postgresql / pgvector"
+    },
+    {
+      "label": "6. Configura\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_6_configura\u00e7\u00e3o",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "6. configuracao"
+    },
+    {
+      "label": "7. Valida\u00e7\u00e3o e tratamento de erros",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_7_valida\u00e7\u00e3o_e_tratamento_de_erros",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "7. validacao e tratamento de erros"
+    },
+    {
+      "label": "8. Seguran\u00e7a",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_8_seguran\u00e7a",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "8. seguranca"
+    },
+    {
+      "label": "9. Observabilidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_9_observabilidade",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "9. observabilidade"
+    },
+    {
+      "label": "10. Testes existentes",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_10_testes_existentes",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "10. testes existentes"
+    },
+    {
+      "label": "11. Decis\u00f5es para a implementa\u00e7\u00e3o definitiva",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L217",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "11. decisoes para a implementacao definitiva"
+    },
+    {
+      "label": "Preservar",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L219",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_preservar",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "preservar"
+    },
+    {
+      "label": "Reavaliar antes de produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L231",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_agent_reavaliar_antes_de_produ\u00e7\u00e3o",
+      "community": 20,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Agent",
+      "norm_label": "reavaliar antes de producao"
+    },
+    {
+      "label": "documentation-embeddings.md",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "documentation-embeddings.md"
+    },
+    {
+      "label": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "especificacao do servico de embeddings"
+    },
+    {
+      "label": "1. Identifica\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_1_identifica\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "1. identificacao"
+    },
+    {
+      "label": "2. Objetivo e escopo",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_2_objetivo_e_escopo",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "2. objetivo e escopo"
+    },
+    {
+      "label": "3. Contexto arquitetural",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_3_contexto_arquitetural",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "3. contexto arquitetural"
+    },
+    {
+      "label": "4. Organiza\u00e7\u00e3o interna",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_4_organiza\u00e7\u00e3o_interna",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "4. organizacao interna"
+    },
+    {
+      "label": "5. Interfaces de rede",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_5_interfaces_de_rede",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "5. interfaces de rede"
+    },
+    {
+      "label": "6. Contrato gRPC",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "6. contrato grpc"
+    },
+    {
+      "label": "6.1 Sem\u00e2ntica das opera\u00e7\u00f5es",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_6_1_sem\u00e2ntica_das_opera\u00e7\u00f5es",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "6.1 semantica das operacoes"
+    },
+    {
+      "label": "6.2 Valida\u00e7\u00e3o de entrada",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_6_2_valida\u00e7\u00e3o_de_entrada",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "6.2 validacao de entrada"
+    },
+    {
+      "label": "6.3 Resposta e invariantes",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_6_3_resposta_e_invariantes",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "6.3 resposta e invariantes"
+    },
+    {
+      "label": "6.4 Metadata de correla\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_6_4_metadata_de_correla\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "6.4 metadata de correlacao"
+    },
+    {
+      "label": "7. Inicializa\u00e7\u00e3o e estado",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_7_inicializa\u00e7\u00e3o_e_estado",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "7. inicializacao e estado"
+    },
+    {
+      "label": "7.1 Artefatos",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_7_1_artefatos",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "7.1 artefatos"
+    },
+    {
+      "label": "7.2 Sequ\u00eancia de startup",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L181",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_7_2_sequ\u00eancia_de_startup",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "7.2 sequencia de startup"
+    },
+    {
+      "label": "7.3 Estado mantido",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L196",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_7_3_estado_mantido",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "7.3 estado mantido"
+    },
+    {
+      "label": "8. Pipeline de infer\u00eancia",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L205",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_8_pipeline_de_infer\u00eancia",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "8. pipeline de inferencia"
+    },
+    {
+      "label": "8.1 Tokeniza\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L228",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_8_1_tokeniza\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "8.1 tokenizacao"
+    },
+    {
+      "label": "8.2 Tensores ONNX",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_8_2_tensores_onnx",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "8.2 tensores onnx"
+    },
+    {
+      "label": "8.3 Normaliza\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L253",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_8_3_normaliza\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "8.3 normalizacao"
+    },
+    {
+      "label": "9. Concorr\u00eancia, cancelamento e capacidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L260",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_9_concorr\u00eancia_cancelamento_e_capacidade",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "9. concorrencia, cancelamento e capacidade"
+    },
+    {
+      "label": "10. Erros e retries",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L280",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_10_erros_e_retries",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "10. erros e retries"
+    },
+    {
+      "label": "11. Configura\u00e7\u00e3o e empacotamento",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L299",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_11_configura\u00e7\u00e3o_e_empacotamento",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "11. configuracao e empacotamento"
+    },
+    {
+      "label": "11.1 Configura\u00e7\u00e3o efetiva",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L301",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_11_1_configura\u00e7\u00e3o_efetiva",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "11.1 configuracao efetiva"
+    },
+    {
+      "label": "11.2 Container local",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L317",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_11_2_container_local",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "11.2 container local"
+    },
+    {
+      "label": "12. Sa\u00fade e observabilidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L335",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_12_sa\u00fade_e_observabilidade",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "12. saude e observabilidade"
+    },
+    {
+      "label": "12.1 Health",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L337",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_12_1_health",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "12.1 health"
+    },
+    {
+      "label": "12.2 Logs",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L349",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_12_2_logs",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "12.2 logs"
+    },
+    {
+      "label": "13. Self-check e verifica\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L364",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_13_self_check_e_verifica\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "13. self-check e verificacao"
+    },
+    {
+      "label": "14. Seguran\u00e7a e dados",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L385",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_14_seguran\u00e7a_e_dados",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "14. seguranca e dados"
+    },
+    {
+      "label": "15. Compatibilidade e reindexa\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L401",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_15_compatibilidade_e_reindexa\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "15. compatibilidade e reindexacao"
+    },
+    {
+      "label": "16. Limites e decis\u00f5es da POC",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L420",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_16_limites_e_decis\u00f5es_da_poc",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "16. limites e decisoes da poc"
+    },
+    {
+      "label": "17. Requisitos para o sistema definitivo",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L437",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "17. requisitos para o sistema definitivo"
+    },
+    {
+      "label": "17.1 Contrato e qualidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L439",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_17_1_contrato_e_qualidade",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "17.1 contrato e qualidade"
+    },
+    {
+      "label": "17.2 Modelo e supply chain",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L448",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_17_2_modelo_e_supply_chain",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "17.2 modelo e supply chain"
+    },
+    {
+      "label": "17.3 Opera\u00e7\u00e3o e escala",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L456",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_17_3_opera\u00e7\u00e3o_e_escala",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "17.3 operacao e escala"
+    },
+    {
+      "label": "17.4 Seguran\u00e7a e privacidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L467",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_17_4_seguran\u00e7a_e_privacidade",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "17.4 seguranca e privacidade"
+    },
+    {
+      "label": "18. Crit\u00e9rios de aceita\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L476",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_18_crit\u00e9rios_de_aceita\u00e7\u00e3o",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "18. criterios de aceitacao"
+    },
+    {
+      "label": "19. Rastreabilidade no c\u00f3digo",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L492",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_embeddings_19_rastreabilidade_no_c\u00f3digo",
+      "community": 6,
+      "community_name": "Especifica\u00e7\u00e3o do servi\u00e7o de embeddings",
+      "norm_label": "19. rastreabilidade no codigo"
+    },
+    {
+      "label": "documentation-frontend.md",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "documentation-frontend.md"
+    },
+    {
+      "label": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "especificacao \u2014 documentation frontend"
+    },
+    {
+      "label": "1. Objetivo e responsabilidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_1_objetivo_e_responsabilidade",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "1. objetivo e responsabilidade"
+    },
+    {
+      "label": "2. Arquitetura e entrega",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_2_arquitetura_e_entrega",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "2. arquitetura e entrega"
+    },
+    {
+      "label": "3. Estrutura da interface",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_3_estrutura_da_interface",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "3. estrutura da interface"
+    },
+    {
+      "label": "Chat",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_chat",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "chat"
+    },
+    {
+      "label": "Administra\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_administra\u00e7\u00e3o",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "administracao"
+    },
+    {
+      "label": "4. Configura\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_4_configura\u00e7\u00e3o",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "4. configuracao"
+    },
+    {
+      "label": "5. Contratos HTTP consumidos",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "5. contratos http consumidos"
+    },
+    {
+      "label": "`GET {apiUrl}/api/documentations`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_get_apiurl_api_documentations",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "`get {apiurl}/api/documentations`"
+    },
+    {
+      "label": "`POST {apiUrl}/api/documentations`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_post_apiurl_api_documentations",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "`post {apiurl}/api/documentations`"
+    },
+    {
+      "label": "`POST {apiUrl}/api/documentations/{documentId}/versions/{versionId}/republish`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L128",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_post_apiurl_api_documentations_documentid_versions_versionid_republish",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "`post {apiurl}/api/documentations/{documentid}/versions/{versionid}/republish`"
+    },
+    {
+      "label": "`POST {agentUrl}/api/agents/chat`",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_post_agenturl_api_agents_chat",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "`post {agenturl}/api/agents/chat`"
+    },
+    {
+      "label": "6. Fluxos funcionais",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_6_fluxos_funcionais",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "6. fluxos funcionais"
+    },
+    {
+      "label": "Perguntar ao agente",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_perguntar_ao_agente",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "perguntar ao agente"
+    },
+    {
+      "label": "Publicar documenta\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L157",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_publicar_documenta\u00e7\u00e3o",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "publicar documentacao"
+    },
+    {
+      "label": "Acompanhar e tentar novamente",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_acompanhar_e_tentar_novamente",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "acompanhar e tentar novamente"
+    },
+    {
+      "label": "7. Renderiza\u00e7\u00e3o e seguran\u00e7a no navegador",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_7_renderiza\u00e7\u00e3o_e_seguran\u00e7a_no_navegador",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "7. renderizacao e seguranca no navegador"
+    },
+    {
+      "label": "8. Valida\u00e7\u00f5es e erros",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_8_valida\u00e7\u00f5es_e_erros",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "8. validacoes e erros"
+    },
+    {
+      "label": "9. Acessibilidade e observabilidade",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L214",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_9_acessibilidade_e_observabilidade",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "9. acessibilidade e observabilidade"
+    },
+    {
+      "label": "10. Testes existentes",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_10_testes_existentes",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "10. testes existentes"
+    },
+    {
+      "label": "11. Decis\u00f5es para a implementa\u00e7\u00e3o definitiva",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L243",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "11. decisoes para a implementacao definitiva"
+    },
+    {
+      "label": "Preservar",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L245",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_preservar",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "preservar"
+    },
+    {
+      "label": "Reavaliar antes de produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L255",
+      "_origin": "ast",
+      "id": "docs_specs_documentation_frontend_reavaliar_antes_de_produ\u00e7\u00e3o",
+      "community": 12,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 Documentation Frontend",
+      "norm_label": "reavaliar antes de producao"
+    },
+    {
+      "label": "project-overview.md",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
+      "norm_label": "project-overview.md"
+    },
+    {
+      "label": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "especificacao geral do documentation portal"
+    },
+    {
+      "label": "1. Finalidade",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_1_finalidade",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "1. finalidade"
+    },
+    {
+      "label": "2. Escopo do produto",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_2_escopo_do_produto",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "2. escopo do produto"
+    },
+    {
+      "label": "Capacidades demonstradas pela POC",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_capacidades_demonstradas_pela_poc",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "capacidades demonstradas pela poc"
+    },
+    {
+      "label": "Fora do escopo atual",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_fora_do_escopo_atual",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "fora do escopo atual"
+    },
+    {
+      "label": "3. Vis\u00e3o arquitetural",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_3_vis\u00e3o_arquitetural",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "3. visao arquitetural"
+    },
+    {
+      "label": "4. Fluxos ponta a ponta",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_4_fluxos_ponta_a_ponta",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "4. fluxos ponta a ponta"
+    },
+    {
+      "label": "4.1 Publica\u00e7\u00e3o e indexa\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_4_1_publica\u00e7\u00e3o_e_indexa\u00e7\u00e3o",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "4.1 publicacao e indexacao"
+    },
+    {
+      "label": "4.2 Consulta assistida",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_4_2_consulta_assistida",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "4.2 consulta assistida"
+    },
+    {
+      "label": "5. Dados e ownership",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_5_dados_e_ownership",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "5. dados e ownership"
+    },
+    {
+      "label": "6. Contratos entre sistemas",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_6_contratos_entre_sistemas",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "6. contratos entre sistemas"
+    },
+    {
+      "label": "7. Estados e recupera\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L177",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_7_estados_e_recupera\u00e7\u00e3o",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "7. estados e recuperacao"
+    },
+    {
+      "label": "8. Requisitos n\u00e3o funcionais derivados",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_8_requisitos_n\u00e3o_funcionais_derivados",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "8. requisitos nao funcionais derivados"
+    },
+    {
+      "label": "Seguran\u00e7a",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_seguran\u00e7a",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "seguranca"
+    },
+    {
+      "label": "Confiabilidade e opera\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L213",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_confiabilidade_e_opera\u00e7\u00e3o",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "confiabilidade e operacao"
+    },
+    {
+      "label": "Qualidade e evolu\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L224",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_qualidade_e_evolu\u00e7\u00e3o",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "qualidade e evolucao"
+    },
+    {
+      "label": "9. Decis\u00f5es da POC",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_9_decis\u00f5es_da_poc",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "9. decisoes da poc"
+    },
+    {
+      "label": "Preservar at\u00e9 evid\u00eancia contr\u00e1ria",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_preservar_at\u00e9_evid\u00eancia_contr\u00e1ria",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "preservar ate evidencia contraria"
+    },
+    {
+      "label": "Reavaliar antes da produ\u00e7\u00e3o",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L246",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_reavaliar_antes_da_produ\u00e7\u00e3o",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "reavaliar antes da producao"
+    },
+    {
+      "label": "10. Crit\u00e9rios m\u00ednimos para a implementa\u00e7\u00e3o definitiva",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L257",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_10_crit\u00e9rios_m\u00ednimos_para_a_implementa\u00e7\u00e3o_definitiva",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "10. criterios minimos para a implementacao definitiva"
+    },
+    {
+      "label": "11. \u00cdndice de especifica\u00e7\u00f5es",
+      "file_type": "document",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L272",
+      "_origin": "ast",
+      "id": "docs_specs_project_overview_11_\u00edndice_de_especifica\u00e7\u00f5es",
+      "community": 19,
+      "community_name": "Especifica\u00e7\u00e3o geral do Documentation Portal",
+      "norm_label": "11. indice de especificacoes"
     },
     {
       "label": "documentation-api.md",
@@ -8290,8 +9456,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "documentation-api.md",
       "id": "docs_specs_documentation_api"
     },
@@ -8301,8 +9467,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "documentation api",
       "id": "docs_specs_documentation_api_documentation_api"
     },
@@ -8312,8 +9478,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "responsabilidade",
       "id": "docs_specs_documentation_api_responsabilidade"
     },
@@ -8323,8 +9489,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "arquitetura",
       "id": "docs_specs_documentation_api_arquitetura"
     },
@@ -8334,8 +9500,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "modelo de persistencia",
       "id": "docs_specs_documentation_api_modelo_de_persist\u00eancia"
     },
@@ -8345,8 +9511,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "contrato http",
       "id": "docs_specs_documentation_api_contrato_http"
     },
@@ -8356,8 +9522,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "mensageria",
       "id": "docs_specs_documentation_api_mensageria"
     },
@@ -8367,8 +9533,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "configuracao",
       "id": "docs_specs_documentation_api_configura\u00e7\u00e3o"
     },
@@ -8378,8 +9544,8 @@
       "source_file": "docs/specs/documentation-api.md",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 22,
-      "community_name": "Documentation API",
+      "community": 18,
+      "community_name": "Especifica\u00e7\u00e3o \u2014 servi\u00e7o de ingest\u00e3o de documenta\u00e7\u00f5es",
       "norm_label": "limites da poc",
       "id": "docs_specs_documentation_api_limites_da_poc"
     },
@@ -23603,6 +24769,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_specs_readme",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
@@ -23617,7 +24794,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L70",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_documentation_portal_poc",
@@ -23639,7 +24816,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L90",
+      "source_location": "L91",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_documentation_portal_poc",
@@ -23650,7 +24827,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_documentation_portal_poc",
@@ -23661,7 +24838,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_documentation_portal_poc",
@@ -23672,11 +24849,1254 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L106",
+      "source_location": "L107",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_documentation_portal_poc",
       "target": "readme_limites_da_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_documentation_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_documentation_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_documentation_embeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_documentation_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_documentation_ingestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_project_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_readme",
+      "target": "docs_specs_readme_especifica\u00e7\u00f5es_da_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent",
+      "target": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L277",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_documentation_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_10_testes_existentes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L217",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_1_objetivo_e_responsabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_2_arquitetura_real",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_3_contrato_http",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_4_fluxo_da_conversa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_5_busca_de_conhecimento_e_contratos_integrados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_6_configura\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_7_valida\u00e7\u00e3o_e_tratamento_de_erros",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_8_seguran\u00e7a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L189",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_especifica\u00e7\u00e3o_documentation_agent",
+      "target": "docs_specs_documentation_agent_9_observabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_3_contrato_http",
+      "target": "docs_specs_documentation_agent_get_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_3_contrato_http",
+      "target": "docs_specs_documentation_agent_post_api_agents_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L109",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_5_busca_de_conhecimento_e_contratos_integrados",
+      "target": "docs_specs_documentation_agent_embeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_5_busca_de_conhecimento_e_contratos_integrados",
+      "target": "docs_specs_documentation_agent_postgresql_pgvector",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L219",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "target": "docs_specs_documentation_agent_preservar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-agent.md",
+      "source_location": "L231",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_agent_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "target": "docs_specs_documentation_agent_reavaliar_antes_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings",
+      "target": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings",
+      "target": "docs_specs_documentation_ingestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_documentation_embeddings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L280",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_10_erros_e_retries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L299",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_11_configura\u00e7\u00e3o_e_empacotamento",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L335",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_12_sa\u00fade_e_observabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L364",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_13_self_check_e_verifica\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L385",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_14_seguran\u00e7a_e_dados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L401",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_15_compatibilidade_e_reindexa\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L420",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_16_limites_e_decis\u00f5es_da_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L437",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L476",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_18_crit\u00e9rios_de_aceita\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L492",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_19_rastreabilidade_no_c\u00f3digo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_1_identifica\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_2_objetivo_e_escopo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_3_contexto_arquitetural",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_4_organiza\u00e7\u00e3o_interna",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_5_interfaces_de_rede",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L158",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_7_inicializa\u00e7\u00e3o_e_estado",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L205",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_8_pipeline_de_infer\u00eancia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L260",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_especifica\u00e7\u00e3o_do_servi\u00e7o_de_embeddings",
+      "target": "docs_specs_documentation_embeddings_9_concorr\u00eancia_cancelamento_e_capacidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "target": "docs_specs_documentation_embeddings_6_1_sem\u00e2ntica_das_opera\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "target": "docs_specs_documentation_embeddings_6_2_valida\u00e7\u00e3o_de_entrada",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L134",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "target": "docs_specs_documentation_embeddings_6_3_resposta_e_invariantes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_6_contrato_grpc",
+      "target": "docs_specs_documentation_embeddings_6_4_metadata_de_correla\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_7_inicializa\u00e7\u00e3o_e_estado",
+      "target": "docs_specs_documentation_embeddings_7_1_artefatos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L181",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_7_inicializa\u00e7\u00e3o_e_estado",
+      "target": "docs_specs_documentation_embeddings_7_2_sequ\u00eancia_de_startup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L196",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_7_inicializa\u00e7\u00e3o_e_estado",
+      "target": "docs_specs_documentation_embeddings_7_3_estado_mantido",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L228",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_8_pipeline_de_infer\u00eancia",
+      "target": "docs_specs_documentation_embeddings_8_1_tokeniza\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L240",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_8_pipeline_de_infer\u00eancia",
+      "target": "docs_specs_documentation_embeddings_8_2_tensores_onnx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L253",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_8_pipeline_de_infer\u00eancia",
+      "target": "docs_specs_documentation_embeddings_8_3_normaliza\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L301",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_11_configura\u00e7\u00e3o_e_empacotamento",
+      "target": "docs_specs_documentation_embeddings_11_1_configura\u00e7\u00e3o_efetiva",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L317",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_11_configura\u00e7\u00e3o_e_empacotamento",
+      "target": "docs_specs_documentation_embeddings_11_2_container_local",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L337",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_12_sa\u00fade_e_observabilidade",
+      "target": "docs_specs_documentation_embeddings_12_1_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L349",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_12_sa\u00fade_e_observabilidade",
+      "target": "docs_specs_documentation_embeddings_12_2_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L439",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "target": "docs_specs_documentation_embeddings_17_1_contrato_e_qualidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L448",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "target": "docs_specs_documentation_embeddings_17_2_modelo_e_supply_chain",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L456",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "target": "docs_specs_documentation_embeddings_17_3_opera\u00e7\u00e3o_e_escala",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-embeddings.md",
+      "source_location": "L467",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_embeddings_17_requisitos_para_o_sistema_definitivo",
+      "target": "docs_specs_documentation_embeddings_17_4_seguran\u00e7a_e_privacidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L278",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_documentation_frontend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L229",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_10_testes_existentes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L243",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_1_objetivo_e_responsabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_2_arquitetura_e_entrega",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_3_estrutura_da_interface",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_4_configura\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_6_fluxos_funcionais",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L174",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_7_renderiza\u00e7\u00e3o_e_seguran\u00e7a_no_navegador",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_8_valida\u00e7\u00f5es_e_erros",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_especifica\u00e7\u00e3o_documentation_frontend",
+      "target": "docs_specs_documentation_frontend_9_acessibilidade_e_observabilidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_3_estrutura_da_interface",
+      "target": "docs_specs_documentation_frontend_administra\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_3_estrutura_da_interface",
+      "target": "docs_specs_documentation_frontend_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "target": "docs_specs_documentation_frontend_get_apiurl_api_documentations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "target": "docs_specs_documentation_frontend_post_agenturl_api_agents_chat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "target": "docs_specs_documentation_frontend_post_apiurl_api_documentations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_5_contratos_http_consumidos",
+      "target": "docs_specs_documentation_frontend_post_apiurl_api_documentations_documentid_versions_versionid_republish",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_6_fluxos_funcionais",
+      "target": "docs_specs_documentation_frontend_acompanhar_e_tentar_novamente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_6_fluxos_funcionais",
+      "target": "docs_specs_documentation_frontend_perguntar_ao_agente",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L157",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_6_fluxos_funcionais",
+      "target": "docs_specs_documentation_frontend_publicar_documenta\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L245",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "target": "docs_specs_documentation_frontend_preservar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/documentation-frontend.md",
+      "source_location": "L255",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_documentation_frontend_11_decis\u00f5es_para_a_implementa\u00e7\u00e3o_definitiva",
+      "target": "docs_specs_documentation_frontend_reavaliar_antes_de_produ\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L274",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_documentation_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L275",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_documentation_ingestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview",
+      "target": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L257",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_10_crit\u00e9rios_m\u00ednimos_para_a_implementa\u00e7\u00e3o_definitiva",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L272",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_11_\u00edndice_de_especifica\u00e7\u00f5es",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_1_finalidade",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_2_escopo_do_produto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_3_vis\u00e3o_arquitetural",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_4_fluxos_ponta_a_ponta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_5_dados_e_ownership",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_6_contratos_entre_sistemas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_7_estados_e_recupera\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_8_requisitos_n\u00e3o_funcionais_derivados",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L235",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_especifica\u00e7\u00e3o_geral_do_documentation_portal",
+      "target": "docs_specs_project_overview_9_decis\u00f5es_da_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_2_escopo_do_produto",
+      "target": "docs_specs_project_overview_capacidades_demonstradas_pela_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_2_escopo_do_produto",
+      "target": "docs_specs_project_overview_fora_do_escopo_atual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_4_fluxos_ponta_a_ponta",
+      "target": "docs_specs_project_overview_4_1_publica\u00e7\u00e3o_e_indexa\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_4_fluxos_ponta_a_ponta",
+      "target": "docs_specs_project_overview_4_2_consulta_assistida",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_8_requisitos_n\u00e3o_funcionais_derivados",
+      "target": "docs_specs_project_overview_confiabilidade_e_opera\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L224",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_8_requisitos_n\u00e3o_funcionais_derivados",
+      "target": "docs_specs_project_overview_qualidade_e_evolu\u00e7\u00e3o",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L200",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_8_requisitos_n\u00e3o_funcionais_derivados",
+      "target": "docs_specs_project_overview_seguran\u00e7a",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L237",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_9_decis\u00f5es_da_poc",
+      "target": "docs_specs_project_overview_preservar_at\u00e9_evid\u00eancia_contr\u00e1ria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/specs/project-overview.md",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_specs_project_overview_9_decis\u00f5es_da_poc",
+      "target": "docs_specs_project_overview_reavaliar_antes_da_produ\u00e7\u00e3o",
       "confidence_score": 1.0
     },
     {
@@ -24007,5 +26427,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "654f05d01dfed3c9fdf7c63f39826dd39092c5c9"
+  "built_at_commit": "671a998fdc0512c7e5c777e322429bbf27fc11eb"
 }

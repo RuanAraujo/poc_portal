@@ -1,49 +1,46 @@
-# Graph Report - poc_portal  (2026-08-17)
+# Graph Report - poc_portal  (2026-08-16)
 
 ## Corpus Check
-- 111 files · ~99,914 words
+- 106 files · ~82,747 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 783 nodes · 1313 edges · 62 communities (45 shown, 17 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 92 edges (avg confidence: 0.61)
+- 677 nodes · 1199 edges · 55 communities (38 shown, 17 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 92 edges (avg confidence: 0.61)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `671a998f`
+- Built from commit: `654f05d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- .Create
+- .PublishVersionAsync
 - .ExecuteInTransactionAsync
 - IngestionDbContext
 - Documentation.Ingestion.Infrastructure.csproj
-- RabbitMqDocumentationEventPublisher
+- DocumentationPublished
 - test_app.py
-- Especificação do serviço de embeddings
+- OpenApiChunker
 - IEmbeddingGenerator
 - ApiDocumentation
 - RabbitMqIngestionWorker
 - DocumentationPortal.sln
 - DatabaseInitializer
-- Especificação — Documentation Frontend
-- Documentation.Ingestion.Application.Abstractions
+- .GetContent
+- Documentation.Ingestion.Application.Models
 - Documentation.Ingestion.Application.Exceptions
 - EmbeddingEngine
 - Documentation.Infrastructure.csproj
 - Documentation.Api
 - Especificação — serviço de ingestão de documentações
-- Especificação geral do Documentation Portal
-- Especificação — Documentation Agent
 - .ProcessAsync
-- Documentation.Domain.Enums
+- Documentation API
 - Documentation.Contracts.csproj
 - smoke.sh
 - Documentation.Embeddings.csproj
 - requirements file
-- Documentation.Application.Abstractions.Persistence
-- DocumentationDbContext
+- Documentation Portal POC
 - Application layer
 - Ingestion worker
 - AGENTS.md
@@ -62,29 +59,25 @@
 - PostgreSQL
 - helpers.test.js
 - Documentation.Ingestion.Application.csproj
-- Documentation.Ingestion.Domain.Entities
-- Documentation.Ingestion.Infrastructure.Persistence
+- Documentation.Ingestion.Application.Abstractions
+- Documentation.Ingestion.Infrastructure/DependencyInjection.cs
 - Documentation.Ingestion.Worker.csproj
 - documentation_agent/__init__.py
 - .AddDocumentationIngestionInfrastructure
 - DocumentationVersion
-- Documentation.Contracts
-- embeddings_pb2_grpc.py
-- RabbitMqIngestionWorker.cs
-- DocumentationPublished
-- .AddDocumentationInfrastructure
+- embeddings.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `AgentTests` - 28 edges
 2. `KnowledgeSearchUseCase` - 20 edges
-3. `Especificação do serviço de embeddings` - 20 edges
-4. `GrpcEmbeddingGateway` - 18 edges
-5. `RabbitMqIngestionWorker` - 18 edges
-6. `HealthUseCase` - 17 edges
-7. `ChatUseCase` - 17 edges
-8. `Settings` - 17 edges
-9. `ApiDocumentation` - 17 edges
-10. `EmbeddingUnavailable` - 16 edges
+3. `GrpcEmbeddingGateway` - 18 edges
+4. `RabbitMqIngestionWorker` - 18 edges
+5. `HealthUseCase` - 17 edges
+6. `ChatUseCase` - 17 edges
+7. `Settings` - 17 edges
+8. `ApiDocumentation` - 17 edges
+9. `EmbeddingUnavailable` - 16 edges
+10. `KnowledgeBaseUnavailable` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `GrpcEmbeddingGateway` --uses--> `EmbeddingUnavailable`  [INFERRED]
@@ -101,15 +94,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (62 total, 17 thin omitted)
+## Communities (55 total, 17 thin omitted)
 
-### Community 0 - ".Create"
+### Community 0 - ".PublishVersionAsync"
 Cohesion: 0.13
-Nodes (20): ControllerBase, HttpPost, HttpPut, ActionResult, CancellationToken, Guid, HttpGet, IActionResult (+12 more)
+Nodes (21): HttpPost, ActionResult, CancellationToken, Guid, HttpGet, IActionResult, IReadOnlyList, ProducesResponseType (+13 more)
 
 ### Community 1 - ".ExecuteInTransactionAsync"
-Cohesion: 0.18
-Nodes (8): CancellationToken, Func, Task, IIngestionUnitOfWork, CancellationToken, Func, Task, IngestionUnitOfWork
+Cohesion: 0.50
+Nodes (3): CancellationToken, Func, Task
 
 ### Community 2 - "IngestionDbContext"
 Cohesion: 0.08
@@ -119,49 +112,49 @@ Nodes (23): EntityTypeBuilder, CancellationToken, Guid, IReadOnlyCollection, Tas
 Cohesion: 0.13
 Nodes (14): Grpc.Net.ClientFactory (2.80.0), Microsoft.EntityFrameworkCore (10.0.0), Microsoft.Extensions.Configuration.Binder (10.0.0), Microsoft.Extensions.Http (10.0.0), Microsoft.Extensions.Options.ConfigurationExtensions (10.0.0), Pgvector.EntityFrameworkCore (0.2.2), YamlDotNet (16.3.0), net10.0 (+6 more)
 
-### Community 4 - "RabbitMqDocumentationEventPublisher"
-Cohesion: 0.20
-Nodes (8): ConnectionFactory, CancellationToken, Task, IDocumentationEventPublisher, CancellationToken, JsonSerializerOptions, Task, RabbitMqDocumentationEventPublisher
+### Community 4 - "DocumentationPublished"
+Cohesion: 0.07
+Nodes (23): ConnectionFactory, Documentation.Infrastructure.Messaging, Documentation.Application.Abstractions.Messaging, Documentation.Contracts, CancellationToken, Task, IDocumentationEventPublisher, string (+15 more)
 
 ### Community 5 - "test_app.py"
 Cohesion: 0.05
 Nodes (48): APIRouter, BaseModel, ChatOpenAI, patch, Protocol, create_app(), FastAPI, AgentInvocationFailed (+40 more)
 
-### Community 6 - "Especificação do serviço de embeddings"
-Cohesion: 0.05
-Nodes (38): 10. Erros e retries, 11.1 Configuração efetiva, 11.2 Container local, 11. Configuração e empacotamento, 12.1 Health, 12.2 Logs, 12. Saúde e observabilidade, 13. Self-check e verificação (+30 more)
+### Community 6 - "OpenApiChunker"
+Cohesion: 0.30
+Nodes (7): IDeserializer, JsonDocument, JsonElement, DocumentationContent, IReadOnlyList, string, OpenApiChunker
 
 ### Community 7 - "IEmbeddingGenerator"
-Cohesion: 0.29
-Nodes (5): IEmbeddingGenerator, CancellationToken, int, Task, EmbeddingGemmaEmbeddingGenerator
+Cohesion: 0.22
+Nodes (6): Documentation.Ingestion.Infrastructure.Embeddings, IEmbeddingGenerator, CancellationToken, int, Task, EmbeddingGemmaEmbeddingGenerator
 
 ### Community 8 - "ApiDocumentation"
-Cohesion: 0.14
+Cohesion: 0.15
 Nodes (14): ICollection, CancellationToken, Guid, IReadOnlyList, Task, IApiDocumentationRepository, DateTimeOffset, Guid (+6 more)
 
 ### Community 9 - "RabbitMqIngestionWorker"
-Cohesion: 0.16
-Nodes (13): BackgroundService, BasicDeliverEventArgs, IDictionary, IModel, string, RabbitMqOptions, CancellationToken, ILogger (+5 more)
+Cohesion: 0.11
+Nodes (18): BackgroundService, BasicDeliverEventArgs, Documentation.Ingestion.Infrastructure.Options, IDictionary, IModel, string, DocumentationApiOptions, string (+10 more)
 
 ### Community 10 - "DocumentationPortal.sln"
 Cohesion: 0.25
 Nodes (5): net10.0, Microsoft.Extensions.Logging.Abstractions (10.0.0), Microsoft.NET.Sdk, net10.0, Microsoft.NET.Sdk
 
 ### Community 11 - "DatabaseInitializer"
-Cohesion: 0.17
+Cohesion: 0.16
 Nodes (12): IHostedService, CancellationToken, ILogger, IServiceScopeFactory, string, Task, DatabaseInitializer, CancellationToken (+4 more)
 
-### Community 12 - "Especificação — Documentation Frontend"
-Cohesion: 0.09
-Nodes (23): 10. Testes existentes, 11. Decisões para a implementação definitiva, 1. Objetivo e responsabilidade, 2. Arquitetura e entrega, 3. Estrutura da interface, 4. Configuração, 5. Contratos HTTP consumidos, 6. Fluxos funcionais (+15 more)
+### Community 12 - ".GetContent"
+Cohesion: 0.23
+Nodes (10): ControllerBase, HttpPut, ActionResult, CancellationToken, Guid, HttpGet, IActionResult, ProducesResponseType (+2 more)
 
-### Community 13 - "Documentation.Ingestion.Application.Abstractions"
-Cohesion: 0.26
-Nodes (5): Documentation.Ingestion.Infrastructure.OpenApi, Documentation.Ingestion.Infrastructure.Clients, Documentation.Ingestion.Application.Models, Documentation.Ingestion.Application.Abstractions, Documentation.Ingestion.Application.Services
+### Community 13 - "Documentation.Ingestion.Application.Models"
+Cohesion: 0.20
+Nodes (5): Documentation.Ingestion.Domain.ValueObjects, Documentation.Ingestion.Application.Models, IReadOnlyList, IOpenApiChunker, DocumentChunkDraft
 
 ### Community 14 - "Documentation.Ingestion.Application.Exceptions"
 Cohesion: 0.33
-Nodes (4): Documentation.Ingestion.Infrastructure.Embeddings, Documentation.Ingestion.Application.Exceptions, Exception, PermanentIngestionException
+Nodes (4): Documentation.Ingestion.Infrastructure.Clients, Documentation.Ingestion.Application.Exceptions, Exception, PermanentIngestionException
 
 ### Community 15 - "EmbeddingEngine"
 Cohesion: 0.09
@@ -176,24 +169,16 @@ Cohesion: 0.18
 Nodes (10): applicationUrl, commandName, dotnetRunMessages, environmentVariables, launchBrowser, launchUrl, ASPNETCORE_ENVIRONMENT, profiles (+2 more)
 
 ### Community 18 - "Especificação — serviço de ingestão de documentações"
-Cohesion: 0.07
-Nodes (27): Arquitetura, Configuração, Contrato HTTP, Documentation API, Limites da POC, Mensageria, Modelo de persistência, Responsabilidade (+19 more)
-
-### Community 19 - "Especificação geral do Documentation Portal"
-Cohesion: 0.10
-Nodes (21): 10. Critérios mínimos para a implementação definitiva, 11. Índice de especificações, 1. Finalidade, 2. Escopo do produto, 3. Visão arquitetural, 4.1 Publicação e indexação, 4.2 Consulta assistida, 4. Fluxos ponta a ponta (+13 more)
-
-### Community 20 - "Especificação — Documentation Agent"
-Cohesion: 0.11
-Nodes (18): 10. Testes existentes, 11. Decisões para a implementação definitiva, 1. Objetivo e responsabilidade, 2. Arquitetura real, 3. Contrato HTTP, 4. Fluxo da conversa, 5. Busca de conhecimento e contratos integrados, 6. Configuração (+10 more)
+Cohesion: 0.17
+Nodes (11): Configuração, Contrato de mensageria, Contrato HTTP esperado da API, Embeddings, Especificação — serviço de ingestão de documentações, Fluxo de processamento, Inicialização local, Limitações deliberadas da POC (+3 more)
 
 ### Community 21 - ".ProcessAsync"
-Cohesion: 0.05
-Nodes (37): Documentation.Ingestion.Domain.ValueObjects, HttpRequestMessage, HttpResponseMessage, IDeserializer, JsonDocument, JsonElement, CancellationToken, Guid (+29 more)
+Cohesion: 0.07
+Nodes (25): HttpRequestMessage, HttpResponseMessage, CancellationToken, Guid, Task, IDocumentationApiClient, CancellationToken, Task (+17 more)
 
-### Community 22 - "Documentation.Domain.Enums"
-Cohesion: 0.18
-Nodes (9): Documentation.Application.Models, Documentation.Api.Controllers, Documentation.Api.Contracts, Documentation.Domain.Enums, Documentation.Application.Services, CreateDocumentationRequest, UpdateIndexingStatusRequest, PublishDocumentationResponse (+1 more)
+### Community 22 - "Documentation API"
+Cohesion: 0.22
+Nodes (8): Arquitetura, Configuração, Contrato HTTP, Documentation API, Limites da POC, Mensageria, Modelo de persistência, Responsabilidade
 
 ### Community 23 - "Documentation.Contracts.csproj"
 Cohesion: 0.29
@@ -207,13 +192,9 @@ Nodes (7): Grpc.AspNetCore (2.80.0), Microsoft.ML.OnnxRuntime (1.28.0), Microsof
 Cohesion: 0.25
 Nodes (8): fastapi, langchain, langchain-openai, psycopg[binary], requirements file, sentence-transformers, torch, uvicorn
 
-### Community 27 - "Documentation.Application.Abstractions.Persistence"
-Cohesion: 0.29
-Nodes (5): Documentation.Infrastructure, Documentation.Application.Abstractions.Persistence, Documentation.Infrastructure.Persistence, Documentation.Domain.Entities, Documentation.Infrastructure.Persistence.Repositories
-
-### Community 28 - "DocumentationDbContext"
-Cohesion: 0.20
-Nodes (7): DbContext, CancellationToken, Task, IUnitOfWork, DbSet, ModelBuilder, DocumentationDbContext
+### Community 27 - "Documentation Portal POC"
+Cohesion: 0.25
+Nodes (7): Agente de integração, Componentes, Desenvolvimento, Documentation Portal POC, Embeddings, Executar localmente, Limites da POC
 
 ### Community 29 - "Application layer"
 Cohesion: 0.67
@@ -231,13 +212,13 @@ Nodes (10): escapeHtml(), formatDuration(), formatFromContent(), formatFromFile(
 Cohesion: 0.29
 Nodes (5): net10.0, Microsoft.Extensions.Logging.Abstractions (10.0.0), Microsoft.NET.Sdk, net10.0, Microsoft.NET.Sdk
 
-### Community 48 - "Documentation.Ingestion.Domain.Entities"
-Cohesion: 0.28
-Nodes (5): Documentation.Ingestion.Infrastructure.Persistence.Repositories, Documentation.Ingestion.Domain.Entities, IChunkRepository, IngestionDbContext, ChunkRepository
+### Community 48 - "Documentation.Ingestion.Application.Abstractions"
+Cohesion: 0.15
+Nodes (12): Documentation.Ingestion.Infrastructure.Persistence.Repositories, Documentation.Ingestion.Application.Abstractions, Documentation.Ingestion.Domain.Entities, IChunkRepository, IIngestionUnitOfWork, IProcessedIntegrationEventRepository, ILogger, int (+4 more)
 
-### Community 49 - "Documentation.Ingestion.Infrastructure.Persistence"
-Cohesion: 0.25
-Nodes (3): Documentation.Ingestion.Infrastructure.Persistence, Documentation.Ingestion.Infrastructure, Documentation.Ingestion.Worker
+### Community 49 - "Documentation.Ingestion.Infrastructure/DependencyInjection.cs"
+Cohesion: 0.22
+Nodes (5): Documentation.Ingestion.Infrastructure.OpenApi, Documentation.Ingestion.Infrastructure.Persistence, Documentation.Ingestion.Application.Services, Documentation.Ingestion.Infrastructure, Documentation.Ingestion.Worker
 
 ### Community 50 - "Documentation.Ingestion.Worker.csproj"
 Cohesion: 0.40
@@ -248,44 +229,28 @@ Cohesion: 0.50
 Nodes (3): IConfiguration, IServiceCollection, DependencyInjection
 
 ### Community 56 - "DocumentationVersion"
-Cohesion: 0.09
-Nodes (23): CancellationToken, Guid, Task, IDocumentationVersionRepository, CreateDocumentationCommand, DocumentationContent, DocumentationSummary, DocumentationVersionSummary (+15 more)
-
-### Community 57 - "Documentation.Contracts"
-Cohesion: 0.25
-Nodes (5): Documentation.Infrastructure.Messaging, Documentation.Application.Abstractions.Messaging, Documentation.Contracts, string, RabbitMqTopology
-
-### Community 59 - "RabbitMqIngestionWorker.cs"
-Cohesion: 0.25
-Nodes (5): Documentation.Ingestion.Infrastructure.Options, string, DocumentationApiOptions, string, EmbeddingsOptions
-
-### Community 60 - "DocumentationPublished"
-Cohesion: 0.36
-Nodes (5): string, DocumentationPublished, CancellationToken, Task, IIngestionService
-
-### Community 61 - ".AddDocumentationInfrastructure"
-Cohesion: 0.25
-Nodes (5): IConfiguration, IServiceCollection, DependencyInjection, IConfiguration, RabbitMqOptions
+Cohesion: 0.05
+Nodes (33): Documentation.Infrastructure, Documentation.Application.Abstractions.Persistence, Documentation.Application.Models, Documentation.Api.Controllers, Documentation.Infrastructure.Persistence, Documentation.Domain.Entities, Documentation.Api.Contracts, Documentation.Domain.Enums (+25 more)
 
 ## Knowledge Gaps
-- **183 isolated node(s):** `smoke.sh script`, `PublishDocumentationResponse`, `net10.0`, `Swashbuckle.AspNetCore (9.0.6)`, `Microsoft.NET.Sdk.Web` (+178 more)
+- **103 isolated node(s):** `smoke.sh script`, `PublishDocumentationResponse`, `net10.0`, `Swashbuckle.AspNetCore (9.0.6)`, `Microsoft.NET.Sdk.Web` (+98 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **17 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Documentation.Contracts` connect `Documentation.Contracts` to `RabbitMqIngestionWorker.cs`, `Documentation.Application.Abstractions.Persistence`, `DocumentationPublished`, `Documentation.Ingestion.Application.Abstractions`?**
-  _High betweenness centrality (0.089) - this node is a cross-community bridge._
-- **Why does `IngestionDbContext` connect `IngestionDbContext` to `Documentation.Ingestion.Infrastructure.Persistence`, `DatabaseInitializer`, `DocumentationDbContext`, `.ExecuteInTransactionAsync`?**
-  _High betweenness centrality (0.054) - this node is a cross-community bridge._
-- **Why does `DatabaseInitializationHostedService` connect `DatabaseInitializer` to `Documentation.Ingestion.Infrastructure.Persistence`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+- **Why does `Documentation.Contracts` connect `DocumentationPublished` to `DocumentationVersion`, `Documentation.Ingestion.Infrastructure/DependencyInjection.cs`?**
+  _High betweenness centrality (0.119) - this node is a cross-community bridge._
+- **Why does `IngestionDbContext` connect `IngestionDbContext` to `DocumentationVersion`, `Documentation.Ingestion.Infrastructure/DependencyInjection.cs`, `Documentation.Ingestion.Application.Abstractions`, `DatabaseInitializer`?**
+  _High betweenness centrality (0.072) - this node is a cross-community bridge._
+- **Why does `DatabaseInitializationHostedService` connect `DatabaseInitializer` to `Documentation.Ingestion.Infrastructure/DependencyInjection.cs`?**
+  _High betweenness centrality (0.071) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `AgentTests` (e.g. with `AgentInvocationFailed` and `EmbeddingUnavailable`) actually correct?**
   _`AgentTests` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `KnowledgeSearchUseCase` (e.g. with `AgentGateway` and `EmbeddingGateway`) actually correct?**
   _`KnowledgeSearchUseCase` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 6 inferred relationships involving `GrpcEmbeddingGateway` (e.g. with `EmbeddingUnavailable` and `AgentTests`) actually correct?**
   _`GrpcEmbeddingGateway` has 6 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `smoke.sh script`, `PublishDocumentationResponse`, `net10.0` to the rest of the system?**
-  _183 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Are the 9 inferred relationships involving `HealthUseCase` (e.g. with `AgentGateway` and `EmbeddingGateway`) actually correct?**
+  _`HealthUseCase` has 9 INFERRED edges - model-reasoned connections that need verification._

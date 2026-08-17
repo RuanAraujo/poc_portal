@@ -335,24 +335,24 @@
     "semantic_hash": ""
   },
   "docs/specs/documentation-api.md": {
-    "mtime": 1786989781.3525808,
-    "ast_hash": "11f59aeeacc622bbc025218d7603b1c2",
+    "mtime": 1786656645.1662555,
+    "ast_hash": "315ccadfcc2ea84e2c954b84473cafa7",
     "semantic_hash": ""
   },
   "docs/specs/documentation-ingestion.md": {
-    "mtime": 1786990038.6820154,
-    "ast_hash": "8b42922d044ade2d8152466337cdc6a9",
+    "mtime": 1786914736.9544466,
+    "ast_hash": "d90a5326d29b123a88af00110f5a74ea",
     "semantic_hash": ""
   },
   "docs/specs/local-infrastructure.md": {
-    "mtime": 1786989961.252761,
-    "ast_hash": "b81e7b2e319de73304290f449bafccd3",
+    "mtime": 1786904371.5051284,
+    "ast_hash": "92bc8b0f77349b35ff1bfe6a5beabf7b",
     "semantic_hash": ""
   },
   "docs/specs/repository-contracts.md": {
-    "mtime": 1786989867.6316614,
-    "ast_hash": "68f56fbce5b927fa748a5a73dca54335",
-    "semantic_hash": ""
+    "mtime": 1785976315.5511546,
+    "ast_hash": "1cff105a4607e59834c2fe923531d3e8",
+    "semantic_hash": "1cff105a4607e59834c2fe923531d3e8"
   },
   "src/Documentation.Agent/requirements.txt": {
     "mtime": 1786656645.178731,
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1786988682.702914,
-    "ast_hash": "1a6d031f1e2967f05afe4900500d629f",
+    "mtime": 1786914288.73131,
+    "ast_hash": "da36b165db74d60a75e666af6da6755c",
     "semantic_hash": ""
   },
   "docs/diagrams/diagrama_completo_docs.png": {
@@ -527,31 +527,6 @@
   "src/Documentation.Agent/documentation_agent/infrastructure/text.py": {
     "mtime": 1786908709.0978656,
     "ast_hash": "699ac4814f054e89ce23fab1e68fe2a9",
-    "semantic_hash": ""
-  },
-  "docs/specs/README.md": {
-    "mtime": 1786988682.588465,
-    "ast_hash": "3058592cc343be67ccbf7715d05ec674",
-    "semantic_hash": ""
-  },
-  "docs/specs/documentation-agent.md": {
-    "mtime": 1786989874.11555,
-    "ast_hash": "619ecb58ac0d0a523da8fd9657785e30",
-    "semantic_hash": ""
-  },
-  "docs/specs/documentation-embeddings.md": {
-    "mtime": 1786990038.7365458,
-    "ast_hash": "a717f96e09ed7f8252f1a4513b0da3b6",
-    "semantic_hash": ""
-  },
-  "docs/specs/documentation-frontend.md": {
-    "mtime": 1786989847.0669596,
-    "ast_hash": "62fad68895d2af6c5fd780246646abc9",
-    "semantic_hash": ""
-  },
-  "docs/specs/project-overview.md": {
-    "mtime": 1786988682.5344107,
-    "ast_hash": "2607d0cccd7f6eb8279982047370b812",
     "semantic_hash": ""
   }
 }

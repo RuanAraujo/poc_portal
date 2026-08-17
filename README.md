@@ -13,7 +13,8 @@ Prova de conceito em .NET 10 e Python para cadastro de especificações OpenAPI,
 - `Documentation.Contracts`: contrato compartilhado da mensageria.
 - PostgreSQL 17 com pgvector e RabbitMQ Management via Docker Compose.
 
-As decisões de cada sistema estão em [`docs/specs`](docs/specs).
+As decisões de cada sistema e a visão integrada para orientar a implementação
+definitiva estão em [`docs/specs`](docs/specs/README.md).
 
 ## Executar localmente
 
